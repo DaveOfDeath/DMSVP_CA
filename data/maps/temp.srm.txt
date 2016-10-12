@@ -1,0 +1,305 @@
+minX: -13
+minZ: -4
+numX: 25
+numZ: 7
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "del"
+  displayName: "oGround"
+  idRef {
+    id: "57e3315a346265a014007a3a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "del"
+  displayName: "oGround2"
+  idRef {
+    id: "57e333163462650404005d86"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "del"
+  displayName: "oGround3"
+  idRef {
+    id: "57e333173462650404005d87"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "del"
+  displayName: "oGround4"
+  idRef {
+    id: "57e333193462650404005d88"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f7908c3462659422004e69"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f7908e3462659422004e6a"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f7908e3462659422004e6b"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f790903462659422004e6c"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f790903462659422004e6d"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f790923462659422004e6e"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f790923462659422004e6f"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f831783462659422004e74"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f831783462659422004e75"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f831783462659422004e76"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "57f831783462659422004e77"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  displayName: "oExit"
+  idRef {
+    id: "57fb8754346265cc140028cb"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_SceneTransition
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  displayName: "oMoney"
+  idRef {
+    id: "57fc57f2346265142b005904"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+    interaction_info_text: "Money"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 7
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  displayName: "oKarma"
+  idRef {
+    id: "57fc5819346265142b005906"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Karma"
+  }
+  lod: 0
+}

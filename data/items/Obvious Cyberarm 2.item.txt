@@ -1,0 +1,25 @@
+id: "Obvious Cyberarm 2"
+type: ItemType_Cyberware
+uirep {
+  icon: "icon_cyber_arm_tank"
+  name: "Yamatetsu Cyberarm (Alphaware)"
+  description: "Yamatetsu\'s alpha cyberlimbs are augmented beyond the capabilities of their organic counterparts. This is a security-grade model. Passive: +1 Strength, +5 HP."
+}
+equippedStatusEffects {
+  statMods {
+    attribute: Attribute_Magic_Essence
+    floatModValue: -1
+  }
+  statMods {
+    attribute: Attribute_HP
+    intModValue: 5
+  }
+  statMods {
+    attribute: Attribute_Strength
+    intModValue: 1
+  }
+  is_from_cyberware: true
+}
+cyberware_type: CyberwareType_Arm
+outfit_texture: "cyber_2_arm"
+sorting_group: "CyberwareArms"

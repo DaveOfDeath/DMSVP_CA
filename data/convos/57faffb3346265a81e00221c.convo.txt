@@ -1,0 +1,189 @@
+idRef {
+  id: "57faffb3346265a81e00221c"
+}
+ui_name: "c0-s0-Set_Scale"
+nodes {
+  idRef {
+    id: "57faffc4346265a81e002224"
+  }
+  index: 0
+  text: "What would you like to set as the scale?"
+  branches {
+    responseText: "1"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:57faffe3346265a81e002226"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "2"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:57faffe3346265a81e002228"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "3"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:57faffe4346265a81e00222a"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "4"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:57faffed346265a81e00222c"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "5"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:57fafff0346265a81e00222e"
+    }
+  }
+  nodeType: ConversationNodeType_InputNumpad
+  inputMaxLength: 1
+}
+nodes {
+  idRef {
+    id: "57fb003e346265a81e002231"
+  }
+  index: 1
+  text: "Ok, set. Ready?"
+  branches {
+    responseText: "Yes."
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "temp"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57faffb3346265a81e00221c:57fb004c346265a81e002233"
+    }
+  }
+  branches {
+    responseText: "No..."
+    nextNodeIndex: 0
+    idRef {
+      id: "57faffb3346265a81e00221c:57fb004d346265a81e002235"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+  idRef {
+    id: "57faffb3346265a81e00221c:57faffb3346265a81e002220"
+  }
+}

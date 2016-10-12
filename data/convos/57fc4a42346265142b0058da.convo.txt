@@ -1,0 +1,125 @@
+idRef {
+  id: "57fc4a42346265142b0058da"
+}
+ui_name: "c0-s3-Exit_Combat"
+nodes {
+  idRef {
+    id: "57fc4a58346265142b0058e2"
+  }
+  index: 0
+  text: "Current scale amount is $(STORY.CharacterScaleAmount). (Max 5)\n\nWould you like to advance it before returning to the hub?"
+  branches {
+    responseText: "Yes."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "temp"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57fc4a42346265142b0058da:57fc4aaa346265142b0058e4"
+    }
+  }
+  branches {
+    responseText: "No."
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "temp"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "57fc4a42346265142b0058da:57fc4aab346265142b0058e6"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "CharacterScaleAmount"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  nextNodeIndex: 0
+  idRef {
+    id: "57fc4a42346265142b0058da:57fc4a42346265142b0058de"
+  }
+}
+roots {
+  responseText: "{{GM}}Return to Hub.{{/GM}}"
+  actions {
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "temp"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: -1
+  idRef {
+    id: "57fc4a42346265142b0058da:57fc4ab5346265142b0058e8"
+  }
+}

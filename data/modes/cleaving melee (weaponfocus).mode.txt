@@ -1,0 +1,12 @@
+uirep {
+  icon: "icon_slash"
+  name: "Melee Attack"
+  description: "Single Fire."
+}
+abilities: "Attack (Cleave)"
+abilities: "DC Attack (Thrust)"
+abilities: "Weaponfocus (Hamstring Cleave)"
+abilities: "Weaponfocus (Syphonstrike Cleave)"
+abilities: "Attack (Disarm)"
+abilities: "Adept (2x Attack)"
+abilities: "Adept (3x Attack)"
