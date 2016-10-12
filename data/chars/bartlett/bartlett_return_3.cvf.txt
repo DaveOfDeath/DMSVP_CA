@@ -5,6 +5,3 @@ icon: "icon_ability_gaichu_regeneration"
 short_desc: "Weapon Focus: Syphon Strike"
 long_desc: "When he hits an enemy with Syphon Strike, Jon regenerates 5 HP. Cost: 1 AP. Cooldown: 3."
 general_tags_to_add: "Bartlett_Return_3"
-equipment_to_add {
-  prefab_name: "Quick Bolt (Bartlett)"
-}
