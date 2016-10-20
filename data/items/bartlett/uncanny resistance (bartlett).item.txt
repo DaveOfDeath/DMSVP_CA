@@ -3,7 +3,7 @@ type: ItemType_Adept
 uirep {
   icon: "icon_magicresistance2"
   name: "Uncanny Resistance"
-  description: "Passive: Jon has light cover even while in the open."
+  description: "Passive: Jon has Medium Cover even while in the open."
 }
 anim_type: AnimType_Spell
 coreAttribute: Attribute_Willpower
@@ -33,11 +33,10 @@ fxrep {
 passiveStatusEffects {
   uirep {
     icon: "icon_magicresistance2"
-    name: "Defense: Light Cover"
+    name: "Defense: Medium Cover"
   }
   stackingCategory: "Cover"
-  statusConditions: Condition_CoverLight
-  fxScript: "AdeptDefenseBuffStatus"
+  statusConditions: Condition_CoverMedium
 }
 store_cost: 400
 sorting_group: "Chi Casting (Adept)"

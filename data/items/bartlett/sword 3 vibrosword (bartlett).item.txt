@@ -13,7 +13,7 @@ coreSpecialization: Specialization_CC_Edged
 apCost: 1
 maxAmmo: 0
 baseHPDamage: 5
-baseAPDamage: 0
+baseAPDamage: -1
 rangeModTable: 10
 noiseLevel: 0
 noiseRounds: 0
