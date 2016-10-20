@@ -12,12 +12,44 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "delay"
+      }
+    }
   }
   conditions {
   }
   actions {
     ops {
-      functionName: "Teleport Actor With Fade"
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "delay"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Teleport Actor"
       args {
         call_value {
           functionName: "Specific Actor"
@@ -67,9 +99,6 @@ triggers {
             int_value: 0
           }
         }
-      }
-      args {
-        float_value: 0.5
       }
     }
     ops {
@@ -245,6 +274,15 @@ triggers {
             }
           }
         }
+      }
+    }
+    ops {
+      functionName: "Fade Camera In"
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
       }
     }
   }
@@ -861,11 +899,18 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanMale"
+    prefab_name: "HongKong:Red Samurai/HumanMaleRedSamuraiSniper"
     character_sheet_id: "RedSamurai_Lv1_Sniper"
     equipment_sheet_id: "RedSamurai_Lv1_Sniper"
     character_mod {
       stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
       }
       skills {
       }
@@ -884,6 +929,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 118
     hiring_cost_override: 1000
     scale_character_sheet: true
   }
@@ -901,10 +947,23 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanMale"
+    prefab_name: "HongKong:Red Samurai/HumanMaleRedSamuraiCaptain"
     character_sheet_id: "RedSamurai_Lv1_Captain"
     equipment_sheet_id: "RedSamurai_Lv1_Captain"
     character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_Soldier"
       attitude: AttitudeAggressive
       attackRandom: AttackStyle_AllEqual
@@ -917,6 +976,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 126
     scale_character_sheet: true
   }
 }
@@ -933,10 +993,23 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanMale"
+    prefab_name: "HongKong:Red Samurai/HumanMaleRedSamuraiHeavy"
     character_sheet_id: "RedSamurai_Lv1_Heavy"
     equipment_sheet_id: "RedSamurai_Lv1_Heavy"
     character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_Soldier"
       attitude: AttitudeAggressive
       attackRandom: AttackStyle_AllEqual
@@ -949,6 +1022,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 138
     scale_character_sheet: true
   }
 }
@@ -965,11 +1039,18 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanMale"
+    prefab_name: "HongKong:Red Samurai/HumanFemaleRedSamuraiMage"
     character_sheet_id: "RedSamurai_Lv1_Mage"
     equipment_sheet_id: "RedSamurai_Lv1_Mage"
     character_mod {
       stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
       }
       skills {
       }
@@ -988,6 +1069,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 107
     hiring_cost_override: 1000
     scale_character_sheet: true
   }
@@ -1038,6 +1120,7 @@ characters {
     scale_character_sheet: true
   }
 }
+mapEvents: "delay"
 worldMapLocation {
   filename: ""
   location {
@@ -1105,8 +1188,6 @@ scene_dimensions {
   initial_alarm_state: 0
   turns_per_round: 3
 }
-character_roster {
-}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -1118,7 +1199,7 @@ hiring_minimum_karma: 0
 hiring_maximum_karma: 8
 roster_overrides {
   roster_entries {
-    reference_id: "crew_lv1_river"
+    reference_id: "crew_lv1_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -1153,7 +1234,7 @@ roster_overrides {
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv2_river"
+    reference_id: "crew_lv2_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -1188,11 +1269,8 @@ roster_overrides {
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv3_river"
+    reference_id: "crew_lv3_violet"
     hiring_conditions {
-      ops {
-        functionName: "No Condition"
-      }
       ops {
         functionName: "Comparison (int)"
         args {
@@ -1226,7 +1304,7 @@ roster_overrides {
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv4_river"
+    reference_id: "crew_lv4_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -1261,7 +1339,7 @@ roster_overrides {
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv5_river"
+    reference_id: "crew_lv5_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -1296,7 +1374,7 @@ roster_overrides {
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv6_river"
+    reference_id: "crew_lv6_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -1507,6 +1585,219 @@ roster_overrides {
   }
   roster_entries {
     reference_id: "crew_lv6_bartlett"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv1_river"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv2_river"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv3_river"
+    hiring_conditions {
+      ops {
+        functionName: "No Condition"
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv4_river"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv5_river"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv6_river"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"

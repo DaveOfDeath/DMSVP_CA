@@ -5,8 +5,8 @@ uirep {
 }
 abilities: "DC Attack (Slash)"
 abilities: "DC Attack (Thrust)"
+abilities: "Attack (Disarm)"
 abilities: "Weaponfocus (Hamstring)"
 abilities: "Weaponfocus (Syphonstrike)"
-abilities: "Attack (Disarm)"
 abilities: "Adept (2x Attack)"
 abilities: "Adept (3x Attack)"

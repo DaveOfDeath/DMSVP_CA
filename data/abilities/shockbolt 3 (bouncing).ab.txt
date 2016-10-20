@@ -4,6 +4,7 @@ uirep {
   name: "Cast Shocking Waterbolt"
   description: "Bouncing Shocking Attack"
 }
+anim_action: AnimAction_Attack
 apCostMod: 0
 hpDamageMod: -4
 apDamageMod: 1
@@ -51,6 +52,13 @@ drainBucket {
     weight: 0.34
     value: -1
   }
+}
+fxrep {
+  preActionFxName: "LightningSpellPrepare"
+  actionFxName: "LightningBoltThrowAction"
+  postActionFxName: ""
+  hitReactionFxName: "LightningHitReaction"
+  missReactionFxName: "GenericSpellMissReaction"
 }
 toHitFunction: "actorSpellAttackToHit"
 damageFunction: "weaponDamage"

@@ -1,6 +1,6 @@
 id: "Weaponfocus (Syphonstrike)"
 uirep {
-  icon: "icon_ability_gaichu_regeneration"
+  icon: "icon_painresistance"
   name: "Syphon Strike"
   description: "An attack that regenerates the attacker for 12 HP over 2 RNDs."
 }

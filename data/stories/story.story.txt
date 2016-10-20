@@ -563,42 +563,42 @@ character_roster {
     content_pack_source: "55e766536636619c20000bdc"
   }
   roster_entries {
-    reference_id: "crew_lv1_river"
+    reference_id: "crew_lv1_violet"
     hiring_conditions {
     }
     hiring_cost: 1
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv2_river"
+    reference_id: "crew_lv2_violet"
     hiring_conditions {
     }
     hiring_cost: 2
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv3_river"
+    reference_id: "crew_lv3_violet"
     hiring_conditions {
     }
     hiring_cost: 3
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv4_river"
+    reference_id: "crew_lv4_violet"
     hiring_conditions {
     }
     hiring_cost: 4
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv5_river"
+    reference_id: "crew_lv5_violet"
     hiring_conditions {
     }
     hiring_cost: 5
     content_pack_source: "579e0109346265441c0058b1"
   }
   roster_entries {
-    reference_id: "crew_lv6_river"
+    reference_id: "crew_lv6_violet"
     hiring_conditions {
     }
     hiring_cost: 6
@@ -641,6 +641,48 @@ character_roster {
   }
   roster_entries {
     reference_id: "crew_lv6_bartlett"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv1_river"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv2_river"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv3_river"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv4_river"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv5_river"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv6_river"
     hiring_conditions {
     }
     hiring_cost: 6
@@ -752,6 +794,60 @@ crew_list {
     crew_variants: "Bartlett_Burnout_5"
     crew_variants: "Bartlett_Return_5"
     associated_char_sheet: "crew_lv6_bartlett"
+    node_idx: 5
+  }
+  scale_variable: "CharacterScaleAmount"
+}
+crew_list {
+  id: "Violet"
+  name: "Ultra Violet"
+  title: "Crew: Decker"
+  prerequisites {
+  }
+  active_nodes {
+    name: "LV1"
+    scale_level: 0
+    associated_char_sheet: "crew_lv1_violet"
+    node_idx: 0
+  }
+  active_nodes {
+    name: "LV2"
+    scale_level: 1
+    crew_variants: "Violet_Brawler_1"
+    crew_variants: "Violet_Meatspace_1"
+    associated_char_sheet: "crew_lv2_violet"
+    node_idx: 1
+  }
+  active_nodes {
+    name: "LV3"
+    scale_level: 2
+    crew_variants: "Violet_Brawler_2"
+    crew_variants: "Violet_Meatspace_2"
+    associated_char_sheet: "crew_lv3_violet"
+    node_idx: 2
+  }
+  active_nodes {
+    name: "LV4"
+    scale_level: 3
+    crew_variants: "Violet_Brawler_3"
+    crew_variants: "Violet_Meatspace_3"
+    associated_char_sheet: "crew_lv4_violet"
+    node_idx: 3
+  }
+  active_nodes {
+    name: "LV5"
+    scale_level: 4
+    crew_variants: "Violet_Brawler_4"
+    crew_variants: "Violet_Meatspace_4"
+    associated_char_sheet: "crew_lv5_violet"
+    node_idx: 4
+  }
+  active_nodes {
+    name: "LV6"
+    scale_level: 5
+    crew_variants: "Violet_Brawler_5"
+    crew_variants: "Violet_Meatspace_5"
+    associated_char_sheet: "crew_lv6_violet"
     node_idx: 5
   }
   scale_variable: "CharacterScaleAmount"
