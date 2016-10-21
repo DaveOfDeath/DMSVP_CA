@@ -1,0 +1,7 @@
+id: "Violet_Meatspace_2"
+crew_id: "Violet"
+name: "Meatspace Hacker"
+icon: "icon_blindness"
+short_desc: "Mr. Zappy: Infrered Overload"
+long_desc: "Violet's taser gains a blinding attack that lasts for RNDs. Cooldown:"
+general_tags_to_add: "Violet_Meatspace_2"
