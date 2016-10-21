@@ -1,7 +1,0 @@
-id: "Violet_Meatspace_4"
-crew_id: "Violet"
-name: "Meatspace Hacker"
-icon: "icon_ability_ranged_stundart"
-short_desc: "Mr. Zappy: Ultracapacitor"
-long_desc: "Increases Mr. Zappy's ammo from 2 to 4."
-general_tags_to_add: "Violet_Meatspace_4"
