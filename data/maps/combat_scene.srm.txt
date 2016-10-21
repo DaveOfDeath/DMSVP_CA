@@ -2784,9 +2784,9 @@ props {
 props {
   name: "whitebox_cover_1x1x1"
   gridPoint {
-    x: 8
+    x: 28
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_S
   displayName: "oJackPoint_Forced"
@@ -4265,9 +4265,9 @@ props {
 props {
   name: "matrixHK_groundDecoration_gearTiny01"
   gridPoint {
-    x: 51
+    x: 48
     y: 0
-    z: -64
+    z: -66
   }
   orientation: ORIENTATION_E
   idRef {
@@ -4371,7 +4371,7 @@ props {
   gridPoint {
     x: 45
     y: 0
-    z: -39
+    z: -38
   }
   orientation: ORIENTATION_E
   idRef {
@@ -5814,11 +5814,11 @@ props {
 props {
   name: "hub_lights_neon07Lighting"
   gridPoint {
-    x: 28.4
+    x: 28
     y: 2.3
-    z: -48
+    z: -50
   }
-  orientation: ORIENTATION_E
+  orientation: ORIENTATION_S
   idRef {
     id: "580966c5346265dc0000428e"
   }
@@ -7094,9 +7094,9 @@ props {
 props {
   name: "whitebox_outdoor_ground"
   gridPoint {
-    x: 7
+    x: 27
     y: 0
-    z: -3
+    z: -5
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7264,9 +7264,9 @@ props {
 props {
   name: "hub_building_glassbase02_lights"
   gridPoint {
-    x: 68.2
+    x: 65.2
     y: 0.12
-    z: -47.199997
+    z: -50.199997
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7277,9 +7277,9 @@ props {
 props {
   name: "hub_building_glassbase02_lights"
   gridPoint {
-    x: 65.4
+    x: 62.4
     y: -0.17999999
-    z: -45.1
+    z: -48.1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -7290,9 +7290,9 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: 66
+    x: 63
     y: 1
-    z: -44
+    z: -47
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7313,9 +7313,9 @@ props {
 props {
   name: "matrixHK_groundDecoration_techTrim07"
   gridPoint {
-    x: 68
+    x: 65
     y: 0
-    z: -48
+    z: -51
   }
   orientation: ORIENTATION_E
   idRef {
@@ -7326,9 +7326,9 @@ props {
 props {
   name: "matrixHK_groundDecoration_techTrimCorner01"
   gridPoint {
-    x: 67
+    x: 64
     y: 0
-    z: -46
+    z: -49
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7339,9 +7339,9 @@ props {
 props {
   name: "matrixHK_groundDecoration_techTrim07"
   gridPoint {
-    x: 65
+    x: 62
     y: 0
-    z: -45
+    z: -48
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7352,9 +7352,9 @@ props {
 props {
   name: "matrixHK_clutter_cube09"
   gridPoint {
-    x: 65
+    x: 62
     y: 0
-    z: -48
+    z: -51
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7365,9 +7365,9 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: 70
+    x: 67
     y: 1
-    z: -47
+    z: -50
   }
   orientation: ORIENTATION_S
   idRef {
@@ -8300,5 +8300,289 @@ props {
   idRef {
     id: "5809fc203462655816000328"
   }
+  lod: 0
+}
+props {
+  name: "matrixHK_groundDecoration_glassSheenCorner01"
+  gridPoint {
+    x: 45
+    y: 0
+    z: -48
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "580a07a33462655816000335"
+  }
+  lod: 0
+}
+props {
+  name: "matrixHK_groundDecoration_glassSheenCorner01"
+  gridPoint {
+    x: 42
+    y: 0
+    z: -48
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "580a07b33462655816000336"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_hologramInfoGame"
+  gridPoint {
+    x: 27
+    y: 1
+    z: -52.8
+  }
+  orientation: ORIENTATION_E
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:HologramInfoGame"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixPixelFalloff"
+  gridPoint {
+    x: 52
+    y: 1
+    z: -58
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixPixelFalloff"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStreakFatHoriz"
+  gridPoint {
+    x: 44
+    y: 0
+    z: -51
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStreakFatHoriz"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixPixelFalloff"
+  gridPoint {
+    x: 53
+    y: 1
+    z: -58
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixPixelFalloff"
+  }
+  idRef {
+    id: "580a0b383462655816000337"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixPixelFalloff"
+  gridPoint {
+    x: 33.8
+    y: 1
+    z: -52.8
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixPixelFalloff"
+  }
+  idRef {
+    id: "580a0b3c3462655816000338"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixPixelFalloff"
+  gridPoint {
+    x: 33.8
+    y: 1
+    z: -53.8
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixPixelFalloff"
+  }
+  idRef {
+    id: "580a0b3c3462655816000339"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStreakFatVert"
+  gridPoint {
+    x: 45
+    y: 0
+    z: -51
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStreakFatVert"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStrayDataClusterBig"
+  gridPoint {
+    x: 35
+    y: 0
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStrayDataClusterBig"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStrayDataClusterBig"
+  gridPoint {
+    x: 43
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStrayDataClusterBig"
+  }
+  idRef {
+    id: "580a0ca03462655816000345"
+  }
+  lod: 0
+}
+props {
+  name: "ares_furniture_standingHoloDesk01_lights"
+  gridPoint {
+    x: 27.400002
+    y: 0.5
+    z: -52.6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "580a0d9f3462655816000346"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStrayDataClusterBig"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStrayDataClusterBig"
+  }
+  idRef {
+    id: "580a0de53462655816000347"
+  }
+  lod: 0
+}
+props {
+  name: "matrixHK_groundDecoration_floorFloater01"
+  gridPoint {
+    x: 39
+    y: 0
+    z: -64
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "580a0df73462655816000348"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStreakFatVert"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStreakFatVert"
+  }
+  idRef {
+    id: "580a0ee9346265581600034a"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_matrixStreakFatHoriz"
+  gridPoint {
+    x: 25
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:matrixStreakFatHoriz"
+  }
+  idRef {
+    id: "580a0ee9346265581600034b"
+  }
+  lod: 0
+}
+props {
+  name: "hub_lights_neon07Lighting"
+  gridPoint {
+    x: 23
+    y: 2.3
+    z: -50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "580a0ff2346265581600034c"
+  }
+  lod: 0
+}
+props {
+  name: "nightMarket_sign_sign08_lights"
+  gridPoint {
+    x: 43.5
+    y: 4
+    z: -62
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_signBus"
+  gridPoint {
+    x: 45
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "barrens_wallDecoration_microdeck"
+  gridPoint {
+    x: 37
+    y: -1
+    z: -45
+  }
+  orientation: ORIENTATION_E
   lod: 0
 }

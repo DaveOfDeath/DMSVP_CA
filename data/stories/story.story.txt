@@ -563,48 +563,6 @@ character_roster {
     content_pack_source: "55e766536636619c20000bdc"
   }
   roster_entries {
-    reference_id: "crew_lv1_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv2_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 2
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv3_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 3
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv4_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 4
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv5_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 5
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv6_violet"
-    hiring_conditions {
-    }
-    hiring_cost: 6
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
     reference_id: "crew_lv1_bartlett"
     hiring_conditions {
     }
@@ -683,6 +641,48 @@ character_roster {
   }
   roster_entries {
     reference_id: "crew_lv6_river"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv1_violet"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv2_violet"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv3_violet"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv4_violet"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv5_violet"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv6_violet"
     hiring_conditions {
     }
     hiring_cost: 6
