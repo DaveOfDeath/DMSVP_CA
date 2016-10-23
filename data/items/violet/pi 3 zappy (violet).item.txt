@@ -13,7 +13,7 @@ forceRating: 5
 apCost: 1
 prereqStrings: "Player.RACE != RACE.DRONE"
 prereqStrings: "Player.RACE != RACE.FREEDRONE"
-maxAmmo: 4
+maxAmmo: 3
 baseHPDamage: 1
 baseAPDamage: 1
 rangeModTable: 8
