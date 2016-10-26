@@ -28,9 +28,9 @@ stats {
   is_fearless: 0
 }
 skills {
-  ranged_combat: 3
+  ranged_combat: 2
   close_combat: 6
-  throwing_weapons: 5
+  throwing_weapons: 2
   spellcasting: 0
   decking: 0
   deck_build_repair: 0
@@ -44,7 +44,7 @@ skills {
   drone_build_repair: 0
   athletics: 0
   biotech: 0
-  dodge: 4
+  dodge: 2
   negotiation: 0
   stealth: 0
   etiquette_corporate: 0
@@ -65,11 +65,11 @@ specializations {
   pistol: 0
   rifle: 0
   shotgun: 0
-  smg: 3
+  smg: 2
   clubs: 0
   edged: 4
   polearms: 0
-  unarmed: 4
+  unarmed: 3
   whips: 0
   throwing_blades: 0
   attack_spells: 0

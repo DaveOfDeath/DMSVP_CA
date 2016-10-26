@@ -30,7 +30,7 @@ stats {
 skills {
   ranged_combat: 4
   close_combat: 7
-  throwing_weapons: 6
+  throwing_weapons: 2
   spellcasting: 0
   decking: 0
   deck_build_repair: 0
@@ -44,7 +44,7 @@ skills {
   drone_build_repair: 0
   athletics: 0
   biotech: 0
-  dodge: 5
+  dodge: 2
   negotiation: 0
   stealth: 0
   etiquette_corporate: 0
@@ -65,7 +65,7 @@ specializations {
   pistol: 0
   rifle: 0
   shotgun: 0
-  smg: 3
+  smg: 2
   clubs: 0
   edged: 5
   polearms: 0

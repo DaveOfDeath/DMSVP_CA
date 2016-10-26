@@ -1,0 +1,203 @@
+minX: -3
+minZ: 0
+numX: 10
+numZ: 13
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000593462656817007eb8"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5810005b3462656817007eb9"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5810005b3462656817007eba"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5810005d3462656817007ebb"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5810005d3462656817007ebc"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ebd"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ebe"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ebf"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ec0"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ec1"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000603462656817007ec2"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000a03462656817007ec4"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x2"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581000a63462656817007ec5"
+  }
+  lod: 0
+}

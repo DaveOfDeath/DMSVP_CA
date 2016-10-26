@@ -1,0 +1,4 @@
+unique_id: "Crew_Seamus_Lv4_Gear"
+equipment {
+  prefab_name: "Seamus_Jacket Lv2"
+}

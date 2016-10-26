@@ -30,7 +30,7 @@ stats {
 skills {
   ranged_combat: 1
   close_combat: 4
-  throwing_weapons: 3
+  throwing_weapons: 1
   spellcasting: 0
   decking: 0
   deck_build_repair: 0
