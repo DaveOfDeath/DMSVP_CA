@@ -1974,6 +1974,7 @@ characters {
     z: -40
   }
   orientation: ORIENTATION_E
+  displayName: "Blocker_A"
   idRef {
     id: "580952e9346265dc000041ee"
   }

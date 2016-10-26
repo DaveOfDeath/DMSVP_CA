@@ -3417,6 +3417,10 @@ props {
     z: -40
   }
   orientation: ORIENTATION_S
+  GeneralTags: "Blocker_A"
+  idRef {
+    id: "580d5fcc346265ac24000743"
+  }
   lod: 0
 }
 props {
@@ -3427,6 +3431,10 @@ props {
     z: -40
   }
   orientation: ORIENTATION_E
+  GeneralTags: "Blocker_A"
+  idRef {
+    id: "580d5fc8346265ac24000742"
+  }
   lod: 0
 }
 props {
