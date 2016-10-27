@@ -5,6 +5,7 @@ uirep {
   name: "O\'Toole\'s Street Clothes"
   description: "For the dwarf with the mojo."
 }
+prereqStrings: "TAG.Seamus_Toolbox_1 NOT_EXISTS"
 equippedStatusEffects {
   statMods {
     attribute: Attribute_Armor

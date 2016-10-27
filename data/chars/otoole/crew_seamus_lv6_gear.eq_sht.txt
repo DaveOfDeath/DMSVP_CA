@@ -2,3 +2,21 @@ unique_id: "Crew_Seamus_Lv6_Gear"
 equipment {
   prefab_name: "Seamus_Jacket Lv3"
 }
+equipment {
+  prefab_name: "Seamus_Resilience Lv3"
+}
+equipment {
+  prefab_name: "Spell Powerbolt 4 (Seamus)"
+}
+equipment {
+  prefab_name: "Spell Armor 1 (Seamus)"
+}
+equipment {
+  prefab_name: "Spell Heal Wound 2"
+}
+equipment {
+  prefab_name: "Spell Aim (Seamus)"
+}
+equipment {
+  prefab_name: "Spell Stunball 1"
+}

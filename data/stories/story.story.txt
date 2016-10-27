@@ -894,6 +894,60 @@ crew_list {
   }
   scale_variable: "CharacterScaleAmount"
 }
+crew_list {
+  id: "Seamus"
+  name: "Seamus O\'Toole"
+  title: "Crew: Mage"
+  prerequisites {
+  }
+  active_nodes {
+    name: "LV1"
+    scale_level: 0
+    associated_char_sheet: "crew_lv1_seamus"
+    node_idx: 0
+  }
+  active_nodes {
+    name: "LV2"
+    scale_level: 1
+    crew_variants: "Seamus_Cannon_1"
+    crew_variants: "Seamus_Toolbox_1"
+    associated_char_sheet: "crew_lv2_seamus"
+    node_idx: 1
+  }
+  active_nodes {
+    name: "LV3"
+    scale_level: 2
+    crew_variants: "Seamus_Cannon_2"
+    crew_variants: "Seamus_Toolbox_2"
+    associated_char_sheet: "crew_lv3_seamus"
+    node_idx: 2
+  }
+  active_nodes {
+    name: "LV4"
+    scale_level: 3
+    crew_variants: "Seamus_Cannon_3"
+    crew_variants: "Seamus_Toolbox_3"
+    associated_char_sheet: "crew_lv4_seamus"
+    node_idx: 3
+  }
+  active_nodes {
+    name: "LV5"
+    scale_level: 4
+    crew_variants: "Seamus_Cannon_4"
+    crew_variants: "Seamus_Toolbox_4"
+    associated_char_sheet: "crew_lv5_seamus"
+    node_idx: 4
+  }
+  active_nodes {
+    name: "LV6"
+    scale_level: 5
+    crew_variants: "Seamus_Cannon_5"
+    crew_variants: "Seamus_Toolbox_5"
+    associated_char_sheet: "crew_lv6_seamus"
+    node_idx: 5
+  }
+  scale_variable: "CharacterScaleAmount"
+}
 crew_advancement_variable: "CharacterScaleAmount"
 crew_advancement_min_val: 1
 allowFinalSaveImport: false

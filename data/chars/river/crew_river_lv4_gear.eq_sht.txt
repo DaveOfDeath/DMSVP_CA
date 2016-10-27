@@ -1,6 +1,6 @@
 unique_id: "Crew_River_Lv4_Gear"
 equipment {
-  prefab_name: "AR 1 AK98"
+  prefab_name: "AR 2 SRPM"
 }
 equipment {
   prefab_name: "Spell Waterbolt 2 (River)"

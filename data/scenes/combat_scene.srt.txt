@@ -2458,8 +2458,6 @@ scene_dimensions {
   is_matrix: true
   max_alarm_value: 100
 }
-character_roster {
-}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -2470,216 +2468,6 @@ hiring_slot_count: 3
 hiring_minimum_karma: 0
 hiring_maximum_karma: 8
 roster_overrides {
-  roster_entries {
-    reference_id: "crew_lv1_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 0
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv2_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 1
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv3_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 2
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv4_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 3
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv5_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 4
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
-  roster_entries {
-    reference_id: "crew_lv6_violet"
-    hiring_conditions {
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "579e0109346265441c0058b1"
-            }
-            args {
-              string_value: "CharacterScaleAmount"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 5
-        }
-      }
-    }
-    hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
-  }
   roster_entries {
     reference_id: "crew_lv1_bartlett"
     hiring_conditions {
@@ -2857,6 +2645,216 @@ roster_overrides {
   }
   roster_entries {
     reference_id: "crew_lv6_bartlett"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv1_seamus"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv2_seamus"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv3_seamus"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv4_seamus"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv5_seamus"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv6_seamus"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
@@ -3070,6 +3068,216 @@ roster_overrides {
   }
   roster_entries {
     reference_id: "crew_lv6_river"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv1_violet"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv2_violet"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv3_violet"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv4_violet"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv5_violet"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "579e0109346265441c0058b1"
+            }
+            args {
+              string_value: "CharacterScaleAmount"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
+  }
+  roster_entries {
+    reference_id: "crew_lv6_violet"
     hiring_conditions {
       ops {
         functionName: "Comparison (int)"
