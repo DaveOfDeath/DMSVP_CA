@@ -8594,3 +8594,332 @@ props {
   orientation: ORIENTATION_E
   lod: 0
 }
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5811ea563462654c1600301d"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5811ea563462654c1600301e"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5811ea5a3462654c16003021"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5811ea5a3462654c16003022"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_heavy"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineLrg"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineClose"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineLrgOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 2
+    spell_bounce_list: "BounceTwice_Dragonline"
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.12
+    uirep {
+      description: "Dragon Line (Heavy)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_medium"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_hp_damage_mod: 3
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_mediumap"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_ap_damage_mod: 1
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_medium"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  idRef {
+    id: "5811eab63462654c16003023"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_hp_damage_mod: 3
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 21
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "5811eab63462654c16003024"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_heavy"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineLrg"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineClose"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineLrgOff"
+  }
+  idRef {
+    id: "5811eab63462654c16003025"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 2
+    spell_bounce_list: "BounceTwice_Dragonline"
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.12
+    uirep {
+      description: "Dragon Line (Heavy)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "5811eab63462654c16003026"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_mediumap"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  idRef {
+    id: "5811eab63462654c16003027"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_ap_damage_mod: 1
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}

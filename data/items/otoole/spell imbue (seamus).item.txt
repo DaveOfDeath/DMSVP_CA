@@ -3,7 +3,7 @@ type: ItemType_Spell
 uirep {
   icon: "icon_dragonslayeridol_wrath"
   name: "Imbue"
-  description: "Target gains +2 Armor, +1 Body, +1 Quickness and +1 Strength. Lasts until combat ends. Shares a cooldown with other Armor spells."
+  description: "Target gains +2 Armor. Target also gains +1 Body, Quickness and Strength for 4 RNDs.  Shares a cooldown with other Armor spells."
 }
 anim_type: AnimType_Spell
 coreAttribute: Attribute_Willpower
@@ -45,7 +45,7 @@ isBuff: true
 cooldown: 2
 cooldown_category: "armorbuff"
 isMagic: true
-effectDuration: -1
+effectDuration: 4
 fxrep {
   preActionFxName: "GenericSpellPrepare"
   actionFxName: "GenericSpellCastAction"
@@ -55,10 +55,10 @@ fxrep {
 }
 activationStatusEffects {
   uirep {
-    icon: "icon_armor1"
+    icon: "icon_kamikaze"
     name: "Imbued: Armor +2, +1 Bod, Quick, Str"
   }
-  stackingCategory: "Armor"
+  stackingCategory: "Imbue"
   statMods {
     attribute: Attribute_Armor
     intModValue: 2

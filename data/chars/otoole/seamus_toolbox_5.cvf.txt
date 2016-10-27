@@ -3,7 +3,7 @@ crew_id: "Seamus"
 name: "Magical Toolbox"
 icon: "icon_mysticarmor"
 short_desc: "Deflect"
-long_desc: "Replaces Seamus\'s Heal spell with Deflect. Shields a target from up to 20 HP DMG for 1 RND. Cooldown: 3."
+long_desc: "Replaces Seamus\'s Heal spell with Deflect. Shields a target from up to 15 HP DMG for 1 RND. Cooldown: 3."
 equipment_to_add {
   prefab_name: "Spell Deflect (Seamus)"
 }

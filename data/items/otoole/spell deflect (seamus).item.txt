@@ -3,7 +3,7 @@ type: ItemType_Spell
 uirep {
   icon: "icon_armor3"
   name: "Deflect"
-  description: "Reduces incoming DMG by 20. Lasts 1 RNDS."
+  description: "Reduces incoming DMG by 15. Lasts 1 RNDS."
 }
 anim_type: AnimType_Spell
 coreAttribute: Attribute_Willpower
@@ -55,12 +55,12 @@ fxrep {
 activationStatusEffects {
   uirep {
     icon: "icon_painresistance"
-    name: "Deflect: Incoming DMG -20"
+    name: "Deflect: Incoming DMG -15"
   }
   stackingCategory: "Deflect"
   statMods {
     attribute: Attribute_Damage_Reduction_Mod
-    intModValue: 20
+    intModValue: 15
   }
   fxScript: "Berlin:DeflectStatus"
 }
