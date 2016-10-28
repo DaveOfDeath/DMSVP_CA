@@ -1,0 +1,7 @@
+id: "Coyote_Grizzled_4"
+crew_id: "Coyote"
+name: "Grizzled Crusader"
+icon: "icon_cyberware_reloader"
+short_desc: "New and Improved"
+long_desc: "Coyote installs an auto-reloader in her cyberarm."
+general_tags_to_add: "Coyote_Grizzled_4"
