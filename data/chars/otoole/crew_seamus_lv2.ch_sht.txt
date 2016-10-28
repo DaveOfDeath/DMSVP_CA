@@ -28,7 +28,7 @@ stats {
   is_fearless: 0
 }
 skills {
-  ranged_combat: 0
+  ranged_combat: 2
   close_combat: 0
   throwing_weapons: 0
   spellcasting: 5
@@ -62,7 +62,7 @@ specializations {
   bows: 0
   heavy_weapons: 0
   laser: 0
-  pistol: 0
+  pistol: 2
   rifle: 0
   shotgun: 0
   smg: 0

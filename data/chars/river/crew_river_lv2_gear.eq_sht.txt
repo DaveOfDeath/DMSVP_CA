@@ -18,6 +18,9 @@ equipment {
   prefab_name: "Spell Heal Wound"
 }
 equipment {
+  prefab_name: "Spell Fog"
+}
+equipment {
   prefab_name: "Bound Water Spirit 2"
 }
 equipment {

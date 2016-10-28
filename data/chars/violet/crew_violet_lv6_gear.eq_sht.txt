@@ -15,6 +15,15 @@ equipment {
   prefab_name: "HealthPack_med"
 }
 equipment {
+  prefab_name: "Nail Grenade"
+}
+equipment {
+  prefab_name: "Grenade 2 (Frag)"
+}
+equipment {
+  prefab_name: "Grenade 3 (Flashbang)"
+}
+equipment {
   prefab_name: "ESP Shield"
 }
 equipment {

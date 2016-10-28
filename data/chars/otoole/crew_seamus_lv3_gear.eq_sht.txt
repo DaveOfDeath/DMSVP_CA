@@ -9,6 +9,9 @@ equipment {
   prefab_name: "Spell Powerbolt 3 (Seamus)"
 }
 equipment {
+  prefab_name: "Pi 1 Walther Palm"
+}
+equipment {
   prefab_name: "Spell Armor 1 (Seamus)"
 }
 equipment {
@@ -19,4 +22,10 @@ equipment {
 }
 equipment {
   prefab_name: "Spell Stunball 1"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack_med"
 }

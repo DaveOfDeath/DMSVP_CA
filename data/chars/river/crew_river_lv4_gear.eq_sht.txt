@@ -18,6 +18,12 @@ equipment {
   prefab_name: "Spell Heal Wound"
 }
 equipment {
+  prefab_name: "Spell Fog"
+}
+equipment {
+  prefab_name: "Spell Blur 1"
+}
+equipment {
   prefab_name: "Bound Hurricane Spirit 4"
 }
 equipment {
