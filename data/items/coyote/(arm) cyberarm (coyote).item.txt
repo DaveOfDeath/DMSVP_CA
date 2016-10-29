@@ -5,11 +5,6 @@ uirep {
   name: "Coyote\'s Cyber Arm"
   description: "Designed to be a simple replacement for the typical organic limb."
 }
-equippedStatusEffects {
-  statMods {
-    attribute: Attribute_Magic_Essence
-    floatModValue: -1.0
-  }
 modelessAbilities: "ReloadAll (Coyote)"
 cyberware_type: CyberwareType_Arm
 outfit_texture: "cyber_1_arm"
