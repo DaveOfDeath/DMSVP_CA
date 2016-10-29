@@ -1,19 +1,16 @@
 id: "(Coyote) High Noon 4"
 uirep {
   icon: "icon_chainshot"
-  name: "High Noon"
-  description: "Subsequent attacks cost 0ap until you miss or reload."
+  name: "High Noon 3rd"
+  description: "Subsequent attacks cost 0ap until you miss."
 }
 anim_action: AnimAction_Attack
 apCostMod: -10
 hpDamageMod: 0
 apDamageMod: 0
-accuracyMod: 0
-prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO < 6"
-prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 2"
+accuracyMod: -15
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 0"
 prereqStrings: "TAG.Coyote_Eye_5 EXISTS"
-prereqStrings: "Player.CONDITION.Condition_StanceNormal2 != 1"
-prereqStrings: "Player.CONDITION.Condition_StanceNormal3 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceDefense3 == 1"
 prereqStrings: "Player.CONDITION.Condition_StanceCritical2 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceCritical3 != 1"
@@ -42,7 +39,7 @@ damageBucket {
 attackRatingMod: 0
 offensiveAbility: true
 ammoCost: 1
-cooldown: 2
+cooldown: 3
 fxrep {
   preActionFxName: ""
   actionFxName: "GunChainFireAction"

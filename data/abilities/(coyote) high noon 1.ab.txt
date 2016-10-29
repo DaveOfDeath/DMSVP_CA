@@ -2,14 +2,14 @@ id: "(Coyote) High Noon 1"
 uirep {
   icon: "icon_chainshot"
   name: "High Noon"
-  description: "Subsequent attacks cost 0ap until you miss or reload."
+  description: "Subsequent attacks cost 0ap until you miss."
 }
 anim_action: AnimAction_Attack
 apCostMod: 0
 hpDamageMod: 0
 apDamageMod: 0
 accuracyMod: 0
-prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 2"
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 1"
 prereqStrings: "TAG.Coyote_Eye_5 EXISTS"
 prereqStrings: "Player.CONDITION.Condition_StanceNormal2 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceNormal3 != 1"
