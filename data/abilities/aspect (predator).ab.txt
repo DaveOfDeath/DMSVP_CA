@@ -2,7 +2,7 @@ id: "Aspect (Predator)"
 uirep {
   icon: "icon_spiritmelee"
   name: "Predator Aspect"
-  description: "Both critical chance and critical multiplier are raised. However, Dodge is reduced by 1 and she takes 2 additional points of damage from attacks."
+  description: "Both critical chance and critical multiplier are raised. However, Dodge is reduced by 2 and she takes 10 additional points of damage from attacks."
 }
 apCostMod: -10
 hpDamageMod: 0
@@ -32,11 +32,11 @@ activationStatusEffects {
   stackingCategory: "Stance"
   statMods {
     skill: Skill_Dodge
-    intModValue: -1
+    intModValue: -2
   }
   statMods {
     attribute: Attribute_Damage_Reduction_Mod
-    intModValue: -2
+    intModValue: -10
   }
   statusConditions: Condition_StanceCritical1
 }

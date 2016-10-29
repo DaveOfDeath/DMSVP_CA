@@ -8923,3 +8923,51 @@ props {
     }
   }
 }
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  displayName: "oExit_B"
+  idRef {
+    id: "5814b93f346265f404000121"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "57fc4a42346265142b0058da"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_Generic
+    interaction_info_text: "Premature Exit"
+  }
+  lod: 0
+}
