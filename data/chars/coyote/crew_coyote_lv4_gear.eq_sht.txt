@@ -6,10 +6,10 @@ equipment {
   prefab_name: "Coyote_Battle Lv2"
 }
 equipment {
-  prefab_name: "Sh 2 Remington 990"
+  prefab_name: "Sh 2 Remington (Coyote)"
 }
 equipment {
-  prefab_name: "Pi 2 Browning Max-Power"
+  prefab_name: "Pi 2 Warhawk (Coyote)"
 }
 equipment {
   prefab_name: "Grenade 2 (Frag)"
