@@ -11,6 +11,7 @@ apDamageMod: 0
 accuracyMod: 0
 prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 1"
 prereqStrings: "TAG.Coyote_Eye_5 EXISTS"
+prereqStrings: "Player.CONDITION.Condition_MatrixCharge1 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceNormal2 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceNormal3 != 1"
 prereqStrings: "Player.CONDITION.Condition_StanceDefense3 != 1"
@@ -41,7 +42,7 @@ damageBucket {
 attackRatingMod: 0
 offensiveAbility: true
 ammoCost: 1
-cooldown: 3
+cooldown: 6
 fxrep {
   preActionFxName: ""
   actionFxName: "GunChainFireAction"

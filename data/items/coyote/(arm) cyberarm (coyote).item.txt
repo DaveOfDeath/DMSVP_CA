@@ -5,7 +5,6 @@ uirep {
   name: "Coyote\'s Cyber Arm"
   description: "Designed to be a simple replacement for the typical organic limb."
 }
-modelessAbilities: "ReloadAll (Coyote)"
 cyberware_type: CyberwareType_Arm
 outfit_texture: "cyber_1_arm"
 store_cost: 1000

@@ -37,7 +37,7 @@ damageBucket {
 attackRatingMod: 0
 offensiveAbility: true
 ammoCost: 1
-cooldown: 3
+cooldown: 6
 fxrep {
   preActionFxName: ""
   actionFxName: "GunChainFireAction"
@@ -53,8 +53,8 @@ successCasterStatusEffects {
     name: "Exhausted"
   }
   stackingCategory: "Noon"
-  statusConditions: Condition_StanceNormal2
+  statusConditions: Condition_MatrixCharge1
   fxScript: "AdeptOffenseBuffStatus"
   is_buff: true
 }
-success_caster_effect_duration: 1
+success_caster_effect_duration: 5
