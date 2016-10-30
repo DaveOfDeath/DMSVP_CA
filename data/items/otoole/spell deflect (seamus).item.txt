@@ -1,5 +1,5 @@
 id: "Spell Deflect (Seamus)"
-type: ItemType_Spell
+type: ItemType_Shaman
 uirep {
   icon: "icon_armor3"
   name: "Deflect"
