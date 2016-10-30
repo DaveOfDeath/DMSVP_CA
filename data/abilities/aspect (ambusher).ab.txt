@@ -31,6 +31,7 @@ activationStatusEffects {
   }
   stackingCategory: "Stance"
   statusConditions: Condition_StanceDefense2
+  fxScript: "HongKong:SamuraiDefenseBoostStatus"
 }
 send_event_on_activation: true
 instantAction: true

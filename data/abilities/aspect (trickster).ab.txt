@@ -39,7 +39,7 @@ activationStatusEffects {
     intModValue: 2
   }
   statusConditions: Condition_StanceDefense1
-  fxScript: "HongKong:SamuraiCoverStatus"
+  fxScript: "AdeptOffenseBuffStatus"
 }
 send_event_on_activation: true
 instantAction: true

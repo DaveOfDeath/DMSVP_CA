@@ -39,6 +39,7 @@ activationStatusEffects {
     intModValue: -10
   }
   statusConditions: Condition_StanceCritical1
+  fxScript: "KillingHandsStatus"
 }
 send_event_on_activation: true
 instantAction: true
