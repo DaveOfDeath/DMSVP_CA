@@ -6,7 +6,7 @@ equipment {
   prefab_name: "Sword 3 Weaponfocus (Bartlett)"
 }
 equipment {
-  prefab_name: "SMG 1 Uzi III"
+  prefab_name: "SMG 2 Ingram Smartgun"
 }
 equipment {
   prefab_name: "DocWagonBasic"
