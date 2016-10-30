@@ -10,6 +10,8 @@ apDamageMod: 0
 accuracyMod: 0
 attackRatingMod: 0
 effectDuration: 3
+cooldown: 1
+cooldown_category: "aspect"
 fxrep {
   preActionFxName: ""
   actionFxName: "HongKong:SamuraiStanceChangeCritToNorm"

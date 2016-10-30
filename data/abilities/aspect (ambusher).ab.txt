@@ -11,6 +11,8 @@ accuracyMod: 0
 prereqStrings: "TAG.Coyote_Grizzled_3 EXISTS"
 attackRatingMod: 0
 effectDuration: 3
+cooldown: 1
+cooldown_category: "aspect"
 fxrep {
   preActionFxName: ""
   actionFxName: "HongKong:SamuraiStanceChangeNormToDef"
