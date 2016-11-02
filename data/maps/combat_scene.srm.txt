@@ -2172,9 +2172,9 @@ props {
 props {
   name: "matrixHK_clutter_cube13"
   gridPoint {
-    x: 37
+    x: 35
     y: 0
-    z: -2
+    z: -6
   }
   orientation: ORIENTATION_S
   lod: 0

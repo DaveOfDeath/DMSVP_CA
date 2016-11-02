@@ -5,7 +5,7 @@ uirep {
   description: "Two attacks on a single target with one action. Critical hit chance increased."
 }
 anim_action: AnimAction_Attack
-apCostMod: 0
+apCostMod: 1
 hpDamageMod: 0
 apDamageMod: 0
 accuracyMod: -5

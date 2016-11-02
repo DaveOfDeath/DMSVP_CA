@@ -1,0 +1,7 @@
+id: "Paco_Tough_2"
+crew_id: "Paco"
+name: "Street Tough"
+icon: "icon_ability_ranged_ShootGrenade"
+short_desc: "Potato Launcher"
+long_desc: "Paco carries a primitive mortar weapon. It gets the job done."
+general_tags_to_add: "Paco_Tough_2"

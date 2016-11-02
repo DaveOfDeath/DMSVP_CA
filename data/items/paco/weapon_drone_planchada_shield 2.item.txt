@@ -1,0 +1,40 @@
+id: "Weapon_Drone_Planchada_Shield 2"
+type: ItemType_Unarmed
+uirep {
+  icon: "icon_crew_racterdrone_koschei_melee"
+  name: "Control Systems"
+  description: "So simple even a child could kill themselves with it."
+}
+anim_type: AnimType_Null
+coreAttribute: Attribute_None
+coreSkill: Skill_None
+apCost: 1
+baseHPDamage: 0
+baseAPDamage: 0
+rangeModTable: 10
+noiseLevel: 3
+noiseRounds: 1
+modelessAbilities: "Deploy Shield Heavy (Planchada)"
+affectsFriendly: true
+affectsEnemy: true
+canTargetSelf: true
+canTargetActor: false
+effectDuration: 1
+effectRadius: 0
+effectOnTile: true
+store_cost: 50
+sorting_group: "crewWeapon"
+activationStatusEffects {
+  stackingCategory: "Riot"
+  statMods {
+    attribute: Attribute_Armor
+    intModValue: 2
+  }
+  statMods {
+    attribute: Attribute_Move_Speed
+    intModValue: -18
+  }
+  statusConditions: Condition_Rooted
+  statusConditions: Condition_CoverHeavy
+  fxScript: "HongKong:SamuraiCoverStatus"
+}
