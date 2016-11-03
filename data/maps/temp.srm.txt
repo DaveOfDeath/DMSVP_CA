@@ -246,9 +246,9 @@ props {
 props {
   name: "whitebox_cover_1x1x1"
   gridPoint {
-    x: -10
+    x: -11
     y: 0
-    z: -1
+    z: 1
   }
   orientation: ORIENTATION_S
   displayName: "oExit"
@@ -300,6 +300,29 @@ props {
     interactionRadius: 1
     interactionIcon: InteractionIcon_Inspect
     interaction_info_text: "Karma"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  displayName: "oAll"
+  idRef {
+    id: "5819e3fd346265442800221e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "combat_all"
+      confirmation_text: "This is an experimental scene."
+    }
+    interaction_info_text: "Testing All"
   }
   lod: 0
 }

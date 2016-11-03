@@ -81,13 +81,15 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 2
+    x: -1
     y: 0
-    z: -6
+    z: -4
   }
   orientation: ORIENTATION_S
-  GeneralTags: "Paco_Smart_1"
   GeneralTags: "Paco_Smart_2"
+  GeneralTags: "Paco_Tough_2"
+  GeneralTags: "Paco_Tough_4"
+  GeneralTags: "Paco_Tough_5"
   displayName: "paco"
   idRef {
     id: "581556463462658805003680"
@@ -164,16 +166,18 @@ characters {
     }
     team_id: "Shadowrunners"
     char_name: "Paco"
-    GeneralTags: "Paco_Smart_1"
     GeneralTags: "Paco_Smart_2"
+    GeneralTags: "Paco_Tough_2"
+    GeneralTags: "Paco_Tough_4"
+    GeneralTags: "Paco_Tough_5"
     pc_spawn_number: -1
     cyberware_eyes: "(Eyes) Cybereye (Paco)"
+    cyberware_left_arm: "(Arm) Induction Datajack"
     portrait {
       filename: "npc_humanmale_paco"
     }
     karma: 216
     last_name: ""
-    cyberware_head: "(Head) Datajack"
   }
 }
 characters {
@@ -295,9 +299,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -3
+    x: -4
     y: 0
-    z: -4
+    z: -5
   }
   orientation: ORIENTATION_S
   GeneralTags: "Paco_Smart_1"
@@ -395,9 +399,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -1
+    x: -4
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_S
   GeneralTags: "Paco_Tough_1"

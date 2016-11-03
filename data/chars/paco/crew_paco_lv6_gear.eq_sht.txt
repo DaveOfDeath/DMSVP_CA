@@ -12,6 +12,9 @@ equipment {
   prefab_name: "Drug Cache 2 (Paco)"
 }
 equipment {
+  prefab_name: "Potato Sack 1 (Paco)"
+}
+equipment {
   prefab_name: "DroneRepairKit_hi"
 }
 equipment {
