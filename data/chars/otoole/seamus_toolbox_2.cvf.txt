@@ -3,7 +3,7 @@ crew_id: "Seamus"
 name: "Magical Toolbox"
 icon: "icon_supportspells_dual_aim_3"
 short_desc: "Dual Aim"
-long_desc: "Cating Aim on a traget also effects Seamus."
+long_desc: "Casting Aim on a traget also effects Seamus."
 equipment_to_add {
   prefab_name: "Spell Dual Aim (Seamus)"
 }
