@@ -1,0 +1,443 @@
+minX: -33
+minZ: -5
+numX: 38
+numZ: 13
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "policeStation_street_overturnedBarrel02"
+  gridPoint {
+    x: -27
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "policeStation_street_overturnedBarrel01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "policeStation_street_barrel02"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "policeStation_street_barrel01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandEnd"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandMid"
+  gridPoint {
+    x: -11
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_street_brokenLamp03"
+  gridPoint {
+    x: -18.7
+    y: 0
+    z: 0.7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_street_brokenLamp02"
+  gridPoint {
+    x: -8
+    y: 0
+    z: 0.5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_signStreetsStop"
+  gridPoint {
+    x: -2.6
+    y: 0
+    z: 0.4
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite03"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite02"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandMid"
+  gridPoint {
+    x: -17
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e0223462659c1a00221a"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite01"
+  gridPoint {
+    x: -20
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandEnd"
+  gridPoint {
+    x: -33
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5819e0443462659c1a00221b"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite01"
+  gridPoint {
+    x: -8
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e0603462659c1a00221c"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite03"
+  gridPoint {
+    x: -20
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e0643462659c1a00221d"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite01"
+  gridPoint {
+    x: -14
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e08e3462659c1a00221f"
+  }
+  lod: 0
+}
+props {
+  name: "haven_street_brokenLamp02"
+  gridPoint {
+    x: -26
+    y: 0
+    z: 0.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e0e53462659c1a002220"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite01"
+  gridPoint {
+    x: -26
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e12a3462659c1a002223"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite03"
+  gridPoint {
+    x: -26
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e12a3462659c1a002224"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite01"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e12a3462659c1a002225"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite03"
+  gridPoint {
+    x: -32
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e12a3462659c1a002226"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandMid"
+  gridPoint {
+    x: -23
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e1343462659c1a002227"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_islandMid"
+  gridPoint {
+    x: -29
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e1363462659c1a002228"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_street_signStreetsStop"
+  gridPoint {
+    x: -32.2
+    y: 0
+    z: 0.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e1453462659c1a002229"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: -32
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e16c3462659c1a00222a"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e1803462659c1a00222b"
+  }
+  lod: 0
+}
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: -23
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5819e18c3462659c1a00222c"
+  }
+  lod: 0
+}
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5819e37c3462654428002219"
+  }
+  lod: 0
+}
+props {
+  name: "policeStation_street_overturnedBarrel02"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e380346265442800221a"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite02"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5819e4c1346265442800221f"
+  }
+  lod: 0
+}
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5819e4c73462654428002220"
+  }
+  lod: 0
+}
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5819e4c93462654428002221"
+  }
+  lod: 0
+}
+props {
+  name: "taiPo_street_barricade01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5819e4ca3462654428002222"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_twoLaneWhite02"
+  gridPoint {
+    x: -2
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a91f9346265c82a000127"
+  }
+  lod: 0
+}

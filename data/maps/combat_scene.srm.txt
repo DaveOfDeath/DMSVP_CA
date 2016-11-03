@@ -8651,7 +8651,7 @@ props {
   gridPoint {
     x: 2
     y: 0
-    z: -1
+    z: 1
   }
   orientation: ORIENTATION_S
   properties {
@@ -8682,7 +8682,7 @@ props {
   gridPoint {
     x: 2
     y: 0
-    z: -3
+    z: -1
   }
   orientation: ORIENTATION_S
   properties {
@@ -8714,7 +8714,7 @@ props {
   gridPoint {
     x: 2
     y: 0
-    z: 1
+    z: 3
   }
   orientation: ORIENTATION_S
   properties {
@@ -8746,7 +8746,7 @@ props {
   gridPoint {
     x: 2
     y: 0
-    z: -2
+    z: 0
   }
   orientation: ORIENTATION_S
   properties {
@@ -8764,7 +8764,7 @@ props {
   gridPoint {
     x: 2
     y: 0
-    z: 0
+    z: 2
   }
   orientation: ORIENTATION_S
   properties {
@@ -8782,7 +8782,7 @@ props {
   gridPoint {
     x: 3
     y: 0
-    z: 20
+    z: 19
   }
   orientation: ORIENTATION_S
   properties {
@@ -8817,7 +8817,7 @@ props {
   gridPoint {
     x: 3
     y: 0
-    z: 21
+    z: 20
   }
   orientation: ORIENTATION_S
   properties {
@@ -8838,7 +8838,7 @@ props {
   gridPoint {
     x: 3
     y: 0
-    z: 22
+    z: 21
   }
   orientation: ORIENTATION_S
   properties {
@@ -8872,7 +8872,7 @@ props {
   gridPoint {
     x: 3
     y: 0
-    z: 23
+    z: 22
   }
   orientation: ORIENTATION_S
   properties {
@@ -8893,7 +8893,7 @@ props {
   gridPoint {
     x: 3
     y: 0
-    z: 24
+    z: 23
   }
   orientation: ORIENTATION_S
   properties {
@@ -8928,7 +8928,7 @@ props {
   gridPoint {
     x: 8
     y: 0
-    z: -1
+    z: -4
   }
   orientation: ORIENTATION_S
   displayName: "oExit_B"
@@ -8968,6 +8968,175 @@ props {
     }
     interactionIcon: InteractionIcon_Generic
     interaction_info_text: "Premature Exit"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 4
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e323462658005006c6a"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e323462658005006c6b"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e473462658005006c6c"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e4d3462658005006c6d"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e603462658005006c6e"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e603462658005006c6f"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e633462658005006c70"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e663462658005006c71"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e683462658005006c72"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 7
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e7b3462658005006c73"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_ground"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e7d3462658005006c74"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e933462658005006c75"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_cover_1x1x1"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "581a9e953462658005006c76"
   }
   lod: 0
 }

@@ -106,7 +106,7 @@ parentStory: ""
 scene_title: "Set the Scale"
 scene_subtitle: ""
 scene_synopsis: "Start the convo, set the scale, transistion."
-scene_image: ""
+scene_image: "loadingimage_epilogue_s1"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {

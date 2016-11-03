@@ -2389,7 +2389,7 @@ parentStory: ""
 scene_title: "Test Combat"
 scene_subtitle: ""
 scene_synopsis: "Bring your crew and test their Advancement Variants."
-scene_image: ""
+scene_image: "loadingimage_epilogue_s1"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
