@@ -1,47 +1,64 @@
 triggers {
-  name: "onContinue.DetainPC0"
+  name: "interactContinue"
   events {
     ops {
-      functionName: "On Map Start"
-    }
-    ops {
-      functionName: "On Load From Save Game"
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5819e16c3462659c1a00222a"
+          }
+        }
+      }
     }
   }
   conditions {
   }
   actions {
     ops {
-      functionName: "Detain Actor"
+      functionName: "Delete Props by Tag"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Get Map Item (SenseTagList)"
           args {
-            call_value {
-              functionName: "Get Map Item (Player)"
-              args {
-                int_value: 0
-              }
-            }
-          }
-          args {
+            string_value: "ex_Wall"
           }
         }
       }
       args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "DetainMethod"
+            string_value: "EnableOrDisable"
           }
           args {
             int_value: 1
           }
         }
       }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5819e16c3462659c1a00222a"
+          }
+        }
+      }
     }
   }
-  isActive: false
+  isActive: true
   idRef {
     id: "5819e23b3462659c1a002238"
   }
@@ -52,10 +69,10 @@ triggers {
 regions {
   name: "cam_Main"
   position {
-    x: -33
-    y: -6
-    width: 39
-    height: 15
+    x: -69
+    y: -22
+    width: 73
+    height: 42
   }
   enabledAtStart: true
   is_camera_region: true
@@ -106,6 +123,64 @@ regions {
   combat_intro_stinger: ""
   combat_outro_stinger: ""
   vfx_fill_prefab_name: ""
+}
+regions {
+  name: "vfx_Fill"
+  position {
+    x: -65
+    y: 11
+    width: 68
+    height: 8
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: true
+  idRef {
+    id: "581b2ce5346265a828006a62"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: "DefaultWaterFill"
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -345,135 +420,905 @@ characters {
   }
 }
 characters {
-  name: "system_spawner_playerSpawner"
+  name: "chars_icon_playerIcon"
   gridPoint {
-    x: -3
+    x: -2
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_N
+  displayName: "Coyote_Inst"
+  idRef {
+    id: "581b217b346265a828006a18"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Story/CoyoteUgly"
+    character_sheet_id: "Crew_Coyote_Lv6"
+    equipment_sheet_id: "Crew_Coyote_Lv6_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Coyote"
+    GeneralTags: "isCoyote"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_left_arm: "(arm) cyberarm (coyote)"
+    portrait {
+      filename: "npc_humanfemale_coyotehealed"
+    }
+    description_bio: "Part time runner, full time badass. Product of the streets who mixes a mean cocktail."
+    portrait_code_override: ""
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Bartender"
+    has_fist: true
+    id: "Crew_Lv6_Coyote"
+    crew_id: "Coyote"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -2
     y: 0
     z: -4
   }
   orientation: ORIENTATION_N
+  displayName: "Paco_Inst"
   idRef {
-    id: "581a91e0346265c82a000121"
+    id: "581b21a4346265a828006a19"
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Story/Paco"
+    character_sheet_id: "Crew_Paco_Lv6"
+    equipment_sheet_id: "Crew_Paco_Lv6_Gear"
     character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
       archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
     }
     team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 1
+    char_name: "Paco"
+    GeneralTags: "isPaco"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_left_arm: "(Arm) Induction Datajack"
+    portrait {
+      filename: "npc_humanmale_paco"
+    }
+    description_bio: "Ganger and lover, Paco is desperate to prove himself to Coyote and the world."
+    portrait_code_override: "s6h6c7b7c7"
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Rigger"
+    has_fist: false
+    id: "Crew_Lv6_Paco"
+    crew_id: "Paco"
   }
 }
 characters {
-  name: "system_spawner_playerSpawner"
+  name: "chars_icon_playerIcon"
   gridPoint {
-    x: -3
+    x: -1
     y: 0
     z: -2
   }
   orientation: ORIENTATION_N
+  displayName: "Violet_Inst"
   idRef {
-    id: "581a91e6346265c82a000122"
+    id: "581b21bb346265a828006a1a"
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/TrollFemale"
+    character_sheet_id: "Crew_Violet_Lv6"
+    equipment_sheet_id: "Crew_Violet_Lv6_Gear"
     character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
       archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
     }
     team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 2
+    char_name: "Violet"
+    GeneralTags: "isViolet"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait {
+      filename: "pc_orkfemale_excl_oni"
+    }
+    description_bio: "A street kid with street muscle who brings her unusal style to the Matrix."
+    portrait_code_override: "s6h12c1b0t9"
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Decker"
+    id: "Crew_Lv6_Violet"
+    crew_id: "Violet"
+    cyberware_head: "(Head) Datajack"
   }
 }
 characters {
-  name: "system_spawner_playerSpawner"
+  name: "chars_icon_playerIcon"
   gridPoint {
-    x: -1
+    x: 0
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_N
+  displayName: "Seamus_Inst"
+  idRef {
+    id: "581b21ff346265a828006a1b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/DwarfMale"
+    character_sheet_id: "Crew_Seamus_Lv6"
+    equipment_sheet_id: "Crew_Seamus_Lv6_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+    }
+    team_id: "Shadowrunners"
+    char_name: "Seamus O\'Toole"
+    GeneralTags: "isSeamus"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait {
+      filename: "pc_dwarfmale_02b_beardie"
+    }
+    description_bio: "Seamus trusts in his body, mind, and magic - and in very little else. Well, and single malt whiskey, too."
+    portrait_code_override: "s5h10c13b5c13t0"
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Mage"
+    id: "Crew_Lv6_Seamus"
+    crew_id: "Seamus"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_N
+  displayName: "River_Inst"
+  idRef {
+    id: "581b2230346265a828006a1c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Triads/ElfFemaleTriad1"
+    character_sheet_id: "Crew_River_Lv6"
+    equipment_sheet_id: "Crew_River_Lv6_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+    }
+    team_id: "Shadowrunners"
+    char_name: "River Daye"
+    GeneralTags: "isRiver"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait {
+      filename: "pc_elffemale_13_rebecca"
+    }
+    description_bio: "A shaman of Dolphin, River is as changeable as the sea, dealing death or returning those on the edge with ease."
+    portrait_code_override: "s3h3c1b0c0t0"
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Shaman"
+    id: "Crew_Lv6_River"
+    crew_id: "River"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_N
+  displayName: "Jon_Inst"
+  idRef {
+    id: "581b2258346265a828006a1d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Story/JonathanBartlett"
+    character_sheet_id: "Crew_Bartlett_Lv6"
+    equipment_sheet_id: "Crew_Bartlett_Lv6_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Bartlett"
+    GeneralTags: "isBartlett"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_left_leg: "(leg) hydraulic jack (bartlett left)"
+    cyberware_right_leg: "(leg) hp quickness cyberleg (bartlett right)"
+    portrait {
+      filename: "backer_humanmale_jonathanbartlett_jonbartlett_tribute"
+    }
+    description_bio: "Torn between the world of magic and technology, Jon is always itching for aciton."
+    portrait_code_override: ""
+    karma: 6
+    hiring_cost_override: 0
+    hiring_tag: "Crew: Cybered Adept"
+    has_fist: true
+    id: "Crew_Lv6_Bartlett"
+    crew_id: "Bartlett"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -65
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f4c346265a828006aeb"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:HKPolice/ElfFemaleHKPolice2"
+    character_sheet_id: "Errant_Lv1_Captain"
+    equipment_sheet_id: "Errant_Lv1_Captain"
+    character_mod {
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Captain"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -52
     y: 0
     z: -3
   }
   orientation: ORIENTATION_N
   idRef {
-    id: "581a91eb346265c82a000123"
+    id: "581b2f50346265a828006aec"
   }
   lod: 0
   character_instance {
+    prefab_name: "HongKong:HKPolice/DwarfMaleHKPolice1"
+    character_sheet_id: "Errant_Lv1_Heavy_Explosive"
+    equipment_sheet_id: "Errant_Lv1_Explosive"
     character_mod {
-      archetypeName: "Player"
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
     }
-    team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 3
+    team_id: "LoneStar"
+    char_name: "HKPF Grenadier"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    scale_character_sheet: true
   }
 }
 characters {
-  name: "system_spawner_playerSpawner"
+  name: "chars_icon_playerIcon"
   gridPoint {
-    x: -1
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "581a91f3346265c82a000124"
-  }
-  lod: 0
-  character_instance {
-    character_mod {
-      archetypeName: "Player"
-    }
-    team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 6
-  }
-}
-characters {
-  name: "system_spawner_playerSpawner"
-  gridPoint {
-    x: -3
-    y: 0
-    z: 5
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "581a91f3346265c82a000125"
-  }
-  lod: 0
-  character_instance {
-    character_mod {
-      archetypeName: "Player"
-    }
-    team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 5
-  }
-}
-characters {
-  name: "system_spawner_playerSpawner"
-  gridPoint {
-    x: -3
+    x: -52
     y: 0
     z: 3
   }
   orientation: ORIENTATION_N
   idRef {
-    id: "581a91f3346265c82a000126"
+    id: "581b2f54346265a828006aed"
   }
   lod: 0
   character_instance {
+    prefab_name: "HongKong:HKPolice/ElfMaleHKPolice1"
+    character_sheet_id: "Errant_Lv1_Human_Mage"
+    equipment_sheet_id: "Errant_Lv1_Spellcasting"
     character_mod {
-      archetypeName: "Player"
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
     }
-    team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 4
+    team_id: "LoneStar"
+    char_name: "HKPF Mage"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -47
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f58346265a828006aee"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Errant_Lv1_Human_Pistol"
+    equipment_sheet_id: "Errant_Lv1_Pistol"
+    character_mod {
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Guard"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "lonestar_pistol"
+    scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -47
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f5b346265a828006aef"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Errant_Lv1_Ork_Shotgun"
+    equipment_sheet_id: "Errant_Lv1_Shotgun"
+    character_mod {
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Enforcer"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "lonestar_enforcer"
+    scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -59
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f5e346265a828006af0"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Berlin:KnightErrants/ElfMaleKnightErrantRigger"
+    character_sheet_id: "Errant_Lv1_Rigger"
+    equipment_sheet_id: "Errant_Lv1_Rigger_Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "gumbo_grunt"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Rigger"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    hiring_cost_override: 1000
+    scale_character_sheet: true
+    cyberware_head: "(Head) Datajack"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -60
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f61346265a828006af1"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:HKPolice/TrollFemaleHKPolice1"
+    character_sheet_id: "Errant_Lv1_Elf_Shaman"
+    equipment_sheet_id: "Errant_Lv1_Shaman"
+    character_mod {
+      archetypeName: "gumbo_grunt"
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Conjurer"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "581b2f64346265a828006af2"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Lonestar/OrkLoneStarCaptain"
+    character_sheet_id: "Errant_Lv1_Human_Sniper"
+    equipment_sheet_id: "Errant_Lv1_Sniper"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_Sniper"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "HKPF Sniper"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 52
+    hiring_cost_override: 1000
+    scale_character_sheet: true
   }
 }
 worldMapLocation {
@@ -544,24 +1389,6 @@ scene_dimensions {
   turns_per_round: 3
 }
 character_roster {
-  roster_entries {
-    reference_id: "crew_lv1_bartlett"
-    hiring_conditions {
-    }
-    hiring_cost: -1
-  }
-  roster_entries {
-    reference_id: "crew_lv1_coyote"
-    hiring_conditions {
-    }
-    hiring_cost: -1
-  }
-  roster_entries {
-    reference_id: "crew_lv1_seamus"
-    hiring_conditions {
-    }
-    hiring_cost: -1
-  }
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
@@ -569,15 +1396,15 @@ scene_hiring_prerequisites {
   prereq_conditions {
   }
 }
-hiring_slot_count: 3
+hiring_slot_count: 0
 hiring_minimum_karma: 0
-hiring_maximum_karma: 7
+hiring_maximum_karma: 0
 roster_overrides {
 }
 use_hiring_cost_warning: false
 hiring_average_cost: 0
 override_hiring_average_cost: false
-show_equip_screen_on_scene_load: true
+show_equip_screen_on_scene_load: false
 is_persistant: false
 is_persistant_has_value: false
 can_move_outside_camera_regions: false
