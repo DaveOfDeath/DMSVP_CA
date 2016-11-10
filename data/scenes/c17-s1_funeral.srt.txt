@@ -4891,7 +4891,7 @@ triggers {
   name: "Player0Died"
   events {
     ops {
-      functionName: "On Actor Downed"
+      functionName: "On Actor Death"
     }
   }
   conditions {
@@ -9292,7 +9292,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: 0
@@ -9481,7 +9481,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: 0
@@ -9669,7 +9669,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: 0
@@ -10241,7 +10241,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: -1
@@ -10333,7 +10333,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: -1
@@ -10622,7 +10622,7 @@ characters {
         essence: 0
         magic: 0
         hp: 0
-        ap: 0
+        ap: 1
         armor: 0
         force: 0
         morale: -1
