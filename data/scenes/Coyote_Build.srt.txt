@@ -1,10 +1,97 @@
+triggers {
+  name: "new_round"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "fire_up"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: false
+  idRef {
+    id: "581eb2dd346265c0150060cf"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "cam_main"
   position {
-    x: -3
-    y: -7
-    width: 8
-    height: 12
+    x: -4
+    y: -9
+    width: 10
+    height: 22
   }
   enabledAtStart: true
   is_camera_region: true
@@ -56,14 +143,72 @@ regions {
   combat_outro_stinger: ""
   vfx_fill_prefab_name: ""
 }
+regions {
+  name: "cam_cloest"
+  position {
+    x: 6
+    y: -18
+    width: 4
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "581f6a0e346265101d00458c"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: true
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
     x: -2
     y: 0
-    z: 3
+    z: 9
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_W
   GeneralTags: "Coyote_Grizzled_4"
   GeneralTags: "Coyote_Grizzled_2"
   GeneralTags: "Coyote_Eye_5"
@@ -160,11 +305,11 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 3
+    x: -1
     y: 0
-    z: 3
+    z: 9
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_W
   idRef {
     id: "58129b283462657c12006b45"
   }
@@ -182,9 +327,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 3
+    x: 8
     y: 0
-    z: -6
+    z: -17
   }
   orientation: ORIENTATION_W
   idRef {
@@ -196,6 +341,19 @@ characters {
     character_sheet_id: "Errant_Lv5_Ork_Shotgun"
     equipment_sheet_id: "Errant_Lv5_Shotgun"
     character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_Soldier"
       attitude: AttitudeAggressive
       attackRandom: AttackStyle_AllEqual
@@ -215,9 +373,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 2
+    x: -3
     y: 0
-    z: -6
+    z: -2
   }
   orientation: ORIENTATION_W
   idRef {
@@ -225,15 +383,73 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanFemale"
-    character_sheet_id: "Errant_Lv5_Ork_Shotgun"
-    equipment_sheet_id: "Errant_Lv5_Shotgun"
+    prefab_name: "Berlin:Objects/ExplosiveBarrel"
+    character_sheet_id: "Environment_Barrel_Explosive"
     character_mod {
-      archetypeName: "gumbo_Soldier"
-      attitude: AttitudeAggressive
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
       attackRandom: AttackStyle_AllEqual
       vulnerabilities {
       }
+    }
+    equipment {
+      prefab_name: "Circle Fire"
     }
     team_id: "LoneStar"
     char_name: "HKPF Enforcer"
@@ -241,49 +457,16 @@ characters {
     portrait {
       filename: ""
     }
-    hiring_set_randomizer: "lonestar_enforcer"
+    karma: 9
     scale_character_sheet: true
   }
 }
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 0
+    x: 8
     y: 0
-    z: -6
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5814184f3462654c24003674"
-  }
-  lod: 0
-  character_instance {
-    prefab_name: "Core/HumanFemale"
-    character_sheet_id: "Errant_Lv5_Ork_Shotgun"
-    equipment_sheet_id: "Errant_Lv5_Shotgun"
-    character_mod {
-      archetypeName: "gumbo_Soldier"
-      attitude: AttitudeAggressive
-      attackRandom: AttackStyle_AllEqual
-      vulnerabilities {
-      }
-    }
-    team_id: "LoneStar"
-    char_name: "HKPF Enforcer"
-    pc_spawn_number: -1
-    portrait {
-      filename: ""
-    }
-    hiring_set_randomizer: "lonestar_enforcer"
-    scale_character_sheet: true
-  }
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
-    x: 1
-    y: 0
-    z: -6
+    z: -16
   }
   orientation: ORIENTATION_W
   idRef {
@@ -291,15 +474,31 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanFemale"
+    prefab_name: "Seattle:Core/HumanFemale"
     character_sheet_id: "Errant_Lv5_Ork_Shotgun"
-    equipment_sheet_id: "Errant_Lv5_Shotgun"
     character_mod {
+      stats {
+        hp: -50
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: -6
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_Soldier"
       attitude: AttitudeAggressive
       attackRandom: AttackStyle_AllEqual
       vulnerabilities {
       }
+    }
+    equipment {
+      prefab_name: "Circle Fire"
     }
     team_id: "LoneStar"
     char_name: "HKPF Enforcer"
@@ -307,6 +506,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 92
     hiring_set_randomizer: "lonestar_enforcer"
     scale_character_sheet: true
   }
@@ -314,9 +514,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -2
+    x: 7
     y: 0
-    z: -6
+    z: -16
   }
   orientation: ORIENTATION_W
   idRef {
@@ -347,9 +547,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -1
+    x: 7
     y: 0
-    z: -6
+    z: -17
   }
   orientation: ORIENTATION_W
   idRef {
@@ -375,6 +575,294 @@ characters {
     }
     hiring_set_randomizer: "lonestar_enforcer"
     scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "fire_up"
+  displayName: "fire_1"
+  idRef {
+    id: "581f67d8346265101d004584"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "Environment_Barrel_Explosive"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Circle Fire"
+    }
+    team_id: "Civilians"
+    char_name: "HKPF Enforcer"
+    GeneralTags: "fire_up"
+    pc_spawn_number: -1
+    ai_ignores: true
+    portrait {
+      filename: ""
+    }
+    karma: 9
+    scale_character_sheet: true
+    hide_floaties: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "fire_up"
+  displayName: "fire_1"
+  idRef {
+    id: "581f67d9346265101d004585"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "Environment_Barrel_Explosive"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Circle Fire"
+    }
+    team_id: "Civilians"
+    char_name: "HKPF Enforcer"
+    GeneralTags: "fire_up"
+    pc_spawn_number: -1
+    ai_ignores: true
+    portrait {
+      filename: ""
+    }
+    karma: 9
+    scale_character_sheet: true
+    hide_floaties: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "fire_up"
+  displayName: "fire_1"
+  idRef {
+    id: "581f7b3f346265101d004591"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "Environment_Barrel_Explosive"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Circle Fire"
+    }
+    team_id: "Civilians"
+    char_name: "HKPF Enforcer"
+    GeneralTags: "fire_up"
+    pc_spawn_number: -1
+    ai_ignores: true
+    portrait {
+      filename: ""
+    }
+    karma: 9
+    scale_character_sheet: true
+    hide_floaties: true
   }
 }
 worldMapLocation {

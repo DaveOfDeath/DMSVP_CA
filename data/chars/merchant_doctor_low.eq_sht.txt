@@ -1,0 +1,37 @@
+unique_id: "Merchant_Doctor_Low"
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}
+equipment {
+  prefab_name: "DocWagonPlatinum"
+}
+equipment {
+  prefab_name: "DocWagonPlatinum"
+}
+equipment {
+  prefab_name: "DocWagonPlatinum"
+}

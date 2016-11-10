@@ -1,0 +1,10 @@
+unique_id: "Merchant_Weapons_Low"
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}

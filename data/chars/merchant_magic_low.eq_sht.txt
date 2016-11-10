@@ -1,0 +1,25 @@
+unique_id: "Merchant_Magic_Low"
+equipment {
+  prefab_name: "Bound Fire Spirit 1"
+}
+equipment {
+  prefab_name: "Bound Fire Spirit 1"
+}
+equipment {
+  prefab_name: "Bound Fire Spirit 2"
+}
+equipment {
+  prefab_name: "Bound Fire Spirit 2"
+}
+equipment {
+  prefab_name: "Bound Earth Spirit 1"
+}
+equipment {
+  prefab_name: "Bound Earth Spirit 1"
+}
+equipment {
+  prefab_name: "Bound Earth Spirit 2"
+}
+equipment {
+  prefab_name: "Bound Earth Spirit 2"
+}

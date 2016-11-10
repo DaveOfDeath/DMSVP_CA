@@ -1,0 +1,4 @@
+unique_id: "Merchant_Outfit_Low"
+equipment {
+  prefab_name: "HealthPack"
+}

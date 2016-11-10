@@ -30,7 +30,7 @@ props {
       conversationID: "57faffb3346265a81e00221c"
       turnToFace: false
     }
-    interactionIcon: InteractionIcon_Conversation
+    interactionIcon: InteractionIcon_SceneTransition
     interaction_info_text: ""
   }
   lod: 0

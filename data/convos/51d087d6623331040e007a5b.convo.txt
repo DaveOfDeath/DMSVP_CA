@@ -1,0 +1,260 @@
+idRef {
+  id: "51d087d6623331040e007a5b"
+}
+ui_name: "c17-s1_Funeral_JakeFixer"
+nodes {
+  idRef {
+    id: "51d087d9623331040e007a61"
+  }
+  index: 0
+  text: "The Brotherhood probably retains mercs like the ones that just attacked us for their security detail. You\'re gonna need a full team if you\'re heading to their chapter house. \n\nI have a secure line you can use to hire some runners, if you want to go now."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+    idRef {
+      id: "51d087d6623331040e007a5b:5823c61e3462659c210015bf"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "hasTalkedToJakeFixer"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51d088b9623331040e007a6f"
+  }
+  index: 1
+  text: ""
+  branches {
+    responseText: "I\'m heading to the Universal Brotherhood. Call the runners."
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5823be2c3462659c21001553"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 6
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5823be2c3462659c21001553"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Open Hiring Screen and Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "TRUST - Violet"
+            }
+          }
+        }
+        args {
+          string_value: "Go to the Universal Brotherhood?"
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "51d087d6623331040e007a5b:5823c61e3462659c210015c2"
+    }
+  }
+  branches {
+    responseText: "No, I want to stop at the Union first. I\'ll hire runners there. "
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "HUB - SeamstressUnion"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    idRef {
+      id: "51d087d6623331040e007a5b:5823c61e3462659c210015c4"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51d088ff623331040e007a74"
+  }
+  index: 2
+  text: "You change your mind?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+    idRef {
+      id: "51d087d6623331040e007a5b:5823c61e3462659c210015c9"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "hasTalkedToJakeFixer"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+  idRef {
+    id: "51d087d6623331040e007a5b:5823c61e3462659c210015bc"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "hasTalkedToJakeFixer"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 2
+  idRef {
+    id: "51d087d6623331040e007a5b:5823c61e3462659c210015c6"
+  }
+}

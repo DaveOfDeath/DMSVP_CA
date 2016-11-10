@@ -1,62 +1,10 @@
 triggers {
   name: "interactContinue"
   events {
-    ops {
-      functionName: "On Item Interaction"
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "5819e16c3462659c1a00222a"
-          }
-        }
-      }
-    }
   }
   conditions {
   }
   actions {
-    ops {
-      functionName: "Delete Props by Tag"
-      args {
-        call_value {
-          functionName: "Get Map Item (SenseTagList)"
-          args {
-            string_value: "ex_Wall"
-          }
-        }
-      }
-      args {
-        float_value: -1
-      }
-      args {
-        call_value {
-          functionName: "Everywhere"
-        }
-      }
-    }
-    ops {
-      functionName: "Enable/Disable Interactable Object"
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "EnableOrDisable"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "5819e16c3462659c1a00222a"
-          }
-        }
-      }
-    }
   }
   isActive: true
   idRef {
@@ -69,10 +17,10 @@ triggers {
 regions {
   name: "cam_Main"
   position {
-    x: -69
-    y: -22
-    width: 73
-    height: 42
+    x: -35
+    y: 31
+    width: 13
+    height: 26
   }
   enabledAtStart: true
   is_camera_region: true
@@ -127,9 +75,9 @@ regions {
 regions {
   name: "vfx_Fill"
   position {
-    x: -65
-    y: 11
-    width: 68
+    x: 17
+    y: 6
+    width: 9
     height: 8
   }
   enabledAtStart: true
@@ -185,9 +133,9 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 3
+    x: -6
     y: 0
-    z: -2
+    z: 35
   }
   orientation: ORIENTATION_N
   idRef {
@@ -207,9 +155,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -27
+    x: -16
     y: 0
-    z: 0
+    z: 28
   }
   orientation: ORIENTATION_N
   idRef {
@@ -239,9 +187,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -23
+    x: -16
     y: 0
-    z: -3
+    z: 31
   }
   orientation: ORIENTATION_N
   idRef {
@@ -272,9 +220,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -24
+    x: -16
     y: 0
-    z: 3
+    z: 29
   }
   orientation: ORIENTATION_N
   idRef {
@@ -304,9 +252,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -28
+    x: -16
     y: 0
-    z: -3
+    z: 32
   }
   orientation: ORIENTATION_N
   idRef {
@@ -330,9 +278,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -29
+    x: -16
     y: 0
-    z: 2
+    z: 30
   }
   orientation: ORIENTATION_N
   idRef {
@@ -365,7 +313,7 @@ characters {
   gridPoint {
     x: -16
     y: 0
-    z: 4
+    z: 27
   }
   orientation: ORIENTATION_N
   idRef {
@@ -398,7 +346,7 @@ characters {
   gridPoint {
     x: -16
     y: 0
-    z: -3
+    z: 33
   }
   orientation: ORIENTATION_N
   idRef {
@@ -422,9 +370,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -2
+    x: -3
     y: 0
-    z: -1
+    z: 28
   }
   orientation: ORIENTATION_N
   displayName: "Coyote_Inst"
@@ -519,9 +467,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -2
+    x: -3
     y: 0
-    z: -4
+    z: 25
   }
   orientation: ORIENTATION_N
   displayName: "Paco_Inst"
@@ -616,9 +564,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -1
+    x: -2
     y: 0
-    z: -2
+    z: 27
   }
   orientation: ORIENTATION_N
   displayName: "Violet_Inst"
@@ -712,9 +660,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 0
+    x: -1
     y: 0
-    z: 2
+    z: 31
   }
   orientation: ORIENTATION_N
   displayName: "Seamus_Inst"
@@ -805,9 +753,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 1
+    x: 0
     y: 0
-    z: 4
+    z: 33
   }
   orientation: ORIENTATION_N
   displayName: "River_Inst"
@@ -898,9 +846,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 0
+    x: -1
     y: 0
-    z: 5
+    z: 34
   }
   orientation: ORIENTATION_N
   displayName: "Jon_Inst"
@@ -996,9 +944,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -65
+    x: -43
     y: 0
-    z: 2
+    z: 30
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1028,9 +976,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -52
+    x: -43
     y: 0
-    z: -3
+    z: 32
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1060,9 +1008,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -52
+    x: -43
     y: 0
-    z: 3
+    z: 28
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1092,9 +1040,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -47
+    x: -43
     y: 0
-    z: 3
+    z: 27
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1125,9 +1073,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -47
+    x: -43
     y: 0
-    z: -4
+    z: 26
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1158,9 +1106,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -59
+    x: -43
     y: 0
-    z: -3
+    z: 31
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1206,9 +1154,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -60
+    x: -43
     y: 0
-    z: 3
+    z: 29
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1234,9 +1182,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -64
+    x: -43
     y: 0
-    z: -3
+    z: 25
   }
   orientation: ORIENTATION_N
   idRef {

@@ -4,9 +4,31 @@ idRef {
 ui_name: "c0-s0-Set_Scale"
 nodes {
   idRef {
-    id: "57faffc4346265a81e002224"
+    id: "5823d70a3462659c21001863"
   }
   index: 0
+  text: "Are you doing Generic Crew testing, or Crew Hiring Hub Testing?"
+  branches {
+    responseText: "Generic."
+    nextNodeIndex: 1
+    idRef {
+      id: "57faffb3346265a81e00221c:5823d7353462659c21001867"
+    }
+  }
+  branches {
+    responseText: "Hub Testing."
+    nextNodeIndex: 3
+    idRef {
+      id: "57faffb3346265a81e00221c:5823d7583462659c21001896"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "57faffb3346265a81e00221c:5823d7433462659c2100186c"
+  }
+  index: 1
   text: "What would you like to set as the scale?"
   branches {
     responseText: "1"
@@ -29,9 +51,9 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 1
+    nextNodeIndex: 2
     idRef {
-      id: "57faffb3346265a81e00221c:57faffe3346265a81e002226"
+      id: "57faffb3346265a81e00221c:5823d7433462659c2100186e"
     }
     auxiliaryLink: true
   }
@@ -56,9 +78,9 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 1
+    nextNodeIndex: 2
     idRef {
-      id: "57faffb3346265a81e00221c:57faffe3346265a81e002228"
+      id: "57faffb3346265a81e00221c:5823d7433462659c21001872"
     }
     auxiliaryLink: true
   }
@@ -83,9 +105,9 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 1
+    nextNodeIndex: 2
     idRef {
-      id: "57faffb3346265a81e00221c:57faffe4346265a81e00222a"
+      id: "57faffb3346265a81e00221c:5823d7433462659c21001876"
     }
     auxiliaryLink: true
   }
@@ -110,9 +132,9 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 1
+    nextNodeIndex: 2
     idRef {
-      id: "57faffb3346265a81e00221c:57faffed346265a81e00222c"
+      id: "57faffb3346265a81e00221c:5823d7433462659c2100187a"
     }
     auxiliaryLink: true
   }
@@ -137,9 +159,9 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 1
+    nextNodeIndex: 2
     idRef {
-      id: "57faffb3346265a81e00221c:57fafff0346265a81e00222e"
+      id: "57faffb3346265a81e00221c:5823d7433462659c2100187e"
     }
   }
   nodeType: ConversationNodeType_InputNumpad
@@ -147,9 +169,9 @@ nodes {
 }
 nodes {
   idRef {
-    id: "57fb003e346265a81e002231"
+    id: "57faffb3346265a81e00221c:5823d7433462659c21001880"
   }
-  index: 1
+  index: 2
   text: "Ok, set. Ready?"
   branches {
     responseText: "Yes."
@@ -168,22 +190,61 @@ nodes {
     }
     nextNodeIndex: -1
     idRef {
-      id: "57faffb3346265a81e00221c:57fb004c346265a81e002233"
+      id: "57faffb3346265a81e00221c:5823d7433462659c21001882"
     }
   }
   branches {
     responseText: "No..."
-    nextNodeIndex: 0
+    nextNodeIndex: 1
     idRef {
-      id: "57faffb3346265a81e00221c:57fb004d346265a81e002235"
+      id: "57faffb3346265a81e00221c:5823d7433462659c21001884"
     }
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
+nodes {
+  idRef {
+    id: "5823d7643462659c21001899"
+  }
+  index: 3
+  text: "Setting Scale to 2 and sending you to Hub."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "CharacterScaleAmount"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "HUB - SeamstressUnion"
+          }
+        }
+      }
+    }
+  }
+}
 roots {
+  responseText: ""
   nextNodeIndex: 0
   idRef {
-    id: "57faffb3346265a81e00221c:57faffb3346265a81e002220"
+    id: "57faffb3346265a81e00221c:5823d7053462659c21001860"
   }
 }

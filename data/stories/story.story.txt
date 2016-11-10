@@ -1,5 +1,77 @@
 id: "Vox Populi Crew Advancement Setup"
 variables {
+  name: "Avail_Bartlett"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_Bartlett"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "Avail_Coyote"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_Coyote"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "Avail_Paco"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_Paco"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "Avail_River"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_River"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "Avail_Seamus"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_Seamus"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "Avail_Violet"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "Avail_Violet"
+      typeName: "bool"
+    }
+  }
+}
+variables {
   name: "CharacterScaleAmount"
   typeName: "int"
   defaultValue {
@@ -821,6 +893,42 @@ crew_list {
   name: "River Daye"
   title: "Crew: Shaman"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_River"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   active_nodes {
     name: "LV1"
@@ -875,6 +983,42 @@ crew_list {
   name: "Jon Bartlett"
   title: "Crew: Cybered Adept"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_Bartlett"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   active_nodes {
     name: "LV1"
@@ -929,6 +1073,42 @@ crew_list {
   name: "Ultra Violet"
   title: "Crew: Decker"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_Violet"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   active_nodes {
     name: "LV1"
@@ -983,6 +1163,42 @@ crew_list {
   name: "Seamus O\'Toole"
   title: "Crew: Mage"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_Seamus"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   active_nodes {
     name: "LV1"
@@ -1037,6 +1253,42 @@ crew_list {
   name: "Coyote"
   title: "Crew: Bartender"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   description_bio: ""
   active_nodes {
@@ -1092,6 +1344,42 @@ crew_list {
   name: "Paco"
   title: "Crew: Rigger"
   prerequisites {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "579e0109346265441c0058b1"
+          }
+          args {
+            string_value: "Avail_Paco"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   active_nodes {
     name: "LV1"
