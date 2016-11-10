@@ -16212,9 +16212,10 @@ props {
       }
     }
     transitionPoint {
-      scene_name: "c17-s2_Seamstress"
+      scene_name: "HUB - SeamstressUnion"
       confirmation_text: "Head to the Seamstresses Union to regroup and hire a team?"
     }
+    interaction_info_text: ""
   }
   lod: 0
 }

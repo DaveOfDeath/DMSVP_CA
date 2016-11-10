@@ -846,7 +846,7 @@ triggers {
       }
     }
     ops {
-      functionName: "Suspend Team\'s Turn"
+      functionName: "Enable/Disable Team\'s Turn"
       args {
         call_value {
           functionName: "Get Preset Value (string)"
@@ -859,7 +859,15 @@ triggers {
         }
       }
       args {
-        int_value: 1
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
       }
       args {
         call_value {
@@ -1336,6 +1344,39 @@ triggers {
       }
       args {
         float_value: 0
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Team\'s Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
       }
     }
   }
@@ -9736,7 +9777,7 @@ characters {
         vision_cone_angle: 0
       }
       skills {
-        ranged_combat: 0
+        ranged_combat: 1
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
@@ -9783,7 +9824,7 @@ characters {
     portrait {
       filename: ""
     }
-    karma: 78
+    karma: 83
   }
 }
 characters {
