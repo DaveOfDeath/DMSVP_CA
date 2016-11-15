@@ -1,7 +1,7 @@
 minX: 2
-minZ: -6
+minZ: -5
 numX: 19
-numZ: 9
+numZ: 7
 props {
   name: "whitebox_indoor_floor"
   gridPoint {
@@ -366,49 +366,6 @@ props {
     interactionRadius: 1
     interactionIcon: InteractionIcon_ItemPickup
     interaction_info_text: ""
-  }
-  lod: 0
-}
-props {
-  name: "whitebox_indoor_doorFront"
-  gridPoint {
-    x: 11
-    y: 0
-    z: -3
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "whitebox_indoor_doorBack"
-  gridPoint {
-    x: 11
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "whitebox_indoor_edge"
-  gridPoint {
-    x: 11
-    y: 0
-    z: -6
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "whitebox_indoor_edge"
-  gridPoint {
-    x: 11
-    y: 0
-    z: 0
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "57f9d1a03462651419002041"
   }
   lod: 0
 }

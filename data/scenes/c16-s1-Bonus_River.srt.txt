@@ -893,6 +893,28 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bSubClear"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Send Event"
       args {
         call_value {
@@ -1630,35 +1652,29 @@ triggers {
         }
       }
       args {
-        int_value: 4
+        int_value: 3
       }
     }
   }
   actions {
     ops {
-      functionName: "Play Sound"
-      args {
-        call_value {
-          functionName: "Get Map Item (Sound)"
-          args {
-            string_value: "HongKong:ambient_slums"
-          }
-          args {
-            string_value: "DoorOpenClose"
-          }
-        }
-      }
-      args {
-        float_value: 1
-      }
+      functionName: "Enable/Disable Trigger"
       args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "bool"
+            string_value: "EnableOrDisable"
           }
           args {
-            int_value: 0
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "582939043462657c25003e5a"
           }
         }
       }
@@ -1681,7 +1697,7 @@ triggers {
         }
       }
       args {
-        int_value: 0
+        int_value: 1
       }
       args {
         int_value: 0
@@ -1693,7 +1709,7 @@ triggers {
             call_value {
               functionName: "Get Map Item (Region)"
               args {
-                string_value: "582939f63462657c25003e5d"
+                string_value: "5829bdb2346265801a003e51"
               }
             }
           }
@@ -1706,7 +1722,7 @@ triggers {
             string_value: "FacingDirection"
           }
           args {
-            int_value: 7
+            int_value: 4
           }
         }
       }
@@ -1740,7 +1756,7 @@ triggers {
         }
       }
       args {
-        int_value: 0
+        int_value: 1
       }
       args {
         int_value: 0
@@ -1752,7 +1768,7 @@ triggers {
             call_value {
               functionName: "Get Map Item (Region)"
               args {
-                string_value: "582939ee3462657c25003e5c"
+                string_value: "5829bdb2346265801a003e51"
               }
             }
           }
@@ -1765,7 +1781,7 @@ triggers {
             string_value: "FacingDirection"
           }
           args {
-            int_value: 7
+            int_value: 5
           }
         }
       }
@@ -1774,6 +1790,209 @@ triggers {
           functionName: "Get Preset Value (int)"
           args {
             string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "582939c13462657c25003e5b"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onActorTurn.AddWave.OpenDoor"
+  events {
+    ops {
+      functionName: "On Actor Start Turn"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isExtraGanger"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "582515dd3462653002001d7a"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582919363462657c25003e38"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5829174b3462657c25003e1d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait for Rounds"
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:ambient_slums"
+          }
+          args {
+            string_value: "DoorOpenClose"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
           }
           args {
             int_value: 0
@@ -1899,24 +2118,108 @@ triggers {
         }
       }
     }
+  }
+  isActive: true
+  idRef {
+    id: "5829bc68346265801a003e4e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onRGNExit.WateRunTo.WaveIn.CloseDoor"
+  events {
     ops {
-      functionName: "Enable/Disable Trigger"
+      functionName: "On Region Exit"
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Get Map Item (Region)"
           args {
-            string_value: "EnableOrDisable"
+            string_value: "5829bdb2346265801a003e51"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isFirstNation"
+              }
+            }
           }
           args {
-            int_value: 1
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
           }
         }
       }
       args {
         call_value {
-          functionName: "Get Map Item (Trigger)"
+          functionName: "Get Preset Value (int)"
           args {
-            string_value: "582939043462657c25003e5a"
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5829bdb2346265801a003e51"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Prop Is Closed Door"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5829b868346265801a003e14"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Force-Use Interactable Object (Basic)"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5829b868346265801a003e14"
           }
         }
       }
@@ -1924,7 +2227,7 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "582939c13462657c25003e5b"
+    id: "5829bd16346265801a003e50"
   }
   elseActions {
   }
@@ -3621,8 +3924,8 @@ regions {
 regions {
   name: "RGN_WaveTarget2"
   position {
-    x: 43
-    y: 125
+    x: 32
+    y: 112
     width: 1
     height: 1
   }
@@ -3679,8 +3982,8 @@ regions {
 regions {
   name: "RGN_WaveTarget1"
   position {
-    x: 42
-    y: 125
+    x: 32
+    y: 110
     width: 1
     height: 1
   }
@@ -3690,6 +3993,180 @@ regions {
   is_vfx_fill_region: false
   idRef {
     id: "582939f63462657c25003e5d"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_WaveRunTo1"
+  position {
+    x: 38
+    y: 113
+    width: 1
+    height: 1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5829b998346265801a003e15"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_WaveRunTo2"
+  position {
+    x: 35
+    y: 116
+    width: 1
+    height: 1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5829b9ac346265801a003e16"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RNG_WavePen"
+  position {
+    x: 31
+    y: 107
+    width: 3
+    height: 9
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5829bdb2346265801a003e51"
   }
   highlight_color {
     r: 0
@@ -3864,6 +4341,8 @@ characters {
     z: 147
   }
   orientation: ORIENTATION_S
+  GeneralTags: "isFirstNation"
+  GeneralTags: "isExtraGanger"
   displayName: "ParkingGanger1"
   idRef {
     id: "5829174b3462657c25003e1d"
@@ -3896,6 +4375,7 @@ characters {
     team_id: "FirstNation"
     char_name: "FirstNation Ganger"
     GeneralTags: "isFirstNation"
+    GeneralTags: "isExtraGanger"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -3912,6 +4392,8 @@ characters {
     z: 134
   }
   orientation: ORIENTATION_E
+  GeneralTags: "isFirstNation"
+  GeneralTags: "isExtraGanger"
   displayName: "ParkingGanger2"
   idRef {
     id: "582919363462657c25003e38"
@@ -3944,6 +4426,7 @@ characters {
     team_id: "FirstNation"
     char_name: "FirstNation Thug"
     GeneralTags: "isFirstNation"
+    GeneralTags: "isExtraGanger"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -4171,11 +4654,26 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Core/HumanFemale"
+    prefab_name: "Seattle:Core/HumanFemale"
     character_sheet_id: "Errant_Lv3_Elf_Shaman"
     equipment_sheet_id: "Errant_Lv3_Shaman"
     character_mod {
-      archetypeName: "gumbo_grunt"
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      vulnerabilities {
+      }
     }
     team_id: "FirstNation"
     char_name: "FirstNation Shaman"
@@ -4185,6 +4683,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 76
     hiring_set_randomizer: "firstnation_shaman"
     scale_character_sheet: false
   }
@@ -4255,6 +4754,14 @@ variables {
     scope: TsVariableScope_Scene
     name: "iWaveTimer_FN"
     typeName: "int"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "bSubClear"
+    typeName: "bool"
   }
 }
 mapEvents: "teleportDelay"
