@@ -1252,6 +1252,39 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bSubClear"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Warp
     interaction_info_text: "Take the minisub?"
@@ -2376,9 +2409,9 @@ props {
   gridPoint {
     x: 40
     y: 0
-    z: 117
+    z: 116
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
@@ -3453,7 +3486,7 @@ props {
 props {
   name: "warehouse_vehicle_forklift02"
   gridPoint {
-    x: 46
+    x: 47
     y: 0
     z: 121
   }
@@ -6176,6 +6209,39 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Warp
     interaction_info_text: ""
@@ -6250,6 +6316,65 @@ props {
             functionName: "Get Map Item (SceneDimension)"
             args {
               string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockPassword"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Evaluate If Actor is Inside Region"
+            args {
+              call_value {
+                functionName: "All Actors With Tag"
+                args {
+                  call_value {
+                    functionName: "Get Map Item (SenseTagList)"
+                    args {
+                      string_value: "isFirstNation"
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "AllOrAny"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AreOrAreNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "582a6734346265cc1b004b55"
+                }
+              }
             }
           }
         }
@@ -6367,6 +6492,195 @@ props {
     z: 117
   }
   orientation: ORIENTATION_S
+  displayName: "oDock-Legwork_Rigger"
+  idRef {
+    id: "582a7891346265cc1b004c94"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Compare Actor Skill"
+                args {
+                  call_value {
+                    functionName: "Get Map Item (Player)"
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorSkills"
+                    }
+                    args {
+                      int_value: 10
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 2
+                    }
+                  }
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Compare Actor Skill"
+                args {
+                  call_value {
+                    functionName: "Get Map Item (Player)"
+                    args {
+                      int_value: 2
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorSkills"
+                    }
+                    args {
+                      int_value: 10
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 2
+                    }
+                  }
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 10
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Examine Power Supply"
+  }
   lod: 0
 }
 props {
@@ -6428,7 +6742,7 @@ props {
   gridPoint {
     x: 95
     y: 0
-    z: 93
+    z: 91
   }
   orientation: ORIENTATION_S
   idRef {
@@ -6622,8 +6936,16 @@ props {
     property_id: "LightScript"
     string_value: "loop; cubic:1:980806; cubic:1:000"
   }
+  displayName: "oDock-Rigger_RedLight"
   idRef {
     id: "5827392e346265dc2500542c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
   light {
@@ -6649,8 +6971,16 @@ props {
     property_id: "LightScript"
     string_value: "loop; cubic:1:000; cubic:1:00CC00"
   }
+  displayName: "oDock-Rigger_GreenLight"
   idRef {
     id: "582739fc346265dc2500542d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
   light {
@@ -8106,9 +8436,9 @@ props {
 props {
   name: "vfx_fx_OceanDebris"
   gridPoint {
-    x: 107
+    x: 106
     y: 0
-    z: 92
+    z: 91
   }
   orientation: ORIENTATION_S
   properties {
@@ -9242,7 +9572,7 @@ props {
     y: 0
     z: 134
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   idRef {
     id: "5827d180346265380f000852"
   }
@@ -9512,11 +9842,78 @@ props {
 props {
   name: "tenements_clutter_woodenCrates"
   gridPoint {
-    x: 83.4
+    x: 77.4
     y: -2.7755576e-017
-    z: 142.3
+    z: 141.3
   }
   orientation: ORIENTATION_E
+  displayName: "oDock-Legwork_Strength"
+  idRef {
+    id: "582bd856346265300f001ddb"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bLegwork_KnowCorp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Generic
+    interaction_info_text: "Examine Crates"
+  }
   lod: 0
 }
 props {
@@ -11256,7 +11653,7 @@ props {
 props {
   name: "vicHarbor_groundDecoration_dirt01"
   gridPoint {
-    x: 83
+    x: 77
     y: 0
     z: 141
   }
@@ -13216,6 +13613,15 @@ props {
     z: 136
   }
   orientation: ORIENTATION_S
+  GeneralTags: "isRiver"
+  GeneralTags: "isViolet"
+  GeneralTags: "isPaco"
+  GeneralTags: "isCoyote"
+  GeneralTags: "isSeamus"
+  GeneralTags: "isBartlett"
+  idRef {
+    id: "582a6f26346265cc1b004be3"
+  }
   lod: 0
 }
 props {
@@ -21581,6 +21987,1180 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5829bc08346265801a003e4d"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_dragonlineConnectorV"
+  gridPoint {
+    x: 78
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonlineConnectorV"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_medium"
+  gridPoint {
+    x: 77
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_hp_damage_mod: 3
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorV"
+  gridPoint {
+    x: 76
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonlineConnectorV"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "582a63e3346265cc1b004b4d"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 79
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 75
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  idRef {
+    id: "582a63ed346265cc1b004b4e"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_mediumap"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_ap_damage_mod: 1
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 118
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "582a641f346265cc1b004b4f"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 117
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  idRef {
+    id: "582a6422346265cc1b004b50"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 4
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a66c9346265cc1b004b51"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a66d4346265cc1b004b52"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a66d7346265cc1b004b53"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a66d9346265cc1b004b54"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_wallDecoration_trid01"
+  gridPoint {
+    x: 106
+    y: 0.7
+    z: 105.3
+  }
+  orientation: ORIENTATION_E
+  displayName: "oDock-Legwork_Decking"
+  idRef {
+    id: "582a6fca346265cc1b004be6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 2
+    prerequisites {
+      ops {
+        functionName: "Evaluate If Actor Is Decker"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bLegwork_KnowCorp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Matrix
+    interaction_info_text: "Examine Terminal"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 107
+    y: -0.5
+    z: 109.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a680c346265cc1b004b56"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.65098041
+      g: 0
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 107
+    y: -0.5
+    z: 102
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a6825346265cc1b004b57"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.65098041
+      g: 0
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 109
+    y: -1
+    z: 106.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a6830346265cc1b004b58"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "vfx_fx_OceanDebris"
+  gridPoint {
+    x: 75
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:EnvironmentLoopOceanDebris"
+  }
+  idRef {
+    id: "582a69af346265cc1b004b59"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 86.5
+    y: -1
+    z: 117.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a6f69346265cc1b004be4"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 97
+    y: -0.5
+    z: 118.5
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-GangerCraneTarget"
+  idRef {
+    id: "582a6fda346265cc1b004be7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 105
+    y: 0
+    z: 105
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a718f346265cc1b004c12"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_shangrila:neonsign"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 1
+    min_radius: 0
+    max_radius: 5
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a719e346265cc1b004c13"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:waterdockloop"
+    attenuation_type: 1
+    min_volume: 1
+    max_volume: 1
+    min_radius: 3
+    max_radius: 12
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 111
+    y: 0
+    z: 93
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a71ac346265cc1b004c14"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:waterdockloop"
+    attenuation_type: 1
+    min_volume: 1
+    max_volume: 1
+    min_radius: 3
+    max_radius: 12
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 104
+    y: 0
+    z: 150
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a71bb346265cc1b004c15"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:waterdockloop"
+    attenuation_type: 1
+    min_volume: 1
+    max_volume: 1
+    min_radius: 3
+    max_radius: 12
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 90
+    y: 0
+    z: 150
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a71c1346265cc1b004c16"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:waterdockloop"
+    attenuation_type: 1
+    min_volume: 1
+    max_volume: 1
+    min_radius: 3
+    max_radius: 12
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 78
+    y: 0
+    z: 161
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a71c8346265cc1b004c17"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:waterdockloop"
+    attenuation_type: 1
+    min_volume: 1
+    max_volume: 1
+    min_radius: 3
+    max_radius: 12
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "kowloon_groundDecoration_filth04"
+  gridPoint {
+    x: 103
+    y: 0
+    z: 100
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "582a7230346265cc1b004c18"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 116
+    y: -1
+    z: 102.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a72b1346265cc1b004c19"
+  }
+  lod: 0
+  light {
+    range: 4
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 118
+    y: -0.5
+    z: 100
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a72b6346265cc1b004c1a"
+  }
+  lod: 0
+  light {
+    range: 4
+    color {
+      r: 0.65098041
+      g: 0
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 119
+    y: -1.5
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a72bb346265cc1b004c1b"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 116
+    y: -1.5
+    z: 96
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "582a72ca346265cc1b004c1c"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.65098041
+      g: 0
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "vfx_fx_flashingAlarm"
+  gridPoint {
+    x: 103
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopFlashingAlarm"
+  }
+  GeneralTags: "dockcranealarm"
+  displayName: "oDock_CraneAlarm_VFX"
+  idRef {
+    id: "582a7700346265cc1b004c92"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 98
+    y: 10.5
+    z: 106
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-CraneAlarmTarget1"
+  idRef {
+    id: "582a75e8346265cc1b004c8d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 97.1
+    y: 11.4
+    z: 106.8
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-CraneAlarmTarget2"
+  idRef {
+    id: "582a75ef346265cc1b004c8e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 97.8
+    y: 10.6
+    z: 100.7
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-CraneAlarmTarget3"
+  idRef {
+    id: "582a7615346265cc1b004c8f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "mitte_wallDecoration_graffiti04"
+  gridPoint {
+    x: 106.9
+    y: 3
+    z: 137
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "582a7fda346265cc1b004d00"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_dragonlineConnectorH"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 138
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineConnectorH"
+  }
+  properties {
+    property_id: "leyline"
+    bool_value: true
+  }
+  idRef {
+    id: "582a7fda346265cc1b004d01"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 139
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  idRef {
+    id: "582a7fda346265cc1b004d02"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_light"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 135
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineSm"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineFar"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineSmOff"
+  }
+  idRef {
+    id: "582a7ff6346265cc1b004d03"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 0
+    spell_accuracy_mod: 0.05
+    onhit_caster_effects: "BuffCaster_LightDragonline_Heal"
+    uirep {
+      description: "Dragon Line (Light)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_mediumap"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 137
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_ap_damage_mod: 1
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 92
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-CrameAlarmTarget3"
+  idRef {
+    id: "582a8b26346265cc1b004d1a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 92
+    y: 0
+    z: 72
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDock-CraneArlarm_SFX"
+  idRef {
+    id: "582a8b2d346265cc1b004d1b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:BuildingPowerUp"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 1
+    min_radius: 0
+    max_radius: 20
+    crossfade_in_time: 1
+    crossfade_out_time: 1
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "pikePlace_decor_corpse02"
+  gridPoint {
+    x: 78
+    y: 0
+    z: 141
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "vfx_fx_steam"
+  gridPoint {
+    x: 100
+    y: 0.5
+    z: 126
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SteamEnvironment"
+  }
+  idRef {
+    id: "582b041b346265702600507a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_clutter_pipes01"
+  gridPoint {
+    x: 86.4
+    y: 0
+    z: 142.1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "582bdf15346265a809001a9d"
   }
   lod: 0
 }

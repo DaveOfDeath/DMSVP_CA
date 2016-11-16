@@ -1,0 +1,11 @@
+idRef {
+  id: "582bde49346265a809001a61"
+}
+ui_name: "c16_s1_DockLegwork_Strong"
+roots {
+  responseText: "Hi!"
+  nextNodeIndex: -1
+  idRef {
+    id: "582bde49346265a809001a61:582bde49346265a809001a65"
+  }
+}
