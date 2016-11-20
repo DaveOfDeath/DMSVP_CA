@@ -318,6 +318,232 @@ triggers {
   is_oneshot: false
 }
 triggers {
+  name: "GLOBAL.onDeath.PC0.FailScene"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "The Distant Shore"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5830e3e53462658c21003a6c"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "GLOBAL.onDeath.Crew.FailScene"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "OR"
+      args {
+        call_value {
+          functionName: "Comparison (Actor)"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "OR"
+          args {
+            call_value {
+              functionName: "Comparison (Actor)"
+              args {
+                call_value {
+                  functionName: "Triggering Target Actor"
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "IsOrIsNot"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Map Item (Player)"
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Comparison (Actor)"
+              args {
+                call_value {
+                  functionName: "Triggering Target Actor"
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "IsOrIsNot"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Map Item (Player)"
+                  args {
+                    int_value: 3
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Bring the Crew Back"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5830e3fb3462658c21003a6d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
   name: "MATRIX.OnTeleport.Shadowrunner.TeleportCamera"
   events {
     ops {
@@ -3114,6 +3340,39 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain Access to the Sub"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Fade Camera Out"
       args {
         float_value: 0.5
@@ -3250,6 +3509,39 @@ triggers {
           }
           args {
             int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find what Dolphin Seeks"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
           }
         }
       }
@@ -5416,6 +5708,131 @@ triggers {
   is_oneshot: true
 }
 triggers {
+  name: "<---Lab Handler--->"
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58313c93346265c4250048a8"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDamage.LabWorker.AlertLevelUp"
+  events {
+    ops {
+      functionName: "On Actor Damage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "On Actor Damage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labAlert_LevelUp"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58313e85346265c4250048ac"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: ""
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58313c94346265c4250048a9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
   name: "<---LabEntrance Handler--->"
   events {
   }
@@ -5430,6 +5847,63 @@ triggers {
   elseActions {
   }
   is_oneshot: true
+}
+triggers {
+  name: "onSetup.SetEntranceAnimations"
+  events {
+    ops {
+      functionName: "On Curtains Up"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "583134a6346265c42500489d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "Seattle:General/standing_idle_sweeping"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "582907cb3462657c25003e13"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_scratch"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58313b68346265c4250048a6"
+  }
+  elseActions {
+  }
+  is_oneshot: false
 }
 triggers {
   name: "OnSub.ExitLab.PlaySequence"
@@ -5600,6 +6074,884 @@ triggers {
   is_oneshot: false
 }
 triggers {
+  name: "onInteract.MoonBayVent1.EnableTurnMode"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "58310e443462658c21003b53"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5831130d3462658c21003b61"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onInteract.MoonBayVent2.WarpDrone"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "58310f353462658c21003b57"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor With Fade"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Offset Point"
+          args {
+            call_value {
+              functionName: "Current Location of Prop"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Prop)"
+                  args {
+                    string_value: "58310fcd3462658c21003b59"
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Specified Point (2D)"
+              args {
+                float_value: -1
+              }
+              args {
+                float_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Cause Damage"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:rigger"
+          }
+          args {
+            string_value: "DroneWheels"
+          }
+        }
+      }
+      args {
+        float_value: 0.25
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583113e53462658c21003b62"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onInteract.EntranceVent1.WarpDrone"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "58310fcd3462658c21003b59"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor With Fade"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Offset Point"
+          args {
+            call_value {
+              functionName: "Current Location of Prop"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Prop)"
+                  args {
+                    string_value: "58310f353462658c21003b57"
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Specified Point (2D)"
+              args {
+                float_value: 2
+              }
+              args {
+                float_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Cause Damage"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:rigger"
+          }
+          args {
+            string_value: "DroneWheels"
+          }
+        }
+      }
+      args {
+        float_value: 0.25
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583117423462658c21003b6b"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onInteract.MoonBayVent3.DisableTurnMode"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5831160b3462658c21003b68"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583117ff3462658c21003b6e"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "event.AltertLevelUp.IncLevel"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labAlert_LevelUp"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "582fe9ca346265fc11003ae2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Random Actor within Area"
+          args {
+            call_value {
+              functionName: "Area: Region"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Region)"
+                  args {
+                    string_value: "582fe9ca346265fc11003ae2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iLab-Alert_Lvl"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58313c8e346265c4250048a7"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "event.AltertLevelUp.RegionHostile"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labAlert_LevelUp"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "582fe9ca346265fc11003ae2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 6
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "582fe9ca346265fc11003ae2"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait for Rounds"
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Seek And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58313cfa346265c4250048ab"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
   name: ""
   events {
   }
@@ -5700,7 +7052,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "Testing.WarpToCircle"
+  name: "Testing.WarpToTarget"
   events {
     ops {
       functionName: "On Curtains Up"
@@ -5713,33 +7065,53 @@ triggers {
       functionName: "Teleport Actor to Area Around Point"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "All Actors on Team"
           args {
             call_value {
-              functionName: "Get Map Item (Player)"
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
               args {
                 int_value: 0
               }
             }
           }
           args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
           }
         }
       }
       args {
-        int_value: 0
+        int_value: 2
       }
       args {
         int_value: 0
       }
       args {
         call_value {
-          functionName: "Current Location of Prop"
+          functionName: "Center of Region"
           args {
             call_value {
-              functionName: "Get Map Item (Prop)"
+              functionName: "Get Map Item (Region)"
               args {
-                string_value: "582e7377346265141a006847"
+                string_value: "582feca3346265fc11003b05"
               }
             }
           }
@@ -5772,6 +7144,22 @@ triggers {
   isActive: true
   idRef {
     id: "582e73c8346265141a00685a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: ""
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58313c9f346265c4250048aa"
   }
   elseActions {
   }
@@ -5834,64 +7222,6 @@ regions {
   combat_intro_stinger: ""
   combat_outro_stinger: ""
   vfx_fill_prefab_name: "defaultWaterFill"
-}
-regions {
-  name: "CAM_Lab-SubBay"
-  position {
-    x: -8
-    y: -10
-    width: 16
-    height: 20
-  }
-  enabledAtStart: true
-  is_camera_region: true
-  is_matrix_node: false
-  is_vfx_fill_region: false
-  idRef {
-    id: "582515193462653002001d27"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_closet: false
-  is_teleporter_region: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.41960785
-    g: 0.54509807
-    b: 0.40392157
-    a: 1
-  }
-  ambient_light_color {
-    r: 0.17254902
-    g: 0.17254902
-    b: 0.21176471
-    a: 1
-  }
-  ambience_template: ""
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-  no_fow_in_region: false
-  combat_intense_music: ""
-  combat_wrapup_music: ""
-  loop_combat_intense_music: true
-  loop_combat_wrapup_music: true
-  combat_intense_threshold: 5
-  combat_wrapup_threshold: 2
-  combat_fade_interval: 2
-  combat_intro_stinger: ""
-  combat_outro_stinger: ""
-  vfx_fill_prefab_name: ""
 }
 regions {
   name: "VFX_Lab-MoonPool"
@@ -6998,10 +8328,10 @@ regions {
 regions {
   name: "CAM_Lab-SpiritChamber"
   position {
-    x: 28
-    y: -1
-    width: 19
-    height: 20
+    x: 25
+    y: -4
+    width: 26
+    height: 27
   }
   enabledAtStart: true
   is_camera_region: true
@@ -7034,6 +8364,238 @@ regions {
     r: 0.3882353
     g: 0.3882353
     b: 0.47450981
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "CAM_Lab-Entrance1"
+  position {
+    x: -51
+    y: -15
+    width: 60
+    height: 31
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "582fe9ca346265fc11003ae2"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.41960785
+    g: 0.54509807
+    b: 0.40392157
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.17254902
+    g: 0.17254902
+    b: 0.21176471
+    a: 1
+  }
+  ambience_template: "mcplaguebearer"
+  combat_music: "HongKong-Combat-Kowloon-Int1"
+  default_music: "HongKong-Sewer"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+  combat_intense_music: "HongKong-Combat-Kowloon-Int2"
+  combat_wrapup_music: "HongKong-Combat-Kowloon-WrapUp"
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: "HongKong-Combat-stinger-Start"
+  combat_outro_stinger: "HongKong-Combat-stinger-End"
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_TestTarget"
+  position {
+    x: -23
+    y: -1
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "582feca3346265fc11003b05"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-MoonPool"
+  position {
+    x: -9
+    y: -10
+    width: 17
+    height: 22
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "58310ecc3462658c21003b55"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-MoonPoolHolding"
+  position {
+    x: 3
+    y: -14
+    width: 6
+    height: 3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "58313581346265c4250048a2"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
     a: 1
   }
   ambience_template: ""
@@ -7612,9 +9174,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 34
+    x: 33
     y: 0
-    z: 5
+    z: 4
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7687,7 +9249,7 @@ characters {
       }
     }
     team_id: "Civilians"
-    char_name: "Bound Air Spirit"
+    char_name: "Spirit of Air"
     GeneralTags: "Temple_Spirits"
     GeneralTags: "magic_user"
     pc_spawn_number: -1
@@ -7703,9 +9265,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 34
+    x: 33
     y: 0
-    z: 12
+    z: 13
   }
   orientation: ORIENTATION_S
   idRef {
@@ -7772,13 +9334,13 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "Player"
+      archetypeName: "Non-Combatant"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
     }
     team_id: "Civilians"
-    char_name: "Bound Earth Spirit"
+    char_name: "Spirit of Earth"
     GeneralTags: "Office_Spirits"
     GeneralTags: "magic_user"
     pc_spawn_number: -1
@@ -7794,11 +9356,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 41
+    x: 42
     y: 0
-    z: 5
+    z: 4
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
   idRef {
     id: "582e7483346265141a00685d"
   }
@@ -7869,7 +9431,7 @@ characters {
       }
     }
     team_id: "Civilians"
-    char_name: "Bound Fire Spirit"
+    char_name: "Spirit of Fire"
     GeneralTags: "Office_Spirits"
     GeneralTags: "magic_user"
     pc_spawn_number: -1
@@ -7885,11 +9447,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 41
+    x: 42
     y: 0
-    z: 12
+    z: 13
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
   idRef {
     id: "582e748b346265141a00685e"
   }
@@ -7960,7 +9522,7 @@ characters {
       }
     }
     team_id: "Civilians"
-    char_name: "Bound Water Spirit"
+    char_name: "Spirit of Water"
     GeneralTags: "Office_Spirits"
     GeneralTags: "magic_user"
     pc_spawn_number: -1
@@ -7986,7 +9548,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Berlin:Spirits/SpiritAdversaryCorrupt"
+    prefab_name: "Berlin:Spirits/SpiritAdvRanged"
     character_sheet_id: "UncontrolledSpirit_Lv2_Nature"
     equipment_sheet_id: "UncontrolledSpirit_Lv2_Nature"
     character_mod {
@@ -8051,7 +9613,7 @@ characters {
       }
     }
     team_id: "Civilians"
-    char_name: "Bound Nature Spirit"
+    char_name: "Bound Spirit"
     GeneralTags: "Office_Spirits"
     GeneralTags: "magic_user"
     pc_spawn_number: -1
@@ -8062,6 +9624,145 @@ characters {
     karma: 71
     hiring_cost_override: 1000
     scale_character_sheet: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -32
+    y: 0
+    z: 10
+  }
+  orientation: ORIENTATION_N
+  GeneralTags: "isLabEntrance"
+  displayName: "Lab Entrance Science 1"
+  idRef {
+    id: "583134a6346265c42500489d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HumanMaleKnightErrantMage"
+    character_sheet_id: "Science_Lv3_Base"
+    equipment_sheet_id: "Science_Lv3_Water"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Scientist Quencher"
+    GeneralTags: "isLabEntrance"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "science_water"
+    scale_character_sheet: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "isLabEntrance"
+  displayName: "Lab Entrance Guard 1"
+  idRef {
+    id: "583135ff346265c4250048a5"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Shiawase/ElfMaleGarra"
+    character_sheet_id: "Errant_Lv3_Captain"
+    equipment_sheet_id: "Errant_Lv3_Captain"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Gaeatronics Guard"
+    GeneralTags: "isLabEntrance"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backer_elfmale_michaelpiantedosi"
+    }
+    karma: 80
   }
 }
 variables {
@@ -8136,15 +9837,42 @@ variables {
     typeName: "bool"
   }
 }
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "iLab-Alert_Lvl"
+    typeName: "int"
+  }
+}
 mapEvents: "teleportDelay"
 mapEvents: "clearFocus"
 mapEvents: "gangGoHostile"
 mapEvents: "craneAlarm"
+mapEvents: "labAlert_LevelUp"
 goals {
   name: "Gain Access to the Sub"
   type: GoalType_Primary
   status: GoalStatus_Started
   description: "River\'s information says there\'s a sub that travels to the location from here."
+}
+goals {
+  name: "The Distant Shore"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "You\'ve Seen the Distant Shore, But Can Never Return"
+}
+goals {
+  name: "Bring the Crew Back"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "And Not in Body Bags"
+}
+goals {
+  name: "Find what Dolphin Seeks"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "River\'s Totem brought you to the lab. Time to find out why."
 }
 worldMapLocation {
   filename: ""
