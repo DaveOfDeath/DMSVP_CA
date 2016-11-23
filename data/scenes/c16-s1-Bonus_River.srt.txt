@@ -614,7 +614,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "OnSetup.IfFresh.HideFill-ShowRoof"
+  name: "onSetup.IfFresh.HideFill-ShowRoof"
   events {
     ops {
       functionName: "On Map Setup"
@@ -1028,7 +1028,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "OnInteract.Dock-Legwork_Strength.OpenConvo"
+  name: "onInteract.Dock-Legwork_Strength.OpenConvo"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -1592,7 +1592,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "onEvent.CraneAlarm.PlaySound_MoveLights"
+  name: "event.CraneAlarm.PlaySound_MoveLights"
   events {
     ops {
       functionName: "Get Map Item (Event)"
@@ -2064,34 +2064,6 @@ triggers {
           functionName: "Get Map Item (Prop)"
           args {
             string_value: "582a8b2d346265cc1b004d1b"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Play Sound"
-      args {
-        call_value {
-          functionName: "Get Map Item (Sound)"
-          args {
-            string_value: "HongKong:props"
-          }
-          args {
-            string_value: "powerdown"
-          }
-        }
-      }
-      args {
-        float_value: 1
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 0
           }
         }
       }
@@ -2976,6 +2948,39 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bLegwork_CraneActive"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "craneAlarm"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -3763,6 +3768,48 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Play FX on Actor"
+      args {
+        string_value: "Berlin:LoopedSmokingIdle"
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582907cb3462657c25003e13"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play FX on Actor"
+      args {
+        string_value: "Berlin:LoopedSmokingIdle"
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "58291b133462657c25003e3a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -3914,6 +3961,48 @@ triggers {
           functionName: "Get Map Item (Animation)"
           args {
             string_value: "HongKong:General/standing_idle"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove FX From Actor"
+      args {
+        string_value: "Berling:LoopedSmokingIdle"
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582907cb3462657c25003e13"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove FX From Actor"
+      args {
+        string_value: "Berling:LoopedSmokingIdle"
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "58291b133462657c25003e3a"
+              }
+            }
+          }
+          args {
           }
         }
       }
@@ -5074,6 +5163,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -5576,6 +5687,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -5849,7 +5982,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "onSetup.SetEntranceAnimations"
+  name: "onSetup.SetEntranceAnimations.HideStartOff"
   events {
     ops {
       functionName: "On Curtains Up"
@@ -5858,6 +5991,44 @@ triggers {
   conditions {
   }
   actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
     ops {
       functionName: "Play Animation From Manifest"
       args {
@@ -5883,7 +6054,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "582907cb3462657c25003e13"
+            string_value: "583135ff346265c4250048a5"
           }
         }
       }
@@ -5892,6 +6063,66 @@ triggers {
           functionName: "Get Map Item (Animation)"
           args {
             string_value: "HongKong:General/standing_idle_scratch"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_bouncer"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isStartOff"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
           }
         }
       }
@@ -6074,7 +6305,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "onInteract.MoonBayVent1.EnableTurnMode"
+  name: "onInteract.AnyVent1.EnableTurnMode"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -6087,30 +6318,19 @@ triggers {
         }
       }
     }
-  }
-  conditions {
     ops {
-      functionName: "Evaluate Turn Mode in Dimension"
+      functionName: "On Item Interaction"
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "TurnBasedOrFreeMove"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (SceneDimension)"
-          args {
-            string_value: "Default"
+            string_value: "583244e83462659812004e40"
           }
         }
       }
     }
+  }
+  conditions {
   }
   actions {
     ops {
@@ -6331,7 +6551,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "onInteract.EntranceVent1.WarpDrone"
+  name: "onInteract.EntranceVent2.WarpDrone"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -6517,7 +6737,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "onInteract.MoonBayVent3.DisableTurnMode"
+  name: "onInteract.AnyVent3.DisableTurnMode"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -6526,6 +6746,17 @@ triggers {
           functionName: "Get Map Item (InteractableObject)"
           args {
             string_value: "5831160b3462658c21003b68"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5832449a3462659812004e3a"
           }
         }
       }
@@ -6634,20 +6865,37 @@ triggers {
       }
     }
     ops {
-      functionName: "Compare Actor Team"
+      functionName: "Evaluate If Actor is Inside Region"
       args {
         call_value {
-          functionName: "Get Random Actor within Area"
+          functionName: "All Actors on Team"
           args {
             call_value {
-              functionName: "Area: Region"
+              functionName: "Get Preset Value (string)"
               args {
-                call_value {
-                  functionName: "Get Map Item (Region)"
-                  args {
-                    string_value: "582fe9ca346265fc11003ae2"
-                  }
-                }
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 6
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
               }
             }
           }
@@ -6657,7 +6905,7 @@ triggers {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "IsOrIsNot"
+            string_value: "AreOrAreNot"
           }
           args {
             int_value: 1
@@ -6666,20 +6914,9 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Preset Value (string)"
+          functionName: "Get Map Item (Region)"
           args {
-            string_value: "FactionList"
-          }
-          args {
-            int_value: 6
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (SceneDimension)"
-          args {
-            string_value: "Default"
+            string_value: "582fe9ca346265fc11003ae2"
           }
         }
       }
@@ -6837,6 +7074,109 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Clear Actor Orders"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Run Speed"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "RunSpeedMethod"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabEntrance"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Change Actor Team"
       args {
         call_value {
@@ -6952,6 +7292,2401 @@ triggers {
   is_oneshot: false
 }
 triggers {
+  name: "evnet.PowerFlciker.StartGuard1Walking"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labPowerFlicker"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Actor Run Speed"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "583135ff346265c4250048a5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "RunSpeedMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "583135ff346265c4250048a5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "58313581346265c4250048a2"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "583135ff346265c4250048a5"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "I\'m sick of this shit!"
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 4
+      }
+    }
+    ops {
+      functionName: "Isolated Team Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5832640c3462659812004e80"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onRGN.Lab-MoonPool_SecDoor.Open"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "583267d13462659812004e84"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Prop Is Closed Door"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "582ff7c5346265fc11003b74"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Force-Use Interactable Object (Basic)"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "582ff7c5346265fc11003b74"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583265b43462659812004e82"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onRGN.EnterExit.SecDoorOpen.Close"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "58313581346265c4250048a2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "On Region Exit"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "58313581346265c4250048a2"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Prop Is Closed Door"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "582ff7c5346265fc11003b74"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "58313581346265c4250048a2"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Force-Use Interactable Object (Basic)"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "582ff7c5346265fc11003b74"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5832668c3462659812004e83"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onInteract.LoadTrolley.ShowBoxesEnableControl"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583252743462659812004e63"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583252743462659812004e63"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "582fe243346265fc11003ab2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:props"
+          }
+          args {
+            string_value: "ChairSlide3"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isLabTrolley"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5832f911346265941e00555e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onInteract.LoadTrolley.StartGuard2Walking"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583252743462659812004e63"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5832eed3346265941e005430"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "God, he\'s so lazy!"
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Actor Run Speed"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5832eed3346265941e005430"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "RunSpeedMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5832eed3346265941e005430"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Offset Point"
+          args {
+            call_value {
+              functionName: "Current Location of Actor"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Actor)"
+                  args {
+                    string_value: "5832eed3346265941e005430"
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Specified Point (2D)"
+              args {
+                float_value: 0
+              }
+              args {
+                float_value: 5
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Isolated Team Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "When\'s your shift end?"
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 6
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "583134a6346265c42500489d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Oh, I don\'t... What even time is it?"
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 8
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5832f093346265941e005431"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onInteract.ControlTrolley.StartConvo"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "582fe243346265fc11003ab2"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "582fe243346265fc11003ab2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5832f6c9346265941e005558"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Offset Point"
+          args {
+            call_value {
+              functionName: "Current Location of Prop"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Prop)"
+                  args {
+                    string_value: "5832f6c9346265941e005558"
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Specified Point (2D)"
+              args {
+                float_value: 0
+              }
+              args {
+                float_value: -18
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "58324fd83462659812004e55"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "58324fd83462659812004e55"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "58324fd83462659812004e55"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "58324fd83462659812004e55"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "582fe863346265fc11003ad2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "582fe863346265fc11003ad2"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "582fe863346265fc11003ad2"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "582fe863346265fc11003ad2"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5831190f3462658c21003b71"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "5831190f3462658c21003b71"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5831190f3462658c21003b71"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5831190f3462658c21003b71"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5830832b346265a411005eac"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "5830832b346265a411005eac"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5830832b346265a411005eac"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5830832b346265a411005eac"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5830832c346265a411005ead"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "5830832c346265a411005ead"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5830832c346265a411005ead"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5830832c346265a411005ead"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Move Prop with Speed"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5832f6c9346265941e005558"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Get Offset Point"
+                  args {
+                    call_value {
+                      functionName: "Current Location of Prop"
+                      args {
+                        call_value {
+                          functionName: "Get Map Item (Prop)"
+                          args {
+                            string_value: "5832f6c9346265941e005558"
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    call_value {
+                      functionName: "Specified Point (2D)"
+                      args {
+                        float_value: -32
+                      }
+                      args {
+                        float_value: 0
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5832f6c9346265941e005558"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 1
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Point Component (float)"
+              args {
+                call_value {
+                  functionName: "Current Location of Prop"
+                  args {
+                    call_value {
+                      functionName: "Get Map Item (Prop)"
+                      args {
+                        string_value: "5832f6c9346265941e005558"
+                      }
+                    }
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "VectorComponent"
+                  }
+                  args {
+                    int_value: 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labToggleAwareRegion"
+          }
+        }
+      }
+      args {
+        float_value: 8
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labTrolleyStop"
+          }
+        }
+      }
+      args {
+        float_value: 32
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5832fa01346265941e005560"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "event.TrolleyStop.LightOn.FlickStop"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labTrolleyStop"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "58325f8b3462659812004e73"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "58339a29346265401b004df5"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5832f6c9346265941e005558"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Current Location of Prop"
+          args {
+            call_value {
+              functionName: "Get Map Item (Prop)"
+              args {
+                string_value: "58339d3c346265401b004df9"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:ambient_office"
+          }
+          args {
+            string_value: "ElevatorDing"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5833b490346265401b004e17"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58339aee346265401b004df6"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "event.TrolleyStop.GuardComplain"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labTrolleyStop"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "I hope the power stays on this time..."
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5833acb8346265401b004e06"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onRGN.LabEntranceAwareView.Shout.GoHostile"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f85a346265941e00555a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f89a346265941e00555b"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Interrupt Team\'s Movement"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5832eed3346265941e005430"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Current Location of Prop"
+          args {
+            call_value {
+              functionName: "Get Map Item (Prop)"
+              args {
+                string_value: "5833a15c346265401b004e00"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5832eed3346265941e005430"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "What the - You\'re no fraggin\' ganger!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labAlert_LevelUp"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5833a026346265401b004dfe"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "event.ToggleAwareRegion.LongViewOff-On"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labToggleAwareRegion"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f85a346265941e00555a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labToggleAwareRegion"
+          }
+        }
+      }
+      args {
+        float_value: 8
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f85a346265941e00555a"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5833a23b346265401b004e01"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
   name: ""
   events {
   }
@@ -6962,6 +9697,396 @@ triggers {
   isActive: false
   idRef {
     id: "58291dba3462657c25003e44"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "<---Power Flicker Handler--->"
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58325dc43462659812004e70"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "evnet.PowerFlciker.StartSound"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labPowerFlicker"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:props"
+          }
+          args {
+            string_value: "powerdown"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58325df43462659812004e71"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "event.PowerFlicker.FlickerQuick"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labPowerFlicker"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0.5
+          }
+          args {
+            float_value: 1.5
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 1
+          }
+          args {
+            float_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0.25
+          }
+          args {
+            float_value: 0.5
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0.1
+          }
+          args {
+            float_value: 0.25
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Prop Visible by Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        float_value: -1
+      }
+      args {
+        call_value {
+          functionName: "Everywhere"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0.25
+          }
+          args {
+            float_value: 0.5
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58325f8b3462659812004e73"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: ""
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58313c9f346265c4250048aa"
   }
   elseActions {
   }
@@ -7140,26 +10265,24 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labPowerFlicker"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
   }
   isActive: true
   idRef {
     id: "582e73c8346265141a00685a"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: ""
-  events {
-  }
-  conditions {
-  }
-  actions {
-  }
-  isActive: false
-  idRef {
-    id: "58313c9f346265c4250048aa"
   }
   elseActions {
   }
@@ -8444,8 +11567,8 @@ regions {
 regions {
   name: "RGN_TestTarget"
   position {
-    x: -23
-    y: -1
+    x: -49
+    y: 36
     width: 2
     height: 2
   }
@@ -8613,6 +11736,296 @@ regions {
   combat_fade_interval: 2
   combat_intro_stinger: ""
   combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-MoonPoolDoorOpen"
+  position {
+    x: 5
+    y: -10
+    width: 2
+    height: 3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "583267d13462659812004e84"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-EntranceLongView"
+  position {
+    x: -29
+    y: -4
+    width: 4
+    height: 9
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5832f85a346265941e00555a"
+  }
+  highlight_color {
+    r: 0.98823529
+    g: 1
+    b: 0.10196079
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-EntranceShortView"
+  position {
+    x: -29
+    y: 1
+    width: 4
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5832f89a346265941e00555b"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-EntranceHolding"
+  position {
+    x: -46
+    y: -13
+    width: 4
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5833aeb6346265401b004e11"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "CAM_Lab-LowerLevel"
+  position {
+    x: -51
+    y: 26
+    width: 60
+    height: 31
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5833bccb346265401b004e2f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: "mcplaguebearer"
+  combat_music: "HongKong-Combat-Kowloon-Int1"
+  default_music: "HongKong-Sewer"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+  combat_intense_music: "HongKong-Combat-Kowloon-Int2"
+  combat_wrapup_music: "HongKong-Combat-Kowloon-WrapUp"
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: "HongKong-Combat-stinger-Start"
+  combat_outro_stinger: "HongKong-Combat-stinger-End"
   vfx_fill_prefab_name: ""
 }
 characters {
@@ -9765,6 +13178,228 @@ characters {
     karma: 80
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -29
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "isLabEntrance"
+  displayName: "Lab Entrance Guard 2"
+  idRef {
+    id: "5832eed3346265941e005430"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Shiawase/HumanFemaleShiawaseGuard"
+    character_sheet_id: "Errant_Lv3_Human_Pistol"
+    equipment_sheet_id: "Errant_Lv3_Pistol_NoGrenade"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Gaeatronics Guard"
+    GeneralTags: "isLabEntrance"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backer_elfmale_michaelpiantedosi"
+    }
+    karma: 61
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58352102346265a00f004103"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HumanMaleKnightErrantMage"
+    character_sheet_id: "Science_Lv3_Base"
+    equipment_sheet_id: "Science_Lv3_Air"
+    character_mod {
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Scientist Choker"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "science_air"
+    scale_character_sheet: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -27
+    y: 0
+    z: 39
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "58352111346265a00f004104"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HumanMaleKnightErrantMage"
+    character_sheet_id: "Science_Lv3_Base"
+    equipment_sheet_id: "Science_Lv3_Earth"
+    character_mod {
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Scientist Pounder"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "science_earth"
+    scale_character_sheet: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58352119346265a00f004105"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HumanMaleKnightErrantMage"
+    character_sheet_id: "Science_Lv3_Base"
+    equipment_sheet_id: "Science_Lv3_Fire"
+    character_mod {
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Scientist Scorcher"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "science_fire"
+    scale_character_sheet: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -30
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "58352120346265a00f004106"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HumanMaleKnightErrantMage"
+    character_sheet_id: "Science_Lv3_Base"
+    equipment_sheet_id: "Science_Lv3_Water"
+    character_mod {
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AllEqual
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Scientist Quencher"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    hiring_set_randomizer: "science_water"
+    scale_character_sheet: false
+  }
+}
 variables {
   bool_value: false
   variableref_value {
@@ -9850,6 +13485,9 @@ mapEvents: "clearFocus"
 mapEvents: "gangGoHostile"
 mapEvents: "craneAlarm"
 mapEvents: "labAlert_LevelUp"
+mapEvents: "labPowerFlicker"
+mapEvents: "labTrolleyStop"
+mapEvents: "labToggleAwareRegion"
 goals {
   name: "Gain Access to the Sub"
   type: GoalType_Primary
@@ -9992,6 +13630,7 @@ character_roster {
     hiring_conditions {
     }
     hiring_cost: -1
+    content_pack_source: "579e0109346265441c0058b1"
   }
 }
 show_hiring_screen_on_scene_load: true
