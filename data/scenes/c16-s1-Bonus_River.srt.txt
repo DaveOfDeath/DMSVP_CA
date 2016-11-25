@@ -5950,6 +5950,105 @@ triggers {
   is_oneshot: false
 }
 triggers {
+  name: "event.AlterLevelUp.DisableMaunalTurn.bDroneVent"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labAlert_LevelUp"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDroneVent"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDroneVent"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583762aa346265e81d000eac"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
   name: ""
   events {
   }
@@ -6351,6 +6450,28 @@ triggers {
           functionName: "Get Map Item (SceneDimension)"
           args {
             string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDroneVent"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
           }
         }
       }
@@ -6783,6 +6904,28 @@ triggers {
           functionName: "Get Map Item (SceneDimension)"
           args {
             string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDroneVent"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
           }
         }
       }
@@ -10093,6 +10236,190 @@ triggers {
   is_oneshot: true
 }
 triggers {
+  name: "<---Lab Lv2 Handler--->"
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58377ddb346265e81d000ed1"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onSetup.Setlv2Animations"
+  events {
+    ops {
+      functionName: "On Curtains Up"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabLv2"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5837616f346265e81d000ea9"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_repairing"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "58352102346265a00f004103"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_repairing"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "58352111346265a00f004104"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "Seattle:General/standing_idle_sacrifice"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "58352119346265a00f004105"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_sacrifice"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "58352120346265a00f004106"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "HongKong:General/standing_idle_doomventing"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58377e37346265e81d000ed2"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: ""
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58377dd9346265e81d000ed0"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
   name: "Testing.MagicCircleVFX.Mapping"
   events {
     ops {
@@ -10249,7 +10576,7 @@ triggers {
             string_value: "FacingDirection"
           }
           args {
-            int_value: 0
+            int_value: 4
           }
         }
       }
@@ -10263,20 +10590,6 @@ triggers {
             int_value: 0
           }
         }
-      }
-    }
-    ops {
-      functionName: "Send Event After Delay"
-      args {
-        call_value {
-          functionName: "Get Map Item (Event)"
-          args {
-            string_value: "labPowerFlicker"
-          }
-        }
-      }
-      args {
-        float_value: 1
       }
     }
   }
@@ -11547,7 +11860,7 @@ regions {
     b: 0.21176471
     a: 1
   }
-  ambience_template: "mcplaguebearer"
+  ambience_template: "underground-quiet"
   combat_music: "HongKong-Combat-Kowloon-Int1"
   default_music: "HongKong-Sewer"
   loop_combat_music: true
@@ -11567,10 +11880,10 @@ regions {
 regions {
   name: "RGN_TestTarget"
   position {
-    x: -49
-    y: 36
-    width: 2
-    height: 2
+    x: -50
+    y: 44
+    width: 3
+    height: 3
   }
   enabledAtStart: true
   is_camera_region: false
@@ -11971,12 +12284,12 @@ regions {
   vfx_fill_prefab_name: ""
 }
 regions {
-  name: "CAM_Lab-LowerLevel"
+  name: "CAM_Lab-Lvl2"
   position {
     x: -51
-    y: 26
+    y: 34
     width: 60
-    height: 31
+    height: 35
   }
   enabledAtStart: true
   is_camera_region: true
@@ -11984,6 +12297,64 @@ regions {
   is_vfx_fill_region: false
   idRef {
     id: "5833bccb346265401b004e2f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.41960785
+    g: 0.54509807
+    b: 0.40392157
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.17254902
+    g: 0.17254902
+    b: 0.21176471
+    a: 1
+  }
+  ambience_template: "underground-quiet"
+  combat_music: "HongKong-Combat-Kowloon-Int1"
+  default_music: "HongKong-Sewer"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+  combat_intense_music: "HongKong-Combat-Kowloon-Int2"
+  combat_wrapup_music: "HongKong-Combat-Kowloon-WrapUp"
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: "HongKong-Combat-stinger-Start"
+  combat_outro_stinger: "HongKong-Combat-stinger-End"
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN_Lab-Lv2DroneRoom"
+  position {
+    x: -39
+    y: 64
+    width: 5
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "58365671346265c80f0049cf"
   }
   highlight_color {
     r: 0
@@ -12011,22 +12382,223 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: "mcplaguebearer"
-  combat_music: "HongKong-Combat-Kowloon-Int1"
-  default_music: "HongKong-Sewer"
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
   loop_combat_music: true
-  loop_default_music: true
+  loop_default_music: false
   no_fow_in_region: false
-  combat_intense_music: "HongKong-Combat-Kowloon-Int2"
-  combat_wrapup_music: "HongKong-Combat-Kowloon-WrapUp"
+  combat_intense_music: ""
+  combat_wrapup_music: ""
   loop_combat_intense_music: true
   loop_combat_wrapup_music: true
   combat_intense_threshold: 5
   combat_wrapup_threshold: 2
   combat_fade_interval: 2
-  combat_intro_stinger: "HongKong-Combat-stinger-Start"
-  combat_outro_stinger: "HongKong-Combat-stinger-End"
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
   vfx_fill_prefab_name: ""
+}
+regions {
+  name: "RGN-Lab_Lv2TripAlarm"
+  position {
+    x: -45
+    y: 56
+    width: 4
+    height: 1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "583759d4346265e81d000e9c"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "CAM-Matrix"
+  position {
+    x: -50
+    y: 103
+    width: 54
+    height: 86
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5837a14a3462657027005fb0"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.627451
+    g: 0.8509804
+    b: 1
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.090196081
+    g: 0.15294118
+    b: 0.29411766
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: "HongKong-Combat-Matrix2"
+  default_music: "HongKong-Stealth-Matrix1"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+patrolRoutes {
+  name: "pLab-Lv2MatrixA"
+  pathType: 0
+  nodes {
+    position {
+      x: -41
+      z: 129
+    }
+    index: 0
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  nodes {
+    position {
+      x: -41
+      z: 122
+    }
+    index: 1
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  nodes {
+    position {
+      x: -45
+      z: 122
+    }
+    index: 2
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  nodes {
+    position {
+      x: -45
+      z: 118
+    }
+    index: 3
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  nodes {
+    position {
+      x: -49
+      z: 118
+    }
+    index: 4
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  nodes {
+    position {
+      x: -49
+      z: 111
+    }
+    index: 5
+    rail_node_pause_time: 0
+    rail_node_flip_180_rotation: false
+    rail_node_facing: -1
+    rail_draw_segment: true
+    rail_draw_node: true
+  }
+  can_move_beyond_node: false
+  is_rail: true
+  rail_speed: 1
+  rail_rotation_time: 4
+  idRef {
+    id: "5837b48034626570270060b5"
+  }
+  rail_draw_segments: true
+  rail_draw_nodes: true
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -13271,11 +13843,13 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -34
+    x: -27
     y: 0
-    z: 38
+    z: 47
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
+  GeneralTags: "isLabLv2"
+  displayName: "Lab Lv2 Science 1"
   idRef {
     id: "58352102346265a00f004103"
   }
@@ -13293,6 +13867,7 @@ characters {
     }
     team_id: "LabWorker"
     char_name: "Scientist Choker"
+    GeneralTags: "isLabLv2"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -13304,11 +13879,13 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -27
+    x: -33
     y: 0
-    z: 39
+    z: 46
   }
-  orientation: ORIENTATION_N
+  orientation: ORIENTATION_S
+  GeneralTags: "isLabLv2"
+  displayName: "Lab Lv2 Science 2"
   idRef {
     id: "58352111346265a00f004104"
   }
@@ -13326,6 +13903,7 @@ characters {
     }
     team_id: "LabWorker"
     char_name: "Scientist Pounder"
+    GeneralTags: "isLabLv2"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -13339,9 +13917,11 @@ characters {
   gridPoint {
     x: -34
     y: 0
-    z: 41
+    z: 49
   }
   orientation: ORIENTATION_S
+  GeneralTags: "isLabLv2"
+  displayName: "Lab Lv2 Science 3"
   idRef {
     id: "58352119346265a00f004105"
   }
@@ -13359,6 +13939,7 @@ characters {
     }
     team_id: "LabWorker"
     char_name: "Scientist Scorcher"
+    GeneralTags: "isLabLv2"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -13370,11 +13951,13 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -30
+    x: -29
     y: 0
-    z: 36
+    z: 42
   }
   orientation: ORIENTATION_E
+  GeneralTags: "isLabLv2"
+  displayName: "Lab Lv2 Science 4"
   idRef {
     id: "58352120346265a00f004106"
   }
@@ -13392,12 +13975,266 @@ characters {
     }
     team_id: "LabWorker"
     char_name: "Scientist Quencher"
+    GeneralTags: "isLabLv2"
     pc_spawn_number: -1
     portrait {
       filename: ""
     }
     hiring_set_randomizer: "science_water"
     scale_character_sheet: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "isLabLv2"
+  idRef {
+    id: "58364edd346265c80f00495d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Objects/AutoTurret"
+    character_sheet_id: "Turret_Lv3"
+    equipment_sheet_id: "Turret_Lv3_Burst_Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 2
+        vision_cone_distance: 18
+        vision_cone_angle: 90
+        is_fearless: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Auto Turret"
+    GeneralTags: "isLabLv2"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 66
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "isLabLv2"
+  idRef {
+    id: "5836f69c346265e81d000e18"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Drone/DroneStrato9Base"
+    character_sheet_id: "ClassB_Attack_Strato9 (Base)"
+    equipment_sheet_id: "ClassB_Attack_Gear (Base)"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+        is_fearless: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_grunt"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Gaeatronics Strato9"
+    GeneralTags: "isLabLv2"
+    pc_spawn_number: -1
+    portrait {
+      filename: "Generic_Drone_Strato9Base"
+    }
+    karma: 67
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -48
+    y: 0
+    z: 60
+  }
+  orientation: ORIENTATION_N
+  GeneralTags: "isLabLv2"
+  displayName: "Lab Lv2 Guard 1"
+  idRef {
+    id: "5837616f346265e81d000ea9"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Shiawase/ElfFemaleShiawaseGuard"
+    character_sheet_id: "Errant_Lv3_Captain"
+    equipment_sheet_id: "Errant_Lv3_Captain"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_Soldier"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "LabWorker"
+    char_name: "Gaeatronics Captain"
+    GeneralTags: "isLabLv2"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backer_elfmale_michaelpiantedosi"
+    }
+    karma: 80
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -27
+    y: 0
+    z: 42
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "isLabSpyEye1"
+  displayName: "Lab Lv2 Spy Eye"
+  idRef {
+    id: "5837754c346265e81d000ecd"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_mod {
+      archetypeName: "Non-Combatant"
+    }
+    team_id: "Civilians"
+    char_name: "Camera"
+    GeneralTags: "isLabSpyEye1"
+    pc_spawn_number: -1
+    is_prop_character: true
   }
 }
 variables {
@@ -13478,6 +14315,14 @@ variables {
     scope: TsVariableScope_Scene
     name: "iLab-Alert_Lvl"
     typeName: "int"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "bDroneVent"
+    typeName: "bool"
   }
 }
 mapEvents: "teleportDelay"
