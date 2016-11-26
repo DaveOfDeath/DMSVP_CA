@@ -1,7 +1,7 @@
 idRef {
   id: "582bde49346265a809001a61"
 }
-ui_name: "c16_s1_DockGangWarehouse"
+ui_name: "c16-s1_DockGangWarehouse"
 nodes {
   idRef {
     id: "582e4b1c346265141a005fa1"

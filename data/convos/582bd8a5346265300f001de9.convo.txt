@@ -1,7 +1,7 @@
 idRef {
   id: "582bd8a5346265300f001de9"
 }
-ui_name: "c16_s1_DockLegwork_Strength"
+ui_name: "c16-s1_DockLegwork_Strength"
 nodes {
   idRef {
     id: "582bd8bc346265300f001df1"

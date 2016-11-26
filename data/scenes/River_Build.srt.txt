@@ -258,6 +258,7 @@ characters {
     z: -2
   }
   orientation: ORIENTATION_S
+  GeneralTags: "River_Water_3"
   displayName: "River"
   idRef {
     id: "57c4262734626568110026cb"
@@ -349,14 +350,18 @@ characters {
     equipment {
       prefab_name: "Spell Fountain Haste 2"
     }
+    equipment {
+      prefab_name: "Bound Hurricane Spirit 6"
+    }
     team_id: "Shadowrunners"
     char_name: "River Daye"
+    GeneralTags: "River_Water_3"
     pc_spawn_number: -1
     portrait {
       filename: "pc_elffemale_13_rebecca"
     }
     portrait_code_override: "s2h6c11"
-    karma: 204
+    karma: 213
     first_name: "River"
     last_name: "Daye"
     cyberware_skin: "(Skin) Shimmer (River)"
