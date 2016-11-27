@@ -5926,17 +5926,9 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      functionName: "Trigger: Wait for Rounds"
       args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "EnableOrDisable"
-          }
-          args {
-            int_value: 1
-          }
-        }
+        int_value: 1
       }
       args {
         call_value {
@@ -5965,6 +5957,28 @@ triggers {
           }
           args {
             int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Manual Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
           }
         }
       }
@@ -6020,6 +6034,32 @@ triggers {
   conditions {
   }
   actions {
+    ops {
+      functionName: "Select Item on Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Fist"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "583135ff346265c4250048a5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
     ops {
       functionName: "Set Actor In Passive Mode"
       args {
@@ -6091,7 +6131,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Animation)"
           args {
-            string_value: "HongKong:General/standing_idle_scratch"
+            string_value: "HongKong:General/standing_idle_stretch"
           }
         }
       }
@@ -6166,7 +6206,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "OnSub.ExitLab.PlaySequence"
+  name: "onInteract.LabSub.ExitLab.PlaySequence"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -7251,7 +7291,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "evnet.PowerFlciker.StartGuard1Walking"
+  name: "event.PowerFlciker.StartGuard1Walking"
   events {
     ops {
       functionName: "Get Map Item (Event)"
@@ -7285,6 +7325,43 @@ triggers {
     }
   }
   actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "583135ff346265c4250048a5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
     ops {
       functionName: "Set Actor Run Speed"
       args {
@@ -8164,7 +8241,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "onInteract.ControlTrolley.StartConvo"
+  name: "onInteract.TrolleyPanel.OpenConvo"
   events {
     ops {
       functionName: "On Item Interaction"
@@ -8175,6 +8252,58 @@ triggers {
             string_value: "582fe243346265fc11003ab2"
           }
         }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "583a36e03462657022000834"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "583a48db3462657022000996"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "event.StartTrolley.DisablePanel"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "labTrolleyStart"
       }
     }
   }
@@ -9195,6 +9324,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5839d7de346265e00900444a"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -9573,6 +9724,17 @@ triggers {
     }
   }
   conditions {
+    ops {
+      functionName: "Invert Bool"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDebugMode"
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -9642,6 +9804,413 @@ triggers {
     id: "5833a23b346265401b004e01"
   }
   elseActions {
+    ops {
+      functionName: "Set Region Visible"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f89a346265941e00555b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f85a346265941e00555a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "labToggleAwareRegion"
+          }
+        }
+      }
+      args {
+        float_value: 8
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Set Region Visible"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f89a346265941e00555b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5832f85a346265941e00555a"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "DEBUG.onInteract.DebugAware.ToggleMode"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5839c51a346265502b001bdc"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Invert Bool"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDebugMode"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDebugMode"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:cyberware"
+          }
+          args {
+            string_value: "Cyberware_Electronic_On"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5839c5da346265502b001bdf"
+  }
+  elseActions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDebugMode"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:cyberware"
+          }
+          args {
+            string_value: "Cyberware_Electronic_Off"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onInteract.EntranceElevator.TeleportRunners"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5833b490346265401b004e17"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "HongKong:props"
+          }
+          args {
+            string_value: "ElevatorDown"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor With Fade"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "58391e6c346265801c001b0f"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait for Triggers"
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5833b490346265401b004e17"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5839d7de346265e00900444a"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5839d89b346265e00900444d"
+  }
+  elseActions {
   }
   is_oneshot: false
 }
@@ -9678,7 +10247,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "evnet.PowerFlciker.StartSound"
+  name: "event.PowerFlciker.StartSound"
   events {
     ops {
       functionName: "Get Map Item (Event)"
@@ -14679,8 +15248,8 @@ regions {
 regions {
   name: "RGN_TestTarget"
   position {
-    x: 62
-    y: 33
+    x: 5
+    y: 4
     width: 3
     height: 3
   }
@@ -14982,8 +15551,8 @@ regions {
     id: "5832f89a346265941e00555b"
   }
   highlight_color {
-    r: 0
-    g: 0
+    r: 1
+    g: 1
     b: 0
     a: 1
   }
@@ -17088,6 +17657,59 @@ characters {
   idRef {
     id: "583135ff346265c4250048a5"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Compare Actor Team"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "583135ff346265c4250048a5"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5839c932346265502b001be5"
+      turnToFace: true
+    }
+    interactionIcon: InteractionIcon_Conversation
+    interaction_info_text: ""
+  }
   lod: 0
   character_instance {
     prefab_name: "HongKong:Shiawase/ElfMaleGarra"
@@ -17155,12 +17777,12 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "LabWorker"
+    team_id: "Civilians"
     char_name: "Gaeatronics Guard"
     GeneralTags: "isLabEntrance"
     pc_spawn_number: -1
     portrait {
-      filename: "backer_elfmale_michaelpiantedosi"
+      filename: "npc_elfmale_gaeatronics"
     }
     karma: 80
   }
@@ -18055,6 +18677,14 @@ variables {
     typeName: "bool"
   }
 }
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "bDebugMode"
+    typeName: "bool"
+  }
+}
 mapEvents: "teleportDelay"
 mapEvents: "clearFocus"
 mapEvents: "gangGoHostile"
@@ -18065,6 +18695,7 @@ mapEvents: "labTrolleyStop"
 mapEvents: "labToggleAwareRegion"
 mapEvents: "labLv2Explosion"
 mapEvents: "labLv2FocusDelay"
+mapEvents: "labTrolleyStart"
 goals {
   name: "Gain Access to the Sub"
   type: GoalType_Primary
