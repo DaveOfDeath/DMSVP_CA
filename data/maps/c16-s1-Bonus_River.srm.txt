@@ -26812,6 +26812,7 @@ props {
     z: 15
   }
   orientation: ORIENTATION_S
+  GeneralTags: "isSpiritDoor"
   displayName: "oLab-SpiritDoor_North"
   idRef {
     id: "5840d3c9346265b819001418"
@@ -26837,6 +26838,7 @@ props {
     z: 30
   }
   orientation: ORIENTATION_E
+  GeneralTags: "isSpiritDoor"
   displayName: "oLab-SpiritDoor_East"
   idRef {
     id: "582f0421346265481b004268"
@@ -27422,6 +27424,7 @@ props {
     z: 8
   }
   orientation: ORIENTATION_E
+  GeneralTags: "isSpiritDoor"
   displayName: "oLab-SpiritDoor_West"
   idRef {
     id: "582fb62c3462650c24003f0a"
@@ -28356,6 +28359,7 @@ props {
     z: 22
   }
   orientation: ORIENTATION_S
+  GeneralTags: "isSpiritDoor"
   displayName: "oLab-SpiritDoor_South"
   idRef {
     id: "582fbdb83462650c24003f8f"
@@ -84004,9 +84008,9 @@ props {
 props {
   name: "undergroundBase_ground_irisVent03"
   gridPoint {
-    x: 76
+    x: 92
     y: 0
-    z: 50
+    z: 19
   }
   orientation: ORIENTATION_S
   GeneralTags: "isSpiritVentClosed"
@@ -84054,7 +84058,7 @@ props {
   gridPoint {
     x: 79
     y: 0
-    z: 50
+    z: 32
   }
   orientation: ORIENTATION_S
   GeneralTags: "isSpiritVentClosed"
@@ -84075,9 +84079,9 @@ props {
 props {
   name: "undergroundBase_ground_irisVent03"
   gridPoint {
-    x: 82
+    x: 59
     y: 0
-    z: 50
+    z: 18
   }
   orientation: ORIENTATION_S
   GeneralTags: "isSpiritVentClosed"
@@ -84098,9 +84102,9 @@ props {
 props {
   name: "undergroundBase_ground_irisVent03"
   gridPoint {
-    x: 85
+    x: 78
     y: 0
-    z: 50
+    z: -1
   }
   orientation: ORIENTATION_S
   GeneralTags: "isSpiritVentClosed"
@@ -87333,19 +87337,6 @@ props {
   lod: 0
 }
 props {
-  name: "secretLab_wall_spyVent"
-  gridPoint {
-    x: 96
-    y: 0
-    z: 38
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "583f86ab346265cc12001787"
-  }
-  lod: 0
-}
-props {
   name: "seaLab_floor_gutterEdge01"
   gridPoint {
     x: 97
@@ -87392,8 +87383,69 @@ props {
     z: 36
   }
   orientation: ORIENTATION_S
+  displayName: "oLab-SpiritVent_West"
   idRef {
     id: "583f86dd346265cc1200178c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 8
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Use Vent"
   }
   lod: 0
 }
@@ -94715,6 +94767,202 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "5840e682346265b81900143d"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_tech_toolbox"
+  gridPoint {
+    x: 98
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58417414346265540e001284"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_spyVent"
+  gridPoint {
+    x: 96
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_E
+  displayName: "oLab-SpiritVent_North"
+  idRef {
+    id: "584174a1346265540e001287"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 8
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Use Vent"
+  }
+  lod: 0
+}
+props {
+  name: "leylines_dragonline_medium"
+  gridPoint {
+    x: 62
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  idRef {
+    id: "584230f6346265ac1f001e48"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_hp_damage_mod: 3
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "leylines_dragonline_mediumap"
+  gridPoint {
+    x: 85
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "leyline_fx_on_tile"
+    string_value: "HongKong:EnvironmentLoopDragonLineMed"
+  }
+  properties {
+    property_id: "leyline_sfx_on_tile"
+    string_value: "StandOnLeylineMed"
+  }
+  properties {
+    property_id: "leyline_fx_on_visible"
+    string_value: "HongKong:EnvironmentLoopDragonLineMedOff"
+  }
+  idRef {
+    id: "584230ff346265ac1f001e49"
+  }
+  lod: 0
+  leyLine {
+    leyline_level: 1
+    spell_bounce_list: "BounceOnce_Dragonline"
+    spell_ap_damage_mod: 1
+    spell_cooldown_mod: -1
+    spell_accuracy_mod: 0.08
+    uirep {
+      description: "Dragon Line (Medium)"
+    }
+  }
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 91
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58423a38346265ac1f001e4c"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -41
+    y: 0
+    z: 91
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58423a38346265ac1f001e4d"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -42
+    y: 0
+    z: 91
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58423a38346265ac1f001e4e"
   }
   lod: 0
 }
