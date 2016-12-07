@@ -2187,7 +2187,7 @@ props {
   gridPoint {
     x: 40.1
     y: 0
-    z: 112
+    z: 112.1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -6751,6 +6751,17 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Inspect
     interaction_info_text: "Examine Power Supply"
@@ -9980,6 +9991,17 @@ props {
             }
             args {
               int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
             }
           }
         }
@@ -22470,6 +22492,17 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Matrix
     interaction_info_text: "Examine Terminal"
@@ -29561,9 +29594,9 @@ props {
 props {
   name: "chars_scaleRef_human"
   gridPoint {
-    x: 70
+    x: 73
     y: 0
-    z: 14
+    z: 5
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -42340,7 +42373,7 @@ props {
   gridPoint {
     x: 76
     y: 0
-    z: 36.2
+    z: 37.2
   }
   orientation: ORIENTATION_S
   idRef {
@@ -42353,7 +42386,7 @@ props {
   gridPoint {
     x: 76
     y: 0
-    z: 36.2
+    z: 37.2
   }
   orientation: ORIENTATION_S
   displayName: "oLab-SpiritPowerLights1"
@@ -56061,12 +56094,12 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 60
-    y: 0
-    z: 38
+    x: 10
+    y: 1
+    z: 27
   }
   orientation: ORIENTATION_S
-  displayName: "oLabSpirit-JackPoint"
+  displayName: "oLab-Spirit_JackPoint_real1"
   idRef {
     id: "583c30b43462651c2c007471"
   }
@@ -83576,7 +83609,7 @@ props {
 props {
   name: "secretLab_wall_fill"
   gridPoint {
-    x: 58
+    x: 57
     y: 0
     z: 43
   }
@@ -83995,6 +84028,222 @@ props {
             functionName: "Get Variable (bool)"
             args {
               string_value: "bShield_Earth_Off"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (Actor)"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 8
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isViolet"
             }
           }
         }
@@ -84439,6 +84688,222 @@ props {
             functionName: "Get Variable (bool)"
             args {
               string_value: "bShield_Water_Off"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (Actor)"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 8
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isViolet"
             }
           }
         }
@@ -85988,7 +86453,7 @@ props {
   name: "mitte_buildingOrnament_panels02"
   gridPoint {
     x: 91
-    y: 0
+    y: 0.05
     z: 13
   }
   orientation: ORIENTATION_S
@@ -86520,7 +86985,7 @@ props {
 props {
   name: "factory_tech_Reactor01"
   gridPoint {
-    x: 76
+    x: 78
     y: 0
     z: 41
   }
@@ -86616,8 +87081,201 @@ props {
     z: 38.480003
   }
   orientation: ORIENTATION_S
+  displayName: "oLab-Spirit_DummyTerminal1"
   idRef {
     id: "583f80d9346265cc1200172c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Is Decker"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Air_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Earth_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Fire_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Water_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isDetained"
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Matrix
+    interaction_info_text: "Jack-In"
   }
   lod: 0
 }
@@ -88965,19 +89623,6 @@ props {
   lod: 0
 }
 props {
-  name: "haven_tech_novahotTerminal01"
-  gridPoint {
-    x: 97.009995
-    y: 1
-    z: 10.280004
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "583f8fda346265cc1200181e"
-  }
-  lod: 0
-}
-props {
   name: "factory_furniture_techDesk01"
   gridPoint {
     x: 101
@@ -90301,6 +90946,222 @@ props {
           }
         }
       }
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 8
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (Actor)"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isViolet"
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Generic
     interaction_info_text: ""
@@ -91326,6 +92187,222 @@ props {
             functionName: "Get Variable (bool)"
             args {
               string_value: "bShield_Air_Off"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (Actor)"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 8
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 7
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isViolet"
             }
           }
         }
@@ -92395,9 +93472,9 @@ props {
   gridPoint {
     x: 72
     y: 0
-    z: 1.1999998
+    z: 0.99999982
   }
-  orientation: ORIENTATION_W
+  orientation: ORIENTATION_E
   idRef {
     id: "584026ad3462657410003d45"
   }
@@ -92408,9 +93485,9 @@ props {
   gridPoint {
     x: 70
     y: 0
-    z: 1.1999998
+    z: 0.99999982
   }
-  orientation: ORIENTATION_W
+  orientation: ORIENTATION_E
   idRef {
     id: "584026b03462657410003d46"
   }
@@ -94963,6 +96040,836 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "58423a38346265ac1f001e4e"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 98
+    y: 0.5
+    z: 40
+  }
+  orientation: ORIENTATION_S
+  displayName: "oRepairKit"
+  idRef {
+    id: "5842e55434626534220000ca"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "DroneRepairKit_Self"
+      destroyOnPickup: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_tech_experimentwire03"
+  gridPoint {
+    x: 70.1
+    y: 0
+    z: 39.1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5842e62d34626534220000cc"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_tech_mainframe"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5842e76934626534220000cd"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_tech_mainframe"
+  gridPoint {
+    x: 71
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5842e76934626534220000ce"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 79.5
+    y: 1
+    z: 32.5
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-SpiritInspect_Earth"
+  idRef {
+    id: "5842e88b34626534220000cf"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5842e8f834626534220000d1"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Inspect Crystal"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 59.5
+    y: 1
+    z: 18.5
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-SpiritInspect_Air"
+  idRef {
+    id: "5842f17e3462653422000147"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5842e8f834626534220000d1"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Inspect Crystal"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 92.5
+    y: 1
+    z: 19.5
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-SpiritInspect_Water"
+  idRef {
+    id: "5842f1843462653422000148"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5842e8f834626534220000d1"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Inspect Crystal"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 78.5
+    y: 1
+    z: -0.5
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-SpiritInspect_Fire"
+  idRef {
+    id: "5842f18a3462653422000149"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5842e8f834626534220000d1"
+      turnToFace: false
+    }
+    interactionIcon: InteractionIcon_Inspect
+    interaction_info_text: "Inspect Crystal"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 46
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584421cb3462659c280013f0"
+  }
+  lod: 0
+}
+props {
+  name: "haven_tech_novahotTerminal01"
+  gridPoint {
+    x: 97.01
+    y: 1
+    z: 10.28
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-Spirit_DummyTerminal2"
+  idRef {
+    id: "584437f73462659c2800144d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Is Decker"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Air_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Earth_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Fire_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Water_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isDetained"
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Matrix
+    interaction_info_text: "Jack-In"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_door01Mid"
+  gridPoint {
+    x: 63
+    y: -0.3
+    z: 42.9
+  }
+  orientation: ORIENTATION_E
+  displayName: "oLab-Spirit-ExitDoor"
+  idRef {
+    id: "584439433462659c2800144e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Door
+    interaction_info_text: "Exit"
+  }
+  lod: 0
+}
+props {
+  name: "haven_tech_novahotTerminal01"
+  gridPoint {
+    x: 72.310005
+    y: 0.9
+    z: 5.3799996
+  }
+  orientation: ORIENTATION_S
+  displayName: "oLab-Spirit_DummyTerminal3"
+  idRef {
+    id: "58443a0f3462659c28001453"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Is Decker"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Air_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Earth_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Fire_Off"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Invert Bool"
+                args {
+                  call_value {
+                    functionName: "Get Variable (bool)"
+                    args {
+                      string_value: "bShield_Water_Off"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bCystalInspected"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Tag for Actor"
+        args {
+          call_value {
+            functionName: "All Actors"
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SenseTagList)"
+            args {
+              string_value: "isDetained"
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Matrix
+    interaction_info_text: "Jack-In"
+  }
+  lod: 0
+}
+props {
+  name: "seaLab_floor_plainTile"
+  gridPoint {
+    x: 66
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58476b54346265fc1a0017ba"
+  }
+  lod: 0
+}
+props {
+  name: "seaLab_floor_plainTile"
+  gridPoint {
+    x: 66
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58476b57346265fc1a0017bb"
+  }
+  lod: 0
+}
+props {
+  name: "seaLab_floor_plainTile"
+  gridPoint {
+    x: 66
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "58476b59346265fc1a0017bc"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_ArmorRailend01"
+  gridPoint {
+    x: 73
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "584773d3346265fc1a0017bf"
   }
   lod: 0
 }
