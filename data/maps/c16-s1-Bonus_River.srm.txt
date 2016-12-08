@@ -1346,6 +1346,17 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Warp
     interaction_info_text: "Take the Minisub"
@@ -6449,6 +6460,17 @@ props {
                   string_value: "582a6734346265cc1b004b55"
                 }
               }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
             }
           }
         }
@@ -13716,8 +13738,53 @@ props {
   GeneralTags: "isSeamus"
   GeneralTags: "isBartlett"
   GeneralTags: "isDetained"
+  displayName: "oSceneExit"
   idRef {
     id: "582a6f26346265cc1b004be3"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bDockReturn"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    transitionPoint {
+      scene_name: "a1_docks_s1"
+      confirmation_text: "Return to the Seamstress Union?"
+    }
+    interaction_info_text: "Escape"
   }
   lod: 0
 }
@@ -62521,7 +62588,7 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: -43
+    x: -42
     y: 0
     z: 90
   }
@@ -62534,7 +62601,7 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: -43
+    x: -42
     y: 0
     z: 89
   }
@@ -62547,7 +62614,7 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: -43
+    x: -42
     y: 0
     z: 88
   }
@@ -96344,13 +96411,21 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 46
+    x: 77
     y: 0
-    z: 40
+    z: 121
   }
   orientation: ORIENTATION_S
+  displayName: "oGormenghastD"
   idRef {
     id: "584421cb3462659c280013f0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
 }
@@ -96870,6 +96945,111 @@ props {
   orientation: ORIENTATION_W
   idRef {
     id: "584773d3346265fc1a0017bf"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 85
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPaladin1"
+  idRef {
+    id: "5848be123462659413000947"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 88
+    y: 0
+    z: 143
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPaladin2"
+  idRef {
+    id: "5848be2f3462659413000949"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 67
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPaladin3"
+  idRef {
+    id: "5848be36346265941300094a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 70
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPaladin4"
+  idRef {
+    id: "5848be3a346265941300094b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 82
+    y: 0
+    z: 132
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPaladin5"
+  idRef {
+    id: "5848be3f346265941300094c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
 }
