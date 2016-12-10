@@ -47893,28 +47893,6 @@ props {
     interactionRadius: 1
     prerequisites {
       ops {
-        functionName: "Evaluate Turn Mode in Dimension"
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TurnBasedOrFreeMove"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
         functionName: "Evaluate If Actor Has Item"
         args {
           call_value {
@@ -47943,7 +47921,7 @@ props {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "MC_a2_Plaguebearer_s1-Lab3Keyfob"
+              string_value: "c16-s1_LabLv2_KeyFob"
             }
           }
         }
@@ -73641,13 +73619,52 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: -7
+    x: -44
     y: 0
-    z: 29
+    z: 74
   }
   orientation: ORIENTATION_S
+  displayName: "oLab-Lv2_KeyFob"
   idRef {
     id: "583c30973462651c2c00746f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (Actor)"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    pickupItem {
+      itemName: "c16-s1_LabLv2_KeyFob"
+      destroyOnPickup: true
+    }
+    interaction_info_text: "Grab Badge"
   }
   lod: 0
 }
@@ -80035,6 +80052,45 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "c16-s1_LabPaydata"
+            }
+          }
+        }
+      }
+    }
     matrixNode {
       prerequisites_control_state: true
       constant_matrix_fx: ""
@@ -80051,7 +80107,7 @@ props {
       state_change_hacked_sound: ""
       state_change_hacked_sound_volume: 1
     }
-    interaction_info_text: ""
+    interaction_info_text: "Download Archive"
   }
   lod: 0
 }

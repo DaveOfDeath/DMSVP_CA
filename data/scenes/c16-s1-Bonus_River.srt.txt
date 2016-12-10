@@ -1388,6 +1388,17 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Invert Bool"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bDockReturn"
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -12576,300 +12587,6 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "onMovement.SetLv2_NextAnimationsGuard"
-  events {
-    ops {
-      functionName: "On Actor Movement Finished"
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (Actor)"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "5837616f346265e81d000ea9"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Comparison (bool)"
-      args {
-        call_value {
-          functionName: "Get Variable (bool)"
-          args {
-            string_value: "bLabLv2Containment"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Play Animation From Manifest"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "5837616f346265e81d000ea9"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Animation)"
-          args {
-            string_value: "HongKong:General/standing_idle_repairing"
-          }
-        }
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "5838d594346265801c00186d"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: "onMovement.SetLv2_NextAnimationsPounder"
-  events {
-    ops {
-      functionName: "On Actor Movement Finished"
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (Actor)"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "58352111346265a00f004104"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Comparison (bool)"
-      args {
-        call_value {
-          functionName: "Get Variable (bool)"
-          args {
-            string_value: "bLabLv2Containment"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Play Animation From Manifest"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "58352111346265a00f004104"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Animation)"
-          args {
-            string_value: "HongKong:General/standing_idle_spell"
-          }
-        }
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "5838d5e1346265801c00186e"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: "onMovement.SetLv2_NextAnimationsScorcher"
-  events {
-    ops {
-      functionName: "On Actor Movement Finished"
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (Actor)"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "58352119346265a00f004105"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Comparison (bool)"
-      args {
-        call_value {
-          functionName: "Get Variable (bool)"
-          args {
-            string_value: "bLabLv2Containment"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Play Animation From Manifest"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "58352119346265a00f004105"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Animation)"
-          args {
-            string_value: "HongKong:General/standing_idle_spell"
-          }
-        }
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "5838d62a346265801c001870"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
   name: "onAware.ContainmentActive.SendAlert"
   events {
     ops {
@@ -13824,6 +13541,68 @@ triggers {
   elseActions {
   }
   is_oneshot: false
+}
+triggers {
+  name: "onDeath.LabLv2Guard.DropKey"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5837616f346265e81d000ea9"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "583c30973462651c2c00746f"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Target Point"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58495828346265e0280033ec"
+  }
+  elseActions {
+  }
+  is_oneshot: true
 }
 triggers {
   name: ""
@@ -15151,6 +14930,81 @@ triggers {
   is_oneshot: false
 }
 triggers {
+  name: "MATRIX.onInteract.DataArchive.AddData"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583cfcd2346265081f0015a0"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "c16-s1_LabPaydata"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "584a1b99346265700c000ae0"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
   name: ""
   events {
   }
@@ -15202,44 +15056,6 @@ triggers {
               functionName: "Get Map Item (SenseTagList)"
               args {
                 string_value: "isSpiritChamber"
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
-              args {
-                int_value: 0
-              }
-            }
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Set Actor In Passive Mode"
-      args {
-        call_value {
-          functionName: "All Actors With Tag"
-          args {
-            call_value {
-              functionName: "Get Map Item (SenseTagList)"
-              args {
-                string_value: "isLabSpirit"
               }
             }
           }
@@ -15546,7 +15362,7 @@ triggers {
           functionName: "All Actors With Tag"
           args {
             call_value {
-              functionName: "Get Map Item (SenseTagList)"
+              functionName: "Tag From String"
               args {
                 string_value: "isLabSpirit"
               }
@@ -15602,7 +15418,7 @@ triggers {
           functionName: "All Actors With Tag"
           args {
             call_value {
-              functionName: "Get Map Item (SenseTagList)"
+              functionName: "Tag From String"
               args {
                 string_value: "isLabSpirit"
               }
@@ -15629,46 +15445,6 @@ triggers {
           }
           args {
             int_value: 0
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Order Actor to Face Point"
-      args {
-        call_value {
-          functionName: "All Actors With Tag"
-          args {
-            call_value {
-              functionName: "Get Map Item (SenseTagList)"
-              args {
-                string_value: "isLabSpirit"
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
-              args {
-                int_value: 0
-              }
-            }
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Current Location of Actor"
-          args {
-            call_value {
-              functionName: "Get Map Item (Actor)"
-              args {
-                string_value: "582e7b24346265141a00685f"
-              }
-            }
           }
         }
       }
@@ -18961,7 +18737,7 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Map Item (SenseTagList)"
+          functionName: "Tag From String"
           args {
             string_value: "isLabSpirit"
           }
@@ -19156,7 +18932,7 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Map Item (SenseTagList)"
+          functionName: "Tag From String"
           args {
             string_value: "isLabSpirit"
           }
@@ -19508,6 +19284,39 @@ triggers {
           functionName: "Get Map Item (Goal)"
           args {
             string_value: "Eliminate the Lab Spirits"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Free Gormenghast"
           }
         }
       }
@@ -20616,44 +20425,6 @@ triggers {
       }
     }
     ops {
-      functionName: "Set Actor In Passive Mode"
-      args {
-        call_value {
-          functionName: "All Actors With Tag"
-          args {
-            call_value {
-              functionName: "Get Map Item (SenseTagList)"
-              args {
-                string_value: "isSpiritChamber"
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
-              args {
-                int_value: 0
-              }
-            }
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-    }
-    ops {
       functionName: "Change Actor Team"
       args {
         call_value {
@@ -21107,6 +20878,93 @@ triggers {
     }
   }
   actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isSpiritChamber"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Suspend Team\'s Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            int_value: 2
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Variable (int)"
+              args {
+                string_value: "iLab-Alert_Lvl"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
     ops {
       functionName: "Display Text over Actor"
       args {
@@ -22285,28 +22143,62 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (Actor)"
+      functionName: "OR"
       args {
         call_value {
-          functionName: "Triggering Target Actor"
+          functionName: "Comparison (Actor)"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7b24346265141a00685f"
+              }
+            }
+          }
         }
       }
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Comparison (Actor)"
           args {
-            string_value: "IsOrIsNot"
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
           }
           args {
-            int_value: 1
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
           }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
           args {
-            string_value: "582e7b24346265141a00685f"
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "58423a46346265ac1f001e4f"
+              }
+            }
           }
         }
       }
@@ -24587,6 +24479,179 @@ triggers {
       }
     }
     ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "584aac9c346265c813002cd2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            call_value {
+              functionName: "Get Measurement for Current Level"
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "MetricType"
+                  }
+                  args {
+                    int_value: 8
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5848c08e346265941300094f"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDeath.WarehousePaladin.PopRiver"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5848b070346265941300093e"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Nearest Tagged Actor to Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isRiver"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "What are Tir Paladins doing here!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
       functionName: "Set Waypoint on Prop"
       args {
         call_value {
@@ -24603,7 +24668,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Prop)"
           args {
-            string_value: "582a6f26346265cc1b004be3"
+            string_value: "5826882e3462654802001646"
           }
         }
       }
@@ -24611,17 +24676,17 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "5848c08e346265941300094f"
+    id: "58495fb1346265e0280033ef"
   }
   elseActions {
   }
   is_oneshot: true
 }
 triggers {
-  name: "onTurnMode.CamDockReturn.BoogieFree.Teleport"
+  name: "onCam.DockOutside.ReturnBoogieFree.Teleport"
   events {
     ops {
-      functionName: "On Turn Mode Enter"
+      functionName: "On Camera Fade In"
     }
   }
   conditions {
@@ -24731,6 +24796,98 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Clear Waypoint from Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5826882e3462654802001646"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Nearest Tagged Actor to Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isRiver"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Oh shit! It\'s coming!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "582a6f26346265cc1b004be3"
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Trigger: Wait for Rounds"
       args {
         int_value: 1
@@ -24751,7 +24908,10 @@ triggers {
           functionName: "Specific Actor"
           args {
             call_value {
-              functionName: "Triggering Actor"
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "58423a46346265ac1f001e4f"
+              }
             }
           }
           args {
@@ -24822,7 +24982,10 @@ triggers {
           functionName: "Nearest Tagged Actor to Prop"
           args {
             call_value {
-              functionName: "Nothing Selected"
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isPaladin"
+              }
             }
           }
           args {
@@ -24865,10 +25028,35 @@ triggers {
         float_value: 3
       }
       args {
-        float_value: 3
+        float_value: 0.5
       }
       args {
-        float_value: 0
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Suspend Team\'s Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
       }
     }
     ops {
@@ -24932,26 +25120,10 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: ""
-  events {
-  }
-  conditions {
-  }
-  actions {
-  }
-  isActive: false
-  idRef {
-    id: "58477b61346265fc1a0017c4"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: "Testing.WarpToTarget"
+  name: "onCam.DocksOutside.PopHint.SetWaypoint"
   events {
     ops {
-      functionName: "On Curtains Up"
+      functionName: "On Camera Fade In"
     }
   }
   conditions {
@@ -24988,97 +25160,105 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5826852c3462654802001636"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Banish Gormenghast"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
-      functionName: "Kill Actor"
+      functionName: "Clear Waypoint from Prop"
       args {
         call_value {
-          functionName: "All Actors Within Area"
+          functionName: "Get Map Item (Prop)"
           args {
-            call_value {
-              functionName: "Area: Region"
-              args {
-                call_value {
-                  functionName: "Get Map Item (Region)"
-                  args {
-                    string_value: "582fe9ca346265fc11003ae2"
-                  }
-                }
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
-              args {
-                int_value: 0
-              }
-            }
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "DeathMethod"
-          }
-          args {
-            int_value: 3
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "FacingDirection"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 0
+            string_value: "5826882e3462654802001646"
           }
         }
       }
     }
     ops {
-      functionName: "Kill Actor"
+      functionName: "Display Text over Actor"
       args {
         call_value {
-          functionName: "All Actors Within Area"
+          functionName: "Nearest Tagged Actor to Actor"
           args {
             call_value {
-              functionName: "Area: Region"
+              functionName: "Get Map Item (SenseTagList)"
               args {
-                call_value {
-                  functionName: "Get Map Item (Region)"
-                  args {
-                    string_value: "5833bccb346265401b004e2f"
-                  }
-                }
+                string_value: "isRiver"
               }
             }
           }
           args {
             call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
+              functionName: "Get Map Item (Player)"
               args {
                 int_value: 0
               }
@@ -25090,18 +25270,45 @@ triggers {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "DeathMethod"
+            string_value: "TextPopupStyle"
           }
           args {
-            int_value: 3
+            int_value: 0
           }
         }
       }
       args {
+        string_value: "Maybe we can sneak past..."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "FacingDirection"
+            string_value: "PrimaryOrSecondary"
           }
           args {
             int_value: 0
@@ -25110,44 +25317,86 @@ triggers {
       }
       args {
         call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "582a6f26346265cc1b004be3"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "58495e7f346265e0280033ee"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDamage.Paladin.NewRound.PopShout"
+  events {
+    ops {
+      functionName: "On Actor Damage"
+      args {
+        call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "WithOrWithout"
+            string_value: "HPOrAP"
           }
           args {
             int_value: 0
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isPaladin"
           }
         }
       }
     }
     ops {
-      functionName: "Kill Actor"
+      functionName: "Actor is Player Controlled"
       args {
         call_value {
-          functionName: "All Actors Within Area"
+          functionName: "Specific Actor"
           args {
             call_value {
-              functionName: "Area: Region"
-              args {
-                call_value {
-                  functionName: "Get Map Item (Region)"
-                  args {
-                    string_value: "582e7267346265141a006836"
-                  }
-                }
-              }
+              functionName: "Triggering Target Actor"
             }
           }
           args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "AllOrAny"
-              }
-              args {
-                int_value: 0
-              }
-            }
           }
         }
       }
@@ -25155,36 +25404,326 @@ triggers {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "DeathMethod"
+            string_value: "IsOrIsNot"
           }
           args {
-            int_value: 3
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "FacingDirection"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 0
+            int_value: 1
           }
         }
       }
     }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Measurement for Current Level"
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "MetricType"
+              }
+              args {
+                int_value: 8
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "More usurper vultures!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Eliminate the witnesses!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Long live Surehand!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Trigger: Wait Until Triggered Again"
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Medaron versakhan co Tir Tairngire!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "iWaveTimer_FN"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  isActive: false
+  idRef {
+    id: "584aac9c346265c813002cd2"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: ""
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: false
+  idRef {
+    id: "58477b61346265fc1a0017c4"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "Testing.WarpToTarget"
+  events {
+    ops {
+      functionName: "On Curtains Up"
+    }
+  }
+  conditions {
+  }
+  actions {
     ops {
       functionName: "Kill Actor"
       args {
@@ -26691,8 +27230,8 @@ regions {
 regions {
   name: "RGN_TestTarget"
   position {
-    x: 50
-    y: 110
+    x: 62
+    y: 38
     width: 2
     height: 3
   }
@@ -29890,6 +30429,7 @@ characters {
     z: 14
   }
   orientation: ORIENTATION_S
+  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
   displayName: "LabSpirit3_Air"
   idRef {
@@ -29963,8 +30503,9 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "LabWorker"
+    team_id: "Disabled"
     char_name: "Spirit of Air"
+    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
     ai_ignores: true
@@ -29974,7 +30515,7 @@ characters {
     }
     karma: 103
     hiring_cost_override: 1000
-    scale_character_sheet: true
+    scale_character_sheet: false
   }
 }
 characters {
@@ -29985,6 +30526,7 @@ characters {
     z: 23
   }
   orientation: ORIENTATION_S
+  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
   displayName: "LabSpirit2_Earth"
   idRef {
@@ -30058,8 +30600,9 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "LabWorker"
+    team_id: "Disabled"
     char_name: "Spirit of Earth"
+    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
     ai_ignores: true
@@ -30069,7 +30612,7 @@ characters {
     }
     karma: 91
     hiring_cost_override: 1000
-    scale_character_sheet: true
+    scale_character_sheet: false
   }
 }
 characters {
@@ -30080,6 +30623,7 @@ characters {
     z: 14
   }
   orientation: ORIENTATION_N
+  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
   displayName: "LabSpirit4_Fire"
   idRef {
@@ -30152,8 +30696,9 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "LabWorker"
+    team_id: "Disabled"
     char_name: "Spirit of Fire"
+    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
     ai_ignores: true
@@ -30174,6 +30719,7 @@ characters {
     z: 23
   }
   orientation: ORIENTATION_N
+  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
   displayName: "LabSpirit1_Water"
   idRef {
@@ -30247,8 +30793,9 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "LabWorker"
+    team_id: "Disabled"
     char_name: "Spirit of Water"
+    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
     ai_ignores: true
@@ -30258,7 +30805,7 @@ characters {
     }
     karma: 103
     hiring_cost_override: 1000
-    scale_character_sheet: true
+    scale_character_sheet: false
   }
 }
 characters {
@@ -30337,7 +30884,7 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "gumbo_Mage"
+      archetypeName: "Non-Combatant"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
@@ -31286,7 +31833,7 @@ characters {
     char_name: "Destroyer IC"
     GeneralTags: "isMatrixResponse"
     pc_spawn_number: -1
-    spawn_type: SpawnType_Normal
+    spawn_type: SpawnType_Matrix
     hiring_type: HiringType_None
     dimension_name: "Matrix"
     karma: 39
@@ -33364,7 +33911,7 @@ goals {
 }
 goals {
   name: "Free Gormenghast"
-  type: GoalType_Secondary
+  type: GoalType_Primary
   status: GoalStatus_Hidden
 }
 goals {
@@ -33412,6 +33959,7 @@ team_affiliations {
   affiliation: 1
   affiliation: 1
   affiliation: 1
+  affiliation: 0
 }
 team_affiliations {
   team_name: "Gangers"
@@ -33422,6 +33970,7 @@ team_affiliations {
   affiliation: 0
   affiliation: 0
   affiliation: 1
+  affiliation: 0
 }
 team_affiliations {
   team_name: "LoneStar"
@@ -33432,9 +33981,11 @@ team_affiliations {
   affiliation: 0
   affiliation: 0
   affiliation: 0
+  affiliation: 0
 }
 team_affiliations {
   team_name: "Civilians"
+  affiliation: 0
   affiliation: 0
   affiliation: 0
   affiliation: 0
@@ -33452,10 +34003,12 @@ team_affiliations {
   affiliation: 0
   affiliation: 0
   affiliation: 0
+  affiliation: 0
 }
 team_affiliations {
   team_name: "Matrix_IC"
   affiliation: 1
+  affiliation: 0
   affiliation: 0
   affiliation: 0
   affiliation: 0
@@ -33467,6 +34020,18 @@ team_affiliations {
   team_name: "LabWorker"
   affiliation: 0
   affiliation: 1
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Disabled"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
   affiliation: 0
   affiliation: 0
   affiliation: 0
@@ -33490,7 +34055,6 @@ character_roster {
     hiring_conditions {
     }
     hiring_cost: -1
-    content_pack_source: "579e0109346265441c0058b1"
   }
 }
 show_hiring_screen_on_scene_load: true
