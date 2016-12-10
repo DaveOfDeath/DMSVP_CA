@@ -15085,6 +15085,44 @@ triggers {
       }
     }
     ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabSpirit"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Play Animation From Manifest"
       args {
         call_value {
@@ -15362,7 +15400,7 @@ triggers {
           functionName: "All Actors With Tag"
           args {
             call_value {
-              functionName: "Tag From String"
+              functionName: "Get Map Item (SenseTagList)"
               args {
                 string_value: "isLabSpirit"
               }
@@ -15418,7 +15456,7 @@ triggers {
           functionName: "All Actors With Tag"
           args {
             call_value {
-              functionName: "Tag From String"
+              functionName: "Get Map Item (SenseTagList)"
               args {
                 string_value: "isLabSpirit"
               }
@@ -15447,6 +15485,147 @@ triggers {
             int_value: 0
           }
         }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Face Point"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabSpirit"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Current Location of Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7b24346265141a00685f"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Apply Condition Status Effect to Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isLabSpirit"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "StatusCondition"
+          }
+          args {
+            int_value: 8
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BuffDebuffType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+    ops {
+      functionName: "Apply Condition Status Effect to Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7b24346265141a00685f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "StatusCondition"
+          }
+          args {
+            int_value: 8
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BuffDebuffType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: -1
       }
     }
   }
@@ -16452,6 +16631,27 @@ triggers {
       }
     }
     ops {
+      functionName: "Remove Status Effect from Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7481346265141a00685c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
+      }
+    }
+    ops {
       functionName: "Set Actor In Passive Mode"
       args {
         call_value {
@@ -16607,6 +16807,27 @@ triggers {
       }
       args {
         int_value: 2
+      }
+    }
+    ops {
+      functionName: "Remove Status Effect from Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7462346265141a00685b"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
       }
     }
     ops {
@@ -16768,6 +16989,27 @@ triggers {
       }
     }
     ops {
+      functionName: "Remove Status Effect from Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7483346265141a00685d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
+      }
+    }
+    ops {
       functionName: "Set Actor In Passive Mode"
       args {
         call_value {
@@ -16923,6 +17165,27 @@ triggers {
       }
       args {
         int_value: 4
+      }
+    }
+    ops {
+      functionName: "Remove Status Effect from Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e748b346265141a00685e"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
       }
     }
     ops {
@@ -18941,6 +19204,27 @@ triggers {
     }
   }
   actions {
+    ops {
+      functionName: "Remove Status Effect from Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "582e7b24346265141a00685f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        string_value: "SpiritIgnore"
+      }
+    }
     ops {
       functionName: "Set Actor Uninjurable"
       args {
@@ -25864,7 +26148,7 @@ triggers {
       }
     }
   }
-  isActive: true
+  isActive: false
   idRef {
     id: "582e73c8346265141a00685a"
   }
@@ -30429,16 +30713,15 @@ characters {
     z: 14
   }
   orientation: ORIENTATION_S
-  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
-  displayName: "LabSpirit3_Air"
+  displayName: "LabSpiritAir2"
   idRef {
     id: "582e7462346265141a00685b"
   }
   lod: 0
   character_instance {
     prefab_name: "HongKong:Spirits/SpiritShrineAir"
-    character_sheet_id: "UncontrolledSpirit_Lv3_Air"
+    character_sheet_id: "RedSamurai_Lv2_Mage"
     equipment_sheet_id: "UncontrolledSpirit_Lv3_Air"
     character_mod {
       stats {
@@ -30464,10 +30747,9 @@ characters {
         vision_peripheral_distance: 0
         vision_cone_distance: 0
         vision_cone_angle: 0
-        is_fearless: 1
       }
       skills {
-        ranged_combat: 0
+        ranged_combat: 5
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
@@ -30505,15 +30787,14 @@ characters {
     }
     team_id: "Disabled"
     char_name: "Spirit of Air"
-    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
-    ai_ignores: true
+    ai_ignores: false
     hiring_type: HiringType_None
     portrait {
       filename: "Generic_Spirit_Air"
     }
-    karma: 103
+    karma: 122
     hiring_cost_override: 1000
     scale_character_sheet: false
   }
@@ -30526,17 +30807,16 @@ characters {
     z: 23
   }
   orientation: ORIENTATION_S
-  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
-  displayName: "LabSpirit2_Earth"
+  displayName: "LabSpiritEarth1"
   idRef {
     id: "582e7481346265141a00685c"
   }
   lod: 0
   character_instance {
     prefab_name: "HongKong:Spirits/SpiritShrineEarth"
-    character_sheet_id: "UncontrolledSpirit_Lv3_Earth"
-    equipment_sheet_id: "Science_Lv3_Earth"
+    character_sheet_id: "RedSamurai_Lv2_Mage"
+    equipment_sheet_id: "Vanguard_Lv6_Mage_Gear"
     character_mod {
       stats {
         body: 0
@@ -30561,7 +30841,6 @@ characters {
         vision_peripheral_distance: 0
         vision_cone_distance: 0
         vision_cone_angle: 0
-        is_fearless: 1
       }
       skills {
         ranged_combat: 0
@@ -30602,15 +30881,14 @@ characters {
     }
     team_id: "Disabled"
     char_name: "Spirit of Earth"
-    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
-    ai_ignores: true
+    ai_ignores: false
     hiring_type: HiringType_None
     portrait {
       filename: "Generic_Spirit_Earth"
     }
-    karma: 91
+    karma: 107
     hiring_cost_override: 1000
     scale_character_sheet: false
   }
@@ -30623,16 +30901,15 @@ characters {
     z: 14
   }
   orientation: ORIENTATION_N
-  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
-  displayName: "LabSpirit4_Fire"
+  displayName: "LabSpiritFire3"
   idRef {
     id: "582e7483346265141a00685d"
   }
   lod: 0
   character_instance {
     prefab_name: "HongKong:Spirits/SpiritShrineFire"
-    character_sheet_id: "UncontrolledSpirit_Lv3_Fire"
+    character_sheet_id: "RedSamurai_Lv2_Mage"
     equipment_sheet_id: "UncontrolledSpirit_Lv3_Fire"
     character_mod {
       stats {
@@ -30658,10 +30935,9 @@ characters {
         vision_peripheral_distance: 0
         vision_cone_distance: 0
         vision_cone_angle: 0
-        is_fearless: 1
       }
       skills {
-        ranged_combat: 0
+        ranged_combat: 5
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
@@ -30679,6 +30955,7 @@ characters {
         etiquette_shadowrunner: 0
         etiquette_street: 0
         etiquette_academic: 0
+        cyberware_affinity: 0
       }
       specializations {
         pistol: 0
@@ -30698,15 +30975,15 @@ characters {
     }
     team_id: "Disabled"
     char_name: "Spirit of Fire"
-    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
-    ai_ignores: true
+    ai_ignores: false
     hiring_type: HiringType_None
     portrait {
       filename: "Generic_Spirit_Fire"
     }
-    karma: 103
+    dimension_name: "Default"
+    karma: 122
     hiring_cost_override: 1000
     scale_character_sheet: false
   }
@@ -30719,16 +30996,15 @@ characters {
     z: 23
   }
   orientation: ORIENTATION_N
-  GeneralTags: "magic_user"
   GeneralTags: "isLabSpirit"
-  displayName: "LabSpirit1_Water"
+  displayName: "LabSpiritWater4"
   idRef {
     id: "582e748b346265141a00685e"
   }
   lod: 0
   character_instance {
     prefab_name: "HongKong:Spirits/SpiritShrineWater"
-    character_sheet_id: "UncontrolledSpirit_Lv3_Water"
+    character_sheet_id: "RedSamurai_Lv2_Mage"
     equipment_sheet_id: "UncontrolledSpirit_Lv3_Water"
     character_mod {
       stats {
@@ -30754,7 +31030,6 @@ characters {
         vision_peripheral_distance: 0
         vision_cone_distance: 0
         vision_cone_angle: 0
-        is_fearless: 1
       }
       skills {
         ranged_combat: 0
@@ -30795,15 +31070,14 @@ characters {
     }
     team_id: "Disabled"
     char_name: "Spirit of Water"
-    GeneralTags: "magic_user"
     GeneralTags: "isLabSpirit"
     pc_spawn_number: -1
-    ai_ignores: true
+    ai_ignores: false
     hiring_type: HiringType_None
     portrait {
       filename: "Generic_Spirit_Water"
     }
-    karma: 103
+    karma: 107
     hiring_cost_override: 1000
     scale_character_sheet: false
   }
@@ -30893,14 +31167,14 @@ characters {
     char_name: "Gormenghast"
     GeneralTags: "isBoogie"
     pc_spawn_number: -1
-    ai_ignores: true
+    ai_ignores: false
     hiring_type: HiringType_None
     portrait {
       filename: "npc_spirit_adversary"
     }
     karma: 111
     hiring_cost_override: 1000
-    scale_character_sheet: true
+    scale_character_sheet: false
   }
 }
 characters {
@@ -32372,8 +32646,6 @@ characters {
     }
     team_id: "Civilians"
     char_name: "Avatar of Gormenghast"
-    GeneralTags: "Office_Spirits"
-    GeneralTags: "magic_user"
     enabled_at_start: false
     pc_spawn_number: -1
     spawn_type: SpawnType_Matrix
