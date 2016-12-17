@@ -4508,7 +4508,7 @@ props {
 props {
   name: "docks_tech_fuelingStation"
   gridPoint {
-    x: 103
+    x: 102
     y: 0
     z: 102
   }
@@ -7137,9 +7137,9 @@ props {
 props {
   name: "docks_vehicle_forklift"
   gridPoint {
-    x: 99
+    x: 101
     y: 0
-    z: 109
+    z: 112
   }
   orientation: ORIENTATION_E
   idRef {
@@ -7160,9 +7160,9 @@ props {
 props {
   name: "docks_clutter_container03"
   gridPoint {
-    x: 99
+    x: 101
     y: 0
-    z: 114
+    z: 117
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -8504,7 +8504,7 @@ props {
 props {
   name: "kowloon_groundDecoration_filth04"
   gridPoint {
-    x: 104
+    x: 103
     y: 0
     z: 109
   }
@@ -22443,7 +22443,7 @@ props {
 props {
   name: "trawler_wallDecoration_trid01"
   gridPoint {
-    x: 106
+    x: 105
     y: 0.7
     z: 105.3
   }
@@ -22626,9 +22626,9 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: 109
+    x: 107
     y: -1
-    z: 106.5
+    z: 105.5
   }
   orientation: ORIENTATION_S
   idRef {
@@ -22870,7 +22870,7 @@ props {
 props {
   name: "kowloon_groundDecoration_filth04"
   gridPoint {
-    x: 103
+    x: 102
     y: 0
     z: 100
   }

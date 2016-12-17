@@ -81,13 +81,13 @@ triggers {
       }
     }
   }
-  isActive: true
+  isActive: false
   idRef {
     id: "583a687e346265540f005db5"
   }
   elseActions {
   }
-  is_oneshot: false
+  is_oneshot: true
 }
 regions {
   name: "cam_test"
@@ -208,9 +208,9 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -14
+    x: -1
     y: 0
-    z: 85
+    z: -24
   }
   orientation: ORIENTATION_S
   idRef {

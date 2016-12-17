@@ -1,7 +1,7 @@
-minX: -29
-minZ: -26
-numX: 62
-numZ: 29
+minX: -114
+minZ: -53
+numX: 147
+numZ: 56
 props {
   name: "haven_wall_fadeFill1"
   gridPoint {
@@ -179,5 +179,285 @@ props {
     z: -21
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrimCorner02"
+  gridPoint {
+    x: -18
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrimCorner01_lights"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrimCorner01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrim_lights"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrim"
+  gridPoint {
+    x: -11
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "shangriLa_groundDecoration_glowyTrimCorner02_lights"
+  gridPoint {
+    x: -19
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge02"
+  gridPoint {
+    x: -89
+    y: -20
+    z: -37
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge01"
+  gridPoint {
+    x: -91
+    y: -17
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge03"
+  gridPoint {
+    x: -89
+    y: -20
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge04"
+  gridPoint {
+    x: -109
+    y: -20
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge05"
+  gridPoint {
+    x: -111
+    y: -20
+    z: -53
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge06"
+  gridPoint {
+    x: -114
+    y: -20
+    z: -42
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge07"
+  gridPoint {
+    x: -113
+    y: -20
+    z: -46
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_ground_Vista02"
+  gridPoint {
+    x: -86
+    y: -20
+    z: -51
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_ground_Vista03"
+  gridPoint {
+    x: -93
+    y: -22
+    z: -36
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge05"
+  gridPoint {
+    x: -91
+    y: -20
+    z: -32
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "584cd720346265600c0073e5"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge03"
+  gridPoint {
+    x: -94
+    y: -20
+    z: -32
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "584cd729346265600c0073e6"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge01"
+  gridPoint {
+    x: -91
+    y: -17
+    z: -37
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd742346265600c0073e7"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge01"
+  gridPoint {
+    x: -94
+    y: -17
+    z: -37
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd745346265600c0073e8"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge01"
+  gridPoint {
+    x: -94
+    y: -17
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd745346265600c0073e9"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge03"
+  gridPoint {
+    x: -92.5
+    y: -17
+    z: -33.5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "584cd779346265600c0073ea"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge02"
+  gridPoint {
+    x: -90.5
+    y: -17
+    z: -35.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd779346265600c0073eb"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge01"
+  gridPoint {
+    x: -92.5
+    y: -11
+    z: -35.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd787346265600c0073ec"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge04"
+  gridPoint {
+    x: -90.5
+    y: -14
+    z: -35.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584cd7aa346265600c0073ed"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_buildingEdge02"
+  gridPoint {
+    x: -92.5
+    y: -14
+    z: -33.5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "584cd7c6346265600c0073ee"
+  }
   lod: 0
 }

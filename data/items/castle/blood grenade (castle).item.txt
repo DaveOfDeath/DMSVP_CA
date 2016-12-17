@@ -1,0 +1,67 @@
+id: "Blood Grenade (Castle)"
+type: ItemType_Thrown
+uirep {
+  icon: "icon_item_modded_flashbang"
+  name: "Nanite Hunter Cloud"
+  description: "An grenade that releases a cloud of nanites that attach to anyone entering the radius. Makes targets easier to hit."
+}
+coreAttribute: Attribute_Intelligence
+coreSkill: Skill_Biotech
+coreSpecialization: Specialization_SC_Attack_Spells
+forceRating: 3
+apCost: 2
+prereqStrings: "Player.RACE != RACE.CREATURE"
+maxAmmo: 0
+baseHPDamage: 0
+baseAPDamage: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+effectModTable: 1
+effectModTable: 1
+effectModTable: 1
+noiseLevel: 10
+noiseRounds: 1
+abilityModes: "Throw (Blood Grenade)"
+affectsFriendly: true
+affectsEnemy: true
+canTargetOccupiedGridPoint: true
+canTargetUnoccupiedGridPoint: true
+effectDuration: 2
+effectRadius: 3
+effectOnTile: true
+activationStatusEffects {
+  uirep {
+    icon: "icon_disintegrate1"
+    name: "Hunted: Eaiser to Hit"
+  }
+  stackingCategory: "Flashbang"
+  statMods {
+    attribute: Attribute_Accuracy_Reduction_Mod
+    intModValue: -25
+  }
+  fxScript: "Berlin:BloodyCloud"
+  durationFxScript: "Berlin:BloodyCloud"
+  is_debuff: true
+}
+store_cost: 125
+sorting_group: "crewWeapon"
+is_consumable: true
+damageType: VulnerabilityType_ActionPoints

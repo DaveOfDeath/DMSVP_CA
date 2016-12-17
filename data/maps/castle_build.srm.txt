@@ -1,0 +1,389 @@
+minX: -13
+minZ: -19
+numX: 31
+numZ: 33
+props {
+  name: "astralPlane_ground_gumCorner01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor02"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_chasm"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_gumEdge01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_gumEdgeCorner01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_gums01"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_gumWallBase"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralLight01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralLight02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralLight02_lights"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine01"
+  gridPoint {
+    x: -9
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine02"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine03"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine04"
+  gridPoint {
+    x: 16
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine05"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralMachine06"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_chasmLight01_lights"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_columnGold01"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_columnGold02"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_columnGold03"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_greenLight01"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_stairs01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_verticalGums01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_wall_barrierDoor01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_wall_barrierWall01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tsang_tech_fortuneEngine01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tsang_tech_fortuneEngine01_lights"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tsang_tech_fortuneEngineAstralGround"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tsang_tech_fortuneEngineBase01"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumCorner01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "584dfb493462658c20005993"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumEdge01"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumEdge01"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "584dfb593462658c20005994"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584dfb733462658c20005996"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "584dfbd33462658c20005999"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5854bcce346265e422000d69"
+  }
+  lod: 0
+}
