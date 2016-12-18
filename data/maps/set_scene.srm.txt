@@ -1,7 +1,7 @@
 minX: 2
-minZ: -2
-numX: 5
-numZ: 6
+minZ: -4
+numX: 17
+numZ: 10
 props {
   name: "whitebox_indoor_floor"
   gridPoint {
@@ -20,6 +20,7 @@ props {
     z: -2
   }
   orientation: ORIENTATION_S
+  displayName: "oExitConvo"
   idRef {
     id: "57faffb0346265a81e00221b"
   }
@@ -72,5 +73,406 @@ props {
   idRef {
     id: "57faffa5346265a81e002219"
   }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85d346265d014000bdc"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85d346265d014000bdd"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85d346265d014000bde"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85d346265d014000bdf"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 12
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85e346265d014000be0"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 12
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85e346265d014000be1"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85e346265d014000be2"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d85e346265d014000be3"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 16
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d860346265d014000be4"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 16
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d860346265d014000be5"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d860346265d014000be6"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d860346265d014000be7"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 16
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000be8"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000be9"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 12
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000bea"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000beb"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000bec"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d866346265d014000bed"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 16
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bee"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bef"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 12
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bf0"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bf1"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bf2"
+  }
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_floor"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5855d868346265d014000bf3"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_door01Door"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  displayName: "oDoor"
+  idRef {
+    id: "5855d917346265d014000bf6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 0
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: false
+      doorSound: ""
+      doorSoundBundle: ""
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_door01Front"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "asylum_wall_door01Back"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_indoor_corner"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "whitebox_outdoor_edge"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
   lod: 0
 }

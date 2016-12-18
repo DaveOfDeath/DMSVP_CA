@@ -33,5 +33,8 @@ equipment {
   prefab_name: "HealthPack_med"
 }
 equipment {
+  prefab_name: "Bound Spirit (Castle)"
+}
+equipment {
   prefab_name: "Castle_Imp Lv2"
 }

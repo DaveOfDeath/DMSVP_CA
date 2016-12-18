@@ -1,26 +1,25 @@
-id: "Throw (Blood Grenade) 2AP"
+id: "Spirit Constrict"
 uirep {
-  icon: "icon_flash"
-  name: "Throw Grenade"
-  description: "Cause AP damage to targets."
+  icon: "icon_spiritmelee"
+  name: "Constrict"
+  description: "A powerful attack."
 }
-anim_action: AnimAction_Throw
+anim_action: AnimAction_Attack
 apCostMod: 0
 hpDamageMod: 0
 apDamageMod: 0
 accuracyMod: 0
-prereqStrings: "Item.CORE_SKILL < 5"
 damageBucket {
   successEntries {
     weight: 0.15
     value: 2
   }
   successEntries {
-    weight: 0.2
+    weight: 0.15
     value: 1.5
   }
   successEntries {
-    weight: 0.65
+    weight: 0.7
     value: 1
   }
   failureEntries {
@@ -36,10 +35,10 @@ attackRatingMod: 0
 offensiveAbility: true
 fxrep {
   preActionFxName: ""
-  actionFxName: "HongKong:FlashGrenadeImpThrowAction"
+  actionFxName: "CudgelPunchAction"
   postActionFxName: ""
-  hitReactionFxName: "MedkitHitReaction"
-  missReactionFxName: "GenericMissReaction"
+  hitReactionFxName: "HongKong:ConstrictHitReaction"
+  missReactionFxName: "UnarmedMissReaction"
 }
-toHitFunction: "locationWeaponToHit"
+toHitFunction: "actorWeaponAttackToHit"
 damageFunction: "weaponDamage"

@@ -38,7 +38,7 @@ fxrep {
   preActionFxName: ""
   actionFxName: "HongKong:FlashGrenadeImpThrowAction"
   postActionFxName: ""
-  hitReactionFxName: "GunHitReaction"
+  hitReactionFxName: "MedkitHitReaction"
   missReactionFxName: "GenericMissReaction"
 }
 toHitFunction: "locationWeaponToHit"
