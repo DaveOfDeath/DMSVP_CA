@@ -1,7 +1,7 @@
 minX: -13
 minZ: -19
 numX: 31
-numZ: 33
+numZ: 44
 props {
   name: "astralPlane_ground_gumCorner01"
   gridPoint {
@@ -85,9 +85,9 @@ props {
 props {
   name: "astralPlane_prop_astralLight01"
   gridPoint {
-    x: 2
+    x: 9
     y: 0
-    z: -3
+    z: 7
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -125,9 +125,9 @@ props {
 props {
   name: "astralPlane_prop_astralMachine02"
   gridPoint {
-    x: 0
+    x: 4
     y: 0
-    z: 2
+    z: 13
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -147,7 +147,7 @@ props {
   gridPoint {
     x: 16
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -165,9 +165,9 @@ props {
 props {
   name: "astralPlane_prop_astralMachine06"
   gridPoint {
-    x: -5
+    x: -12
     y: 0
-    z: 6
+    z: 4
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -225,9 +225,9 @@ props {
 props {
   name: "astralPlane_prop_gumTeeth"
   gridPoint {
-    x: -5
+    x: 5
     y: 0
-    z: -15
+    z: 8
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -384,6 +384,244 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5854bcce346265e422000d69"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad7b346265e819000841"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_ground_gumFloor01"
+  gridPoint {
+    x: -9
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad7b346265e819000842"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad8d346265e819000843"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad8e346265e819000844"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad90346265e819000845"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad94346265e819000846"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_gumTeeth"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ad96346265e819000847"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_chasmLight01_lights"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ada0346265e819000848"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 7
+    summonPoint {
+      hasCharacter: true
+      summon_icon: ""
+      max_summon_force: 6
+      is_shrine_spirit: false
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Spirits/SpiritRat"
+    character_sheet_id: "Spirit Castle"
+    equipment_sheet_id: "Spirit Castle F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    portrait {
+      filename: "generic_spirit_toxic"
+    }
+    karma: 376
+  }
+}
+props {
+  name: "astralPlane_groundDecoration_chasm"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ada0346265e819000849"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_chasmLight01_lights"
+  gridPoint {
+    x: -9
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ada4346265e81900084a"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_groundDecoration_chasm"
+  gridPoint {
+    x: -9
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856ada4346265e81900084b"
+  }
+  lod: 0
+}
+props {
+  name: "astralPlane_prop_astralLight01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5856adb5346265e81900084c"
   }
   lod: 0
 }

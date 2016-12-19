@@ -16,15 +16,15 @@ rangeModTable: 1
 rangeModTable: 1
 rangeModTable: 1
 rangeModTable: 1
-modelessAbilities: "SummonSpirit"
+modelessAbilities: "SummonSpirit (Castle)"
 affectsFriendly: true
 canTargetSelf: true
 canTargetUnoccupiedGridPoint: true
 isMagic: true
-cooldown: 6
+cooldown: 9
 fxrep {
   preActionFxName: ""
-  actionFxName: "Berlin:DragonslayerTotemCastAction"
+  actionFxName: "Berlin:TotemCastAction"
   postActionFxName: ""
   hitReactionFxName: "GenericEmptyReaction"
   missReactionFxName: "GunMissReaction"

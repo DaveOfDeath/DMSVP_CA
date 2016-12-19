@@ -25638,55 +25638,6 @@ props {
 props {
   name: "kowloon_wall_lowerWall01"
   gridPoint {
-    x: -24
-    y: 0
-    z: 94
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "kowloon_wall_lowerWall01"
-  gridPoint {
-    x: -24
-    y: -6
-    z: 94
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "581fe7d6346265d810006e55"
-  }
-  lod: 0
-}
-props {
-  name: "kowloon_wall_lowerWall01"
-  gridPoint {
-    x: -18
-    y: 0
-    z: 94
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "581fe7dd346265d810006e56"
-  }
-  lod: 0
-}
-props {
-  name: "kowloon_wall_lowerWall01"
-  gridPoint {
-    x: -13
-    y: 0
-    z: 94
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "581fe7e1346265d810006e57"
-  }
-  lod: 0
-}
-props {
-  name: "kowloon_wall_lowerWall01"
-  gridPoint {
     x: -9
     y: 0
     z: 89
@@ -37797,6 +37748,58 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "584cd9bc346265600c00778e"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_wall06"
+  gridPoint {
+    x: -18.9
+    y: -4
+    z: 95
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "585610cd346265b401005e15"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_wall06"
+  gridPoint {
+    x: -24.9
+    y: -4
+    z: 95
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "585610d0346265b401005e16"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_wall06"
+  gridPoint {
+    x: -21.9
+    y: -4
+    z: 95
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "585610d0346265b401005e17"
+  }
+  lod: 0
+}
+props {
+  name: "rooftopGarden_building_wall06"
+  gridPoint {
+    x: -25.9
+    y: -4
+    z: 95
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "585610d3346265b401005e18"
   }
   lod: 0
 }
