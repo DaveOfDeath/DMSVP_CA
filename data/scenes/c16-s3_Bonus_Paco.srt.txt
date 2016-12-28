@@ -1,4 +1,80 @@
 triggers {
+  name: "Global.onTeleport.PC0Freemove.TeleportCamera"
+  events {
+    ops {
+      functionName: "On Actor Teleport"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Turn Mode in Dimension"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "585c91fe346265fc22004e50"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
   name: "Airport.onInteract.WarpToPlane.WarpShadowrunners"
   events {
     ops {
@@ -101,85 +177,9 @@ triggers {
       }
     }
   }
-  isActive: true
+  isActive: false
   idRef {
     id: "585930fb346265a429007ec7"
-  }
-  elseActions {
-  }
-  is_oneshot: false
-}
-triggers {
-  name: "Global.onTeleport.PC0Freemove.TeleportCamera"
-  events {
-    ops {
-      functionName: "On Actor Teleport"
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (Actor)"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Player)"
-          args {
-            int_value: 0
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Evaluate Turn Mode in Dimension"
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "TurnBasedOrFreeMove"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (SceneDimension)"
-          args {
-            string_value: "Default"
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Teleport Camera To Actor"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "585c91fe346265fc22004e50"
   }
   elseActions {
   }
@@ -302,12 +302,12 @@ regions {
   vfx_fill_prefab_name: ""
 }
 regions {
-  name: "camStart"
+  name: "camGate"
   position {
-    x: 13
-    y: 5
-    width: 30
-    height: 27
+    x: 15
+    y: 6
+    width: 76
+    height: 34
   }
   enabledAtStart: true
   is_camera_region: true
@@ -331,15 +331,73 @@ regions {
     z: -0.75
   }
   directional_light_color {
-    r: 0.23529412
-    g: 0.19607843
-    b: 0.3137255
+    r: 0.3137255
+    g: 0.39215687
+    b: 0.47058824
     a: 1
   }
   ambient_light_color {
-    r: 0.16078432
-    g: 0.16078432
-    b: 0.23921569
+    r: 0.15686275
+    g: 0.19607843
+    b: 0.23529412
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+  combat_intense_music: ""
+  combat_wrapup_music: ""
+  loop_combat_intense_music: true
+  loop_combat_wrapup_music: true
+  combat_intense_threshold: 5
+  combat_wrapup_threshold: 2
+  combat_fade_interval: 2
+  combat_intro_stinger: ""
+  combat_outro_stinger: ""
+  vfx_fill_prefab_name: ""
+}
+regions {
+  name: "camTerminal"
+  position {
+    x: 124
+    y: 66
+    width: 21
+    height: 16
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  is_matrix_node: false
+  is_vfx_fill_region: false
+  idRef {
+    id: "5863218a346265181f005f64"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.3137255
+    g: 0.39215687
+    b: 0.47058824
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.15686275
+    g: 0.19607843
+    b: 0.23529412
     a: 1
   }
   ambience_template: ""
@@ -362,11 +420,11 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 26
+    x: 135
     y: 0
-    z: 24
+    z: 74
   }
-  orientation: ORIENTATION_E
+  orientation: ORIENTATION_N
   idRef {
     id: "5859e9f33462658c080058dd"
   }
@@ -384,9 +442,9 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 26
+    x: 135
     y: 0
-    z: 25
+    z: 75
   }
   orientation: ORIENTATION_N
   idRef {
@@ -412,10 +470,10 @@ worldMapLocation {
 }
 mapName: "c16-s3_Bonus_Paco"
 parentStory: ""
-scene_title: "New Scene"
+scene_title: "TERMINAL CONNECTION"
 scene_subtitle: ""
 scene_synopsis: ""
-scene_image: ""
+scene_image: "loadingimage_epilogue_s1"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -496,6 +554,6 @@ override_hiring_average_cost: false
 show_equip_screen_on_scene_load: true
 is_persistant: false
 is_persistant_has_value: false
-can_move_outside_camera_regions: true
+can_move_outside_camera_regions: false
 can_start_before_triggers: true
 can_use_team_advancement: false
