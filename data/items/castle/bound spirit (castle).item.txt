@@ -32,7 +32,7 @@ fxrep {
 character_sheet_id: "Spirit Castle"
 equipment_sheet_id: "Spirit Castle F6 Gear"
 character_prefab_id: "Seattle:Spirit/SpiritToxic"
-character_ui_name: "Asclepeion"
+character_ui_name: "Asclepius"
 store_cost: 800
 sorting_group: "Bound Spirits"
 is_consumable: false

@@ -362,10 +362,10 @@ regions {
 regions {
   name: "camTerminal"
   position {
-    x: 124
-    y: 66
-    width: 21
-    height: 16
+    x: 140
+    y: 134
+    width: 14
+    height: 27
   }
   enabledAtStart: true
   is_camera_region: true
@@ -420,11 +420,11 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 135
+    x: 152
     y: 0
-    z: 74
+    z: 159
   }
-  orientation: ORIENTATION_N
+  orientation: ORIENTATION_W
   idRef {
     id: "5859e9f33462658c080058dd"
   }
@@ -442,11 +442,11 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 135
+    x: 151
     y: 0
-    z: 75
+    z: 159
   }
-  orientation: ORIENTATION_N
+  orientation: ORIENTATION_W
   idRef {
     id: "585c90e8346265fc22004e4f"
   }
@@ -459,6 +459,46 @@ characters {
     char_name: "New Actor"
     enabled_at_start: true
     pc_spawn_number: 1
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 138
+    y: 8
+    z: 141
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5869a9be3462655409003c39"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "Camera"
+    character_mod {
+      stats {
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Camera"
+    pc_spawn_number: -1
+    ai_ignores: true
+    uninjurable: true
+    unkillable: true
+    hiring_type: HiringType_None
+    karma: 6
+    hiring_cost_override: 3000
+    is_prop_character: true
+    hide_floaties: true
   }
 }
 worldMapLocation {
