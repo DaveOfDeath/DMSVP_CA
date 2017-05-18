@@ -6140,9 +6140,9 @@ props {
 props {
   name: "system_invisible_blockSight"
   gridPoint {
-    x: 43
+    x: 44
     y: 0
-    z: 194
+    z: 195
   }
   orientation: ORIENTATION_S
   idRef {
@@ -8097,16 +8097,6 @@ props {
   idRef {
     id: "585dc00c3462652c0f005cfe"
   }
-  lod: 0
-}
-props {
-  name: "chars_scaleRef_troll"
-  gridPoint {
-    x: 28
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -14504,19 +14494,6 @@ props {
   lod: 0
 }
 props {
-  name: "mitte_street_trashcan02"
-  gridPoint {
-    x: 20
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "586077353462657c28005cff"
-  }
-  lod: 0
-}
-props {
   name: "whampoa_wall_01"
   gridPoint {
     x: 36
@@ -15178,19 +15155,6 @@ props {
     z: 21.3
   }
   orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "mitte_street_trashcan02"
-  gridPoint {
-    x: 36
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "586083dd3462657c28005d39"
-  }
   lod: 0
 }
 props {
@@ -17869,7 +17833,7 @@ props {
     interactionRadius: 1
     doorPoint {
       doorState: false
-      aiOnlyDoor: true
+      aiOnlyDoor: false
       doorSound: ""
       doorSoundBundle: ""
     }
@@ -18543,6 +18507,7 @@ props {
     z: 35
   }
   orientation: ORIENTATION_E
+  displayName: "oGate_Security1"
   idRef {
     id: "5861d468346265701f001902"
   }
@@ -25991,16 +25956,6 @@ props {
   idRef {
     id: "5869af133462655409003d0b"
   }
-  lod: 0
-}
-props {
-  name: "bikerBar_clutter_rubble04"
-  gridPoint {
-    x: 175
-    y: 0
-    z: 157
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -33797,8 +33752,17 @@ props {
     z: 135.2
   }
   orientation: ORIENTATION_S
+  GeneralTags: "Terminal_Barrier"
+  displayName: "oTerminal_Barrier1"
   idRef {
     id: "58ec24dd3462657807003699"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
 }
@@ -48923,9 +48887,9 @@ props {
   ambientNode {
     override_camera_ambient: false
     sound_file: "HongKong:ambient_VicHarbor:motorcycle-loop"
-    attenuation_type: 1
+    attenuation_type: 0
     min_volume: 0
-    max_volume: 1
+    max_volume: 0.5
     min_radius: 0
     max_radius: 5
     crossfade_in_time: 1
@@ -49149,7 +49113,7 @@ props {
   gridPoint {
     x: 176.5
     y: -3.1
-    z: 162
+    z: 162.1
   }
   orientation: ORIENTATION_S
   idRef {
@@ -49216,9 +49180,9 @@ props {
 props {
   name: "mitte_street_trashcan02"
   gridPoint {
-    x: 185.2
+    x: 52.199997
     y: 2.7755576e-017
-    z: 171.2
+    z: 94.2
   }
   orientation: ORIENTATION_E
   idRef {
@@ -49270,7 +49234,7 @@ props {
   gridPoint {
     x: 62
     y: 0
-    z: 125
+    z: 124
   }
   orientation: ORIENTATION_N
   idRef {
@@ -49695,11 +49659,11 @@ props {
 props {
   name: "office_furniture_overturnedDesk01"
   gridPoint {
-    x: 79
+    x: 77
     y: 0
-    z: 103
+    z: 96
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
@@ -49931,8 +49895,17 @@ props {
     z: 136
   }
   orientation: ORIENTATION_S
+  GeneralTags: "Terminal_Barrier"
+  displayName: "oTerminal_Barrier2"
   idRef {
     id: "5919a8ec346265f4050015a2"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
   light {
@@ -50030,7 +50003,7 @@ props {
   gridPoint {
     x: 60
     y: -1.3
-    z: 125
+    z: 123
   }
   orientation: ORIENTATION_S
   idRef {
@@ -50290,9 +50263,9 @@ props {
 props {
   name: "vfx_fx_smallfire"
   gridPoint {
-    x: 185.3
+    x: 52.300003
     y: 1.1
-    z: 171.3
+    z: 94.3
   }
   orientation: ORIENTATION_S
   properties {
@@ -50304,14 +50277,14 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: 185.20001
+    x: 52.000015
     y: -2.5
-    z: 171.40001
+    z: 94.100006
   }
   orientation: ORIENTATION_S
   properties {
     property_id: "LightScript"
-    string_value: "loop; bounce:5:ff3300; cubic:2:4d0000"
+    string_value: "loop; bounce:2:ff3300; bounce:2:4d0000"
   }
   idRef {
     id: "5919c337346265f4050015b6"
@@ -50326,5 +50299,1535 @@ props {
       a: 1
     }
     intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 94
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b01a6346265341a001954"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 86
+    y: 0
+    z: 93
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b04e2346265341a001955"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_smallfire"
+  gridPoint {
+    x: 86.3
+    y: 1.1
+    z: 93.3
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "CampfireEnvironment"
+  }
+  idRef {
+    id: "591b04e2346265341a001956"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 86.2
+    y: 2.7755576e-017
+    z: 93.2
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "591b04e2346265341a001957"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 86.000015
+    y: -2.5
+    z: 93.100006
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:2:4d0000; bounce:2:ff3300"
+  }
+  idRef {
+    id: "591b04e2346265341a001958"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 89.400017
+    y: -2.5
+    z: 123.50001
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:2:ff3300; bounce:2:4d0000"
+  }
+  idRef {
+    id: "591b04f6346265341a001959"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 89.4
+    y: 0
+    z: 123.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b04f6346265341a00195a"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_smallfire"
+  gridPoint {
+    x: 89.700005
+    y: 1.1
+    z: 123.7
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "CampfireEnvironment"
+  }
+  idRef {
+    id: "591b04f6346265341a00195b"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 89.6
+    y: 2.7755576e-017
+    z: 123.6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "591b04f6346265341a00195c"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 89.7
+    y: -1
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b0516346265341a00195d"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.81960785
+      g: 0.67450982
+      b: 0.082352944
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "telestrianEstate_vehicle_motorcycle01"
+  gridPoint {
+    x: 90
+    y: 0
+    z: 115
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "591b0516346265341a00195e"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 68.000015
+    y: -2.5
+    z: 109.10001
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:2:4d0000; bounce:2:ff3300"
+  }
+  idRef {
+    id: "591b057b346265341a001960"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 68
+    y: 0
+    z: 109
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b057b346265341a001961"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_smallfire"
+  gridPoint {
+    x: 68.3
+    y: 1.1
+    z: 109.3
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "CampfireEnvironment"
+  }
+  idRef {
+    id: "591b057b346265341a001962"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 68.2
+    y: 2.7755576e-017
+    z: 109.2
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "591b057b346265341a001963"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 179.9
+    y: -2.5
+    z: 155.09999
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b05b4346265341a001964"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 75
+    y: -1.3
+    z: 102
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b082d346265341a001966"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.81960785
+      g: 0.67450982
+      b: 0.082352944
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "barrens_vehicle_brunerMotorcycle02"
+  gridPoint {
+    x: 77
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "591b082d346265341a001967"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 90
+    y: 0
+    z: 115
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:motorcycle-loop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.2
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 77
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b13da3462651c180015a2"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:motorcycle-loop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.2
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 62
+    y: 0
+    z: 124
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b13df3462651c180015a3"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:motorcycle-loop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.2
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 67
+    y: 0
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591b13e43462651c180015a4"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_VicHarbor:motorcycle-loop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.2
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 72.3
+    y: 0
+    z: 124.5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_gobbet:water"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 1
+    min_radius: 1
+    max_radius: 6
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_watersplashes"
+  gridPoint {
+    x: 73.4
+    y: 0
+    z: 123
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopWaterSplashes"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_watersplashes"
+  gridPoint {
+    x: 73
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopWaterSplashes"
+  }
+  idRef {
+    id: "591b171a3462651c180015a5"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_watersplashes"
+  gridPoint {
+    x: 74
+    y: 0
+    z: 125
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopWaterSplashes"
+  }
+  idRef {
+    id: "591b17b23462651c180015a6"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_watersplashes"
+  gridPoint {
+    x: 73
+    y: 0
+    z: 126
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopWaterSplashes"
+  }
+  idRef {
+    id: "591b17b43462651c180015a7"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 80
+    y: -1
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c3d7a346265a0090015a5"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.66666669
+      g: 1
+      b: 0.49803922
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 80
+    y: -1
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c3d98346265a0090015a6"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.66666669
+      g: 1
+      b: 0.49803922
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 81
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.98039216
+      g: 1
+      b: 0.54901963
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 62
+    y: -0.5
+    z: 17.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4b9e346265a0090015a7"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.38039216
+      g: 0.38039216
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 50
+    y: 0
+    z: 10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4bc5346265a0090015a8"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.8509804
+      g: 0.44705883
+      b: 0.090196081
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 30
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4be2346265a0090015a9"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.8509804
+      g: 0.44705883
+      b: 0.090196081
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 18
+    y: -1
+    z: 13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4c0f346265a0090015aa"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.7764706
+      g: 0.070588239
+      b: 0.070588239
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 19
+    y: 0
+    z: 22.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4c30346265a0090015ac"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.38039216
+      g: 0.38039216
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 36.000015
+    y: -2.5
+    z: 18.100006
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:2:ff3300; bounce:2:4d0000"
+  }
+  idRef {
+    id: "591c4c5b346265a0090015ad"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 36
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4c5b346265a0090015ae"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_smallfire"
+  gridPoint {
+    x: 36.300003
+    y: 1.1
+    z: 18.300003
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "CampfireEnvironment"
+  }
+  idRef {
+    id: "591c4c5b346265a0090015af"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 36.199997
+    y: 2.7755576e-017
+    z: 18.199997
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4c5b346265a0090015b0"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash02"
+  gridPoint {
+    x: 37
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4c5b346265a0090015b1"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 44
+    y: -0.5
+    z: 15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4d01346265a0090015b2"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 1
+      g: 1
+      b: 0.74509805
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 19.800014
+    y: -2.5
+    z: 8.9000063
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:2:4d0000; bounce:2:ff3300"
+  }
+  idRef {
+    id: "591c4d3f346265a0090015b4"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 19.8
+    y: 0
+    z: 8.8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4d3f346265a0090015b5"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:burningloop"
+    attenuation_type: 0
+    min_volume: 0
+    max_volume: 0.5
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.5
+    crossfade_out_time: 0.5
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_smallfire"
+  gridPoint {
+    x: 20.100002
+    y: 1.1
+    z: 9.1000032
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "CampfireEnvironment"
+  }
+  idRef {
+    id: "591c4d3f346265a0090015b6"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 19.999996
+    y: 2.7755576e-017
+    z: 8.9999971
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "591c4d3f346265a0090015b7"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 45
+    y: 0.5
+    z: 131.2
+  }
+  orientation: ORIENTATION_S
+  displayName: "oTerminal_Exit2Gate"
+  idRef {
+    id: "591c4e3a346265a0090015b9"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Head to the Gate"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 82
+    y: -1
+    z: 37
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4f2f346265a0090015bc"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.7764706
+      g: 0.070588239
+      b: 0.070588239
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 75
+    y: 0
+    z: 37.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4f40346265a0090015bd"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 88
+    y: 0
+    z: 34
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c4f4d346265a0090015be"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+  }
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 99
+    y: 0.5
+    z: 114.2
+  }
+  orientation: ORIENTATION_S
+  displayName: "oTerminal_Exit2Entrance"
+  idRef {
+    id: "591c4ff1346265a0090015c0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Head to the Gate"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 80
+    y: 0.5
+    z: 21.499996
+  }
+  orientation: ORIENTATION_S
+  displayName: "oGate_Return2Terminal"
+  idRef {
+    id: "591c5086346265a0090015c2"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Return to the Terminal"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 18.4
+    y: 1
+    z: 177
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPlane_Return2Gate"
+  idRef {
+    id: "591c51b2346265a0090015ca"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+    interaction_info_text: "Return to the Gate"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 82
+    y: 0.5
+    z: 135.5
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "Terminal_Barrier"
+  displayName: "oTerminal_Barrier0"
+  idRef {
+    id: "591c52f8346265a0090015ce"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 6
+    prerequisites {
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Evaluate If Actor is Inside Region"
+            args {
+              call_value {
+                functionName: "All Actors"
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "AllOrAny"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AreOrAreNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "591c53e7346265a0090015d0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_BlockerIC
+    interaction_info_text: "Move Drone"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockSight"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 194
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5815346265a0090015d2"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockSight"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 193
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5816346265a0090015d3"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockSight"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 192
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5817346265a0090015d4"
+  }
+  lod: 0
+}
+props {
+  name: "bikerBar_clutter_rubble02"
+  gridPoint {
+    x: 175.4
+    y: 0
+    z: 157
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_decor_gargoylePillar02"
+  gridPoint {
+    x: 174
+    y: 0
+    z: 185
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 66
+    y: -0.5
+    z: 17.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5ab0346265a0090015d6"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.38039216
+      g: 0.38039216
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 13
+    y: 0
+    z: 192
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5b97346265a0090015d7"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.73333335
+      g: 0.99607843
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 28
+    y: -2
+    z: 188
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5ba7346265a0090015d8"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 0.96078432
+      g: 0.654902
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 30
+    y: -2
+    z: 194
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5bd1346265a0090015d9"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 6
+    y: -2
+    z: 192.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5c0d346265a0090015da"
+  }
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 0
+      g: 1
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 37
+    y: 0
+    z: 193
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c5c4e346265a0090015db"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 0.73333335
+      g: 0.99607843
+      b: 1
+      a: 1
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:props:generatorloop"
+    attenuation_type: 0
+    min_volume: 0.05
+    max_volume: 0.2
+    min_radius: 0
+    max_radius: 3
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "vfx_fx_singleDrip"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "HongKong:EnvironmentLoopSingleDrip"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_audio"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 3.5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c6013346265a0090015dc"
+  }
+  lod: 0
+  ambientNode {
+    override_camera_ambient: false
+    sound_file: "HongKong:ambient_haven:Hydroponics"
+    attenuation_type: 0
+    min_volume: 0.05
+    max_volume: 0.2
+    min_radius: 3
+    max_radius: 8
+    crossfade_in_time: 0.2
+    crossfade_out_time: 0.2
+    music_fade_volume: 1
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 176.40002
+    y: -1.5
+    z: 164.3
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "LightScript"
+    string_value: "loop; bounce:1:D433FF; bounce:1:3CFF33"
+  }
+  idRef {
+    id: "591c613c346265a0090015dd"
+  }
+  lod: 0
+  light {
+    range: 3
+    color {
+      r: 1
+      g: 0.33333334
+      b: 0
+      a: 1
+    }
+    intensity: 4
+  }
+}
+props {
+  name: "lodge_furniture_modernTableLamp01"
+  gridPoint {
+    x: 175.7
+    y: 1.4
+    z: 164
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "vfx_fx_roach"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 30
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopRoachScurry"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_fallingsparks"
+  gridPoint {
+    x: 27
+    y: 1
+    z: 21
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SparksEnvironment"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 42.5
+    y: -3.1
+    z: 13.699997
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c671a346265a0090015e1"
+  }
+  lod: 0
+  light {
+    range: 1
+    color {
+      r: 1
+      g: 1
+      b: 0
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 42.5
+    y: -3.1
+    z: 14.100006
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c671a346265a0090015e2"
+  }
+  lod: 0
+  light {
+    range: 1
+    color {
+      r: 1
+      g: 1
+      b: 0
+      a: 1
+    }
+    intensity: 2
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 84
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "591c67bf346265a0090015e3"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.98039216
+      g: 1
+      b: 0.54901963
+      a: 1
+    }
+    intensity: 2
   }
 }
