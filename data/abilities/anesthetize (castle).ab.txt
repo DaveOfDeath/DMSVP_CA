@@ -1,7 +1,7 @@
 id: "Anesthetize (Castle)"
 uirep {
   icon: "icon_adrenalpump"
-  name: "Inoculate"
+  name: "Anesthetize"
   description: "Dr. Castle can inject a serum into stunned targets, taking them out of the fight."
 }
 anim_action: AnimAction_Attack
