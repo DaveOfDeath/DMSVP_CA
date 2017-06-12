@@ -170,7 +170,7 @@ nodes {
     id: "5930b67b346265b42a005ca7"
   }
   index: 3
-  text: "{{GM}}She glances at the terminal.{{/GM}} Judging by the rate of Astral decay, I would give you no more than an hour.  I\'m not going to sugarcoat this; we\'re dealing with a viral bioweapon that was deliberately activated by a spell. The virus was designed to spread via contact, which it\'s symptoms encourage, but only within the radius of the attacker\'s choosing. Once the spell fades from the astral, the virus switches to a non-contagious, but quickly fatal, illness."
+  text: "{{GM}}She glances at the terminal.{{/GM}} Judging by the rate of Astral decay, I would give you no more than an hour.  I\'m not going to sugarcoat this; we\'re dealing with a viral bioweapon that was deliberately activated by a spell. The virus was designed to spread via contact, which its symptoms encourage, but only within the radius of the attacker\'s choosing. Once the spell fades from the astral, the virus switches to a non-contagious, but quickly fatal, illness."
   branches {
     responseText: "{{GM}}Inject the serum.{{/GM}}"
     nextNodeIndex: 5

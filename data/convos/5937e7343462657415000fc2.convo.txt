@@ -7,7 +7,7 @@ nodes {
     id: "5937e7503462657415000fca"
   }
   index: 0
-  text: "{{GM}}Your commlink buzzes on the hike up the escalator. The doctor doesn\'t sound happy.{{/GM}} Looks like whoever was responsible for the attack is starting to tighten the noose. Several unmarked armored vehicles pulling into the terminal parkway. I\'ve had to move the van deeper into the airport to avoid being boxed in. If these maps are right, there\'s an old maintenance tunnel we can use for egress once you have the patient, but you\'ll have to find an exit to the tarmac. It\'s not safe to return the way you came."
+  text: "{{GM}}Your commlink buzzes on the hike up the escalator. The doctor doesn\'t sound happy.{{/GM}} Looks like whoever was responsible for the attack is starting to tighten the noose. Several unmarked armored vehicles pulling into the terminal parkway. I\'ve had to move the van to avoid being boxed in. I\'m searching for some maps and intel for egress. I\'ll update you once I have anything useful."
   branches {
     responseText: "Keep us posted, doc."
     nextNodeIndex: -1

@@ -27399,6 +27399,17 @@ props {
           }
         }
       }
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bPhase2"
+            }
+          }
+        }
+      }
     }
     interactionIcon: InteractionIcon_Generic
     interaction_info_text: "Open Drone Vent"
@@ -33614,7 +33625,8 @@ props {
     z: 128.7
   }
   orientation: ORIENTATION_S
-  displayName: "oTerminal_SummoningPoint"
+  GeneralTags: "DeleteOnPhase2"
+  displayName: "oTerminal_SummoningPoint1"
   idRef {
     id: "58d7e43434626584240036cd"
   }
@@ -33697,6 +33709,7 @@ props {
       }
     }
     char_name: "Stagnation"
+    GeneralTags: "DeleteOnPhase2"
     portrait {
       filename: "Generic_ShrineSpirit_Water"
     }
@@ -33854,8 +33867,16 @@ props {
     z: 123.39999
   }
   orientation: ORIENTATION_S
+  displayName: "oTerminal_SummonPointTarget"
   idRef {
     id: "58e1303e346265282700369c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
   }
   lod: 0
 }
@@ -35100,6 +35121,50 @@ props {
     z: 106
   }
   orientation: ORIENTATION_E
+  displayName: "oTerminal_LuggageAddEnemyDoor"
+  idRef {
+    id: "59393b6d346265e421007879"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (Actor)"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "59393c86346265e4210078a7"
+            }
+          }
+        }
+      }
+    }
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: true
+      doorSound: ""
+      doorSoundBundle: ""
+    }
+    interaction_info_text: ""
+  }
   lod: 0
 }
 props {
@@ -41503,7 +41568,7 @@ props {
 props {
   name: "secretLab_wall_4x4fill"
   gridPoint {
-    x: 58.24
+    x: 59.24
     y: 0
     z: 105.27
   }
@@ -41516,7 +41581,7 @@ props {
 props {
   name: "secretLab_wall_4x4fill"
   gridPoint {
-    x: 58.24
+    x: 59.24
     y: 0
     z: 101.97
   }
@@ -51522,7 +51587,8 @@ props {
     z: 18.199997
   }
   orientation: ORIENTATION_S
-  displayName: "oGate_SummoningPoint"
+  GeneralTags: "DeleteOnPhase2"
+  displayName: "oGate_SummoningPoint_1"
   idRef {
     id: "591c4c5b346265a0090015b0"
   }
@@ -51605,6 +51671,7 @@ props {
       }
     }
     char_name: "Dying Embers"
+    GeneralTags: "DeleteOnPhase2"
     portrait {
       filename: "Generic_ShrineSpirit_Fire"
     }
@@ -51713,19 +51780,6 @@ props {
   }
   idRef {
     id: "591c4d3f346265a0090015b6"
-  }
-  lod: 0
-}
-props {
-  name: "mitte_street_trashcan02"
-  gridPoint {
-    x: 19.999996
-    y: 2.7755576e-017
-    z: 8.9999971
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "591c4d3f346265a0090015b7"
   }
   lod: 0
 }
@@ -52833,6 +52887,19 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 3
+    prerequisites {
+      ops {
+        functionName: "Invert Bool"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bPhase2"
+            }
+          }
+        }
+      }
+    }
     inspectInteraction {
       dispalyTime: 5
       fadeTime: 0.5
@@ -55649,6 +55716,30 @@ props {
   interactionRoot {
     isEnabled: false
     interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
     interactionIcon: InteractionIcon_Inspect
     interaction_info_text: "Inspect Door"
   }
@@ -55667,11 +55758,34 @@ props {
     id: "5934ceb9346265080e007205"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
-    dummyInteraciton {
+    prerequisites {
+      ops {
+        functionName: "Evaluate Turn Mode in Dimension"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
     }
-    interaction_info_text: ""
+    interactionIcon: InteractionIcon_SceneTransition
+    interaction_info_text: "Exit"
   }
   lod: 0
 }
@@ -58162,27 +58276,6 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 25
-    y: 0
-    z: 26
-  }
-  orientation: ORIENTATION_S
-  displayName: "oPhase2_Gate_Grenader"
-  idRef {
-    id: "59369b3f346265d82b004029"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    dummyInteraciton {
-    }
-    interaction_info_text: ""
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_nonsolidProp"
-  gridPoint {
     x: 19
     y: 0
     z: 23
@@ -58204,7 +58297,7 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 21
+    x: 22
     y: 0
     z: 8
   }
@@ -58246,14 +58339,1167 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 25
+    x: 26
     y: 0
-    z: 21
+    z: 22
   }
   orientation: ORIENTATION_S
   displayName: "oPhase2_Gate_Gunner"
   idRef {
     id: "59369bf7346265d82b00402d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge01"
+  gridPoint {
+    x: 50
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b81346265e42100787a"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge04"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b84346265e42100787b"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge03"
+  gridPoint {
+    x: 48
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b86346265e42100787c"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge04"
+  gridPoint {
+    x: 46
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b98346265e42100787d"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b98346265e42100787e"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge03"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393b98346265e42100787f"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 55
+    y: 0
+    z: 105
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393bab346265e421007880"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 55
+    y: 0
+    z: 103
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393bb1346265e421007881"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 55
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393bb2346265e421007882"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge03"
+  gridPoint {
+    x: 54
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393bc0346265e421007886"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 106
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393bcd346265e421007887"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 45
+    y: 0
+    z: 106
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393bd0346265e421007888"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 43
+    y: 0
+    z: 106
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393bd1346265e421007889"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge02"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 103
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393bd7346265e42100788a"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEnd01"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393bdd346265e42100788b"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsConnector01"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393bdd346265e42100788c"
+  }
+  lod: 0
+}
+props {
+  name: "trawler_walls_beamsEdge02"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 105
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393be2346265e42100788d"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 106
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393be4346265e42100788e"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393bfd346265e42100788f"
+  }
+  lod: 0
+}
+props {
+  name: "tsang_floor_subBasement2x2panel01"
+  gridPoint {
+    x: 50
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c01346265e421007890"
+  }
+  lod: 0
+}
+props {
+  name: "tsang_floor_subBasement2x2panel01"
+  gridPoint {
+    x: 48
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c03346265e421007891"
+  }
+  lod: 0
+}
+props {
+  name: "tsang_floor_subBasement2x2panel01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c06346265e421007892"
+  }
+  lod: 0
+}
+props {
+  name: "tsang_floor_subBasement2x2panel01"
+  gridPoint {
+    x: 46
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c06346265e421007893"
+  }
+  lod: 0
+}
+props {
+  name: "tsang_floor_subBasement2x2panel01"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c08346265e421007895"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 48
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393c10346265e421007896"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 50
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393c1b346265e421007898"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393c21346265e421007899"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 46
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393c21346265e42100789a"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "59393c22346265e42100789c"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_grating01"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c32346265e42100789d"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_floor_ventFloor03"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 102
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c3f346265e42100789e"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_floor_ventFloor03"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 103
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c41346265e42100789f"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_floor_ventFloor03"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "59393c46346265e4210078a0"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c4f346265e4210078a1"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 50
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c52346265e4210078a2"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 48
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c55346265e4210078a3"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c57346265e4210078a4"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 45
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c5a346265e4210078a5"
+  }
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_grunge03"
+  gridPoint {
+    x: 43
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393c5d346265e4210078a6"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 40
+    y: 0
+    z: 106
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "59393daa346265e4210078a9"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 19.999996
+    y: 2.7755576e-017
+    z: 8.9999971
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "doEnablePhase2"
+  displayName: "oGate_SummoningPointTarget"
+  idRef {
+    id: "593b6839346265e01e00540d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Spirits/SpiritShrineFire"
+    character_sheet_id: "Shrine Spirit Fire"
+    equipment_sheet_id: "Shrine Spirit Fire F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    char_name: "Dying Embers"
+    GeneralTags: "doEnablePhase2"
+    portrait {
+      filename: "Generic_ShrineSpirit_Fire"
+    }
+    karma: 244
+  }
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 22
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b691d346265e01e005411"
+  }
+  lod: 0
+}
+props {
+  name: "museum_wall_column02"
+  gridPoint {
+    x: 70.4
+    y: 0
+    z: 128.7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b6a1d346265e01e005412"
+  }
+  lod: 0
+}
+props {
+  name: "bikerBar_clutter_rubble04"
+  gridPoint {
+    x: 75.3
+    y: 0
+    z: 150.4
+  }
+  orientation: ORIENTATION_S
+  displayName: "oTerminal_SummonPoint2"
+  idRef {
+    id: "593b6a6c346265e01e005414"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 7
+    summonPoint {
+      hasCharacter: true
+      summon_icon: ""
+      max_summon_force: 4
+      is_shrine_spirit: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Spirit/SpiritNature"
+    character_sheet_id: "Shrine Spirit Nature"
+    equipment_sheet_id: "Spirit Nature F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    char_name: "Fetid Odor"
+    portrait {
+      filename: "Generic_ShrineSpirit_Nature"
+    }
+    karma: 358
+  }
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 36.2
+    y: 0
+    z: 18.2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b6b0e346265e01e005417"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_street_trashcan02"
+  gridPoint {
+    x: 40.999996
+    y: 2.7755576e-017
+    z: 55.999996
+  }
+  orientation: ORIENTATION_S
+  displayName: "oGate_SummoningPoint2"
+  idRef {
+    id: "593b6b35346265e01e005418"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 7
+    summonPoint {
+      hasCharacter: true
+      summon_icon: ""
+      max_summon_force: 4
+      is_shrine_spirit: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "HongKong:Spirits/SpiritShrineFire"
+    character_sheet_id: "Shrine Spirit Fire"
+    equipment_sheet_id: "Shrine Spirit Fire F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+        cyberware_affinity: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    char_name: "Burning Desire"
+    portrait {
+      filename: "Generic_ShrineSpirit_Fire"
+    }
+    karma: 244
+  }
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 195
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPlane_DocWagon"
+  idRef {
+    id: "593b6c3a346265e01e00541e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bPhase2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "iPasskeyLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    pickupItem {
+      itemName: "DocWagonGold"
+      destroyOnPickup: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 76
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Sniper"
+  idRef {
+    id: "593b6fe2346265e01e0054e2"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 68
+    y: 0
+    z: 112
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Enforcer"
+  idRef {
+    id: "593b7013346265e01e0054e3"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 91
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Gunner"
+  idRef {
+    id: "593b7028346265e01e0054e4"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 89
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Shaman"
+  idRef {
+    id: "593b7039346265e01e0054e5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 49
+    y: 0
+    z: 93
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Mage"
+  idRef {
+    id: "593b7053346265e01e0054e6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 51
+    y: 0
+    z: 85
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPhase2_Terminal_Captain"
+  idRef {
+    id: "593b7069346265e01e0054e7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 159
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b721c346265e01e0054ee"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 157
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b721d346265e01e0054ef"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 158
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b721d346265e01e0054f0"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 155
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b721e346265e01e0054f1"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 156
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "593b721e346265e01e0054f2"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 24
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 13
+    y: 0
+    z: 194
+  }
+  orientation: ORIENTATION_S
+  displayName: "oPlane_InfectedRatTarget"
+  idRef {
+    id: "593dd9bb3462656c22003cd8"
   }
   interactionRoot {
     isEnabled: true
